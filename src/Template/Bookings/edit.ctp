@@ -25,11 +25,14 @@
     </ul>
 </nav>
 <div class="bookings form large-9 medium-8 columns content">
+    <h3>ID: <?= h($booking->id) ?></h3>
+    <h3>Created by: <?= $this->Html->link($booking['user']->email,['controller' => 'Users', 'action' => 'view', $booking->user->id]) ?> (<?= $booking->created ?>)</h3>
+    <h3>Client: <?= $this->Html->link($booking['client']->name,['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></h3>
+    <h3>Car: <?= $this->Html->link($booking['car']->model,['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></h3>
     <?= $this->Form->create($booking) ?>
     <fieldset>
         <legend><?= __('Edit Booking') ?></legend>
         <?php
-            echo $this->Form->control('car_id', ['options' => $cars]);
             echo $this->Form->control('current_km');
             echo $this->Form->control('date_service');
             echo $this->Form->control('payment_received');
