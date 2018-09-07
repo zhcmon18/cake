@@ -16,7 +16,7 @@
     </ul>
 </nav>
 <div class="users view large-9 medium-8 columns content">
-    <h3><?= h($user->id) ?></h3>
+    <h5>ID: <?= h($user->id) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Email') ?></th>
@@ -46,10 +46,12 @@
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($user->bookings as $bookings): ?>
+
+            <?php $ind = 0; foreach ($user->bookings as $bookings): ?>
             <tr>
-                <td><?= h($bookings->client_id) ?></td>
-                <td><?= h($bookings->car_id) ?></td>
+                <td><?= $this->Html->link(($user['bookings'][$ind]['client']->name), ['controller' => 'Clients', 'action'=> 'view', $bookings->client_id]) ?></td>
+                <td><?= $this->Html->link(($user['bookings'][$ind]['car']->model), ['controller' => 'Cars', 'action'=> 'view', $bookings->car_id]) ?></td>
+                <?php ++$ind; ?>
                 <td><?= h($bookings->current_km) ?></td>
                 <td><?= h($bookings->date_service) ?></td>
                 <td><?= h($bookings->payment_received ? __('Yes') : __('No')); ?></td>

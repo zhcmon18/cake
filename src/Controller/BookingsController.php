@@ -71,13 +71,14 @@ class BookingsController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($id = null)
     {
         $booking = $this->Bookings->newEntity();
         if ($this->request->is('post')) {
             $booking = $this->Bookings->patchEntity($booking, $this->request->getData());
             
             $booking->user_id = $this->Auth->user('id');
+            $booking->client_id = $id;
             
             if ($this->Bookings->save($booking)) {
                 $this->Flash->success(__('The booking has been saved.'));
@@ -87,9 +88,7 @@ class BookingsController extends AppController
             $this->Flash->error(__('The booking could not be saved. Please, try again.'));
         }
         
-        $users = $this->Bookings->Users->find('list', ['limit' => 200]);
-        $clients = $this->Bookings->Clients->find('list', ['limit' => 200]);
-        $cars = $this->Bookings->Cars->find('list', ['limit' => 200]);
+        $cars = $this->Bookings->Cars->find('list', ['conditions' => ['Cars.client_id' => $id]]);
         $tags = $this->Bookings->Tags->find('list', ['limit' => 200]);
         $this->set(compact('booking', 'users', 'clients', 'cars', 'tags'));
     }
@@ -104,7 +103,7 @@ class BookingsController extends AppController
     public function edit($id = null)
     {
         $booking = $this->Bookings->get($id, [
-            'contain' => ['Tags']
+            'contain' => ['Users', 'Clients', 'Cars', 'Tags']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $booking = $this->Bookings->patchEntity($booking, 

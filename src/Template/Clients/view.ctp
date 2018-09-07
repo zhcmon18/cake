@@ -6,19 +6,21 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+        <li class="heading"><?= __('Navigation') ?></li>
+         <li><?= $this->Html->link(__('List Clients'), ['action' => 'index']) ?> </li>
+         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
+         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Client'), ['action' => 'edit', $client->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Client'), ['action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete # {0}?', $client->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Clients'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Client'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Car'), ['controller' => 'Cars', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="clients view large-9 medium-8 columns content">
-    <h3><?= h($client->name) ?></h3>
+    <h5>ID: <?= h($client->id) ?></h5>
+    <h5><?= h($client->name) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Name') ?></th>
@@ -50,10 +52,8 @@
         <?php if (!empty($client->bookings)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
-                <th scope="col"><?= __('Client Id') ?></th>
-                <th scope="col"><?= __('Car Id') ?></th>
+                <th scope="col"><?= __('Created by') ?></th>
+                <th scope="col"><?= __('Car') ?></th>
                 <th scope="col"><?= __('Current Km') ?></th>
                 <th scope="col"><?= __('Date Service') ?></th>
                 <th scope="col"><?= __('Payment Received') ?></th>
@@ -62,15 +62,14 @@
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
+            <?php $ind = 0 ?>
             <?php foreach ($client->bookings as $bookings): ?>
             <tr>
-                <td><?= h($bookings->id) ?></td>
-                <td><?= h($bookings->user_id) ?></td>
-                <td><?= h($bookings->client_id) ?></td>
-                <td><?= h($bookings->car_id) ?></td>
+                <td><?= $this->Html->link(($client['bookings'][$ind]['user']->email), ['controller' => 'Users', 'action'=> 'view', $bookings->user_id]) ?></td>
+                <td><?= h($client['cars'][$ind]->model) ?></td>
                 <td><?= h($bookings->current_km) ?></td>
                 <td><?= h($bookings->date_service) ?></td>
-                <td><?= h($bookings->payment_received) ?></td>
+                <td><?= h($bookings->payment_received ? __('Yes') : __('No')); ?></td>
                 <td><?= h($bookings->description) ?></td>
                 <td><?= h($bookings->created) ?></td>
                 <td><?= h($bookings->modified) ?></td>
@@ -80,7 +79,7 @@
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookings->id)]) ?>
                 </td>
             </tr>
-            <?php endforeach; ?>
+            <?php endforeach; ++$ind ?>
         </table>
         <?php endif; ?>
     </div>
@@ -89,8 +88,6 @@
         <?php if (!empty($client->cars)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Client Id') ?></th>
                 <th scope="col"><?= __('License') ?></th>
                 <th scope="col"><?= __('Model') ?></th>
                 <th scope="col"><?= __('Color') ?></th>
@@ -101,8 +98,6 @@
             </tr>
             <?php foreach ($client->cars as $cars): ?>
             <tr>
-                <td><?= h($cars->id) ?></td>
-                <td><?= h($cars->client_id) ?></td>
                 <td><?= h($cars->license) ?></td>
                 <td><?= h($cars->model) ?></td>
                 <td><?= h($cars->color) ?></td>

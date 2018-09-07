@@ -22,7 +22,7 @@
     </ul>
 </nav>
 <div class="bookings view large-9 medium-8 columns content">
-    <h3><?= h($booking->id) ?></h3>
+    <h3>ID: <?= h($booking->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('User') ?></th>

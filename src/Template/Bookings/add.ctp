@@ -21,9 +21,8 @@
 <div class="bookings form large-9 medium-8 columns content">
     <?= $this->Form->create($booking) ?>
     <fieldset>
-        <legend><?= __('Add Booking') ?></legend>
+        <legend><?= __('New booking for') ?></legend>
         <?php
-            echo $this->Form->control('client_id', ['options' => $clients]);
             echo $this->Form->control('car_id', ['options' => $cars]);
             echo $this->Form->control('current_km');
             echo $this->Form->control('date_service');
