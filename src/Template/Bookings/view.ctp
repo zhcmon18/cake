@@ -6,23 +6,19 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+        <li class="heading"><?= __('Navigation') ?></li>
+        <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients','action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Booking'), ['action' => 'edit', $booking->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Bookings'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Booking'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Client'), ['controller' => 'Clients', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Car'), ['controller' => 'Cars', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="bookings view large-9 medium-8 columns content">
-    <h3>ID: <?= h($booking->id) ?></h3>
+    <h5>ID: <?= h($booking->id) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('User') ?></th>
@@ -49,16 +45,16 @@
             <td><?= h($booking->date_service) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Created') ?></th>
+            <th scope="row"><?= __('Payment Received') ?></th>
+            <td><?= h($booking->payment_received ? __('Yes') : __('No')); ?></td>
+        </tr>
+        <tr>
+             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($booking->created) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($booking->modified) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Payment Received') ?></th>
-            <td><?= h($booking->payment_received ? __('Yes') : __('No')); ?></td>
         </tr>
     </table>
     <div class="related">

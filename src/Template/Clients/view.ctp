@@ -7,15 +7,16 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Navigation') ?></li>
-         <li><?= $this->Html->link(__('List Clients'), ['action' => 'index']) ?> </li>
-         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
-         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
-         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Clients'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>       
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Client'), ['action' => 'edit', $client->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Client'), ['action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete # {0}?', $client->id)]) ?> </li>
-        <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('New Car'), ['controller' => 'Cars', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add', $client->id]) ?> </li>
+        <li><?= $this->Html->link(__('New Car'), ['controller' => 'Cars', 'action' => 'add', $client->id]) ?> </li>
     </ul>
 </nav>
 <div class="clients view large-9 medium-8 columns content">
@@ -62,14 +63,13 @@
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php $ind = 0 ?>
-            <?php foreach ($client->bookings as $bookings): ?>
+            <?php $ind = 0; foreach ($client->bookings as $bookings): ?>
             <tr>
                 <td><?= $this->Html->link(($client['bookings'][$ind]['user']->email), ['controller' => 'Users', 'action'=> 'view', $bookings->user_id]) ?></td>
-                <td><?= h($client['cars'][$ind]->model) ?></td>
+                <td><?= h($client['cars'][$ind]->model . ' ' . $client['cars'][$ind]->license) ?></td>
                 <td><?= h($bookings->current_km) ?></td>
                 <td><?= h($bookings->date_service) ?></td>
-                <td><?= h($bookings->payment_received ? __('Yes') : __('No')); ?></td>
+                <td><?= h($bookings->payment_received ? __('Yes') : __('No')) ?></td>
                 <td><?= h($bookings->description) ?></td>
                 <td><?= h($bookings->created) ?></td>
                 <td><?= h($bookings->modified) ?></td>
@@ -79,7 +79,7 @@
                     <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookings->id)]) ?>
                 </td>
             </tr>
-            <?php endforeach; ++$ind ?>
+            <?php endforeach; ++$ind?>
         </table>
         <?php endif; ?>
     </div>

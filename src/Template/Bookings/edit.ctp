@@ -6,20 +6,19 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New booking'), ['action' => 'add', $booking->client_id]) ?></li>
+        <li class="heading"><?= __('Navigation') ?></li>
+        <li><?= $this->Html->link(__('List Clients'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>        
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
+        <li class="heading"><?= __('Actions') ?></li>       
         <li><?= $this->Form->postLink(
-                __('Delete booking'),
+                __('Delete Booking'),
                 ['action' => 'delete', $booking->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id)]
             )
         ?>
-        <li class="heading"><?= __('Navigation') ?></li>
-        <li><?= $this->Html->link(__('Bookings'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Clients'), ['controller' => 'Clients', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Cars'), ['controller' => 'Cars', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="bookings form large-9 medium-8 columns content">

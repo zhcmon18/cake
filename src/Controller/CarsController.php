@@ -55,7 +55,7 @@ class CarsController extends AppController
     public function view($id = null)
     {
         $car = $this->Cars->get($id, [
-            'contain' => ['Clients', 'Bookings']
+            'contain' => ['Clients', 'Bookings'=> ['Users', 'Clients', 'Cars']]
         ]);
 
         $this->set('car', $car);
@@ -66,15 +66,16 @@ class CarsController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($id = null)
     {
         $car = $this->Cars->newEntity();
         if ($this->request->is('post')) {
             $car = $this->Cars->patchEntity($car, $this->request->getData());
+            $car->client_id = $id;
             if ($this->Cars->save($car)) {
                 $this->Flash->success(__('The car has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'clients', 'action' => 'view', $id]);
             }
             $this->Flash->error(__('The car could not be saved. Please, try again.'));
         }
@@ -118,6 +119,7 @@ class CarsController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $car = $this->Cars->get($id);
+        $client_id = $car->client_id;
         if ($this->Cars->delete($car)) {
             $this->Flash->success(__('The car has been deleted.'));
         } else {
@@ -125,5 +127,6 @@ class CarsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+
     }
 }

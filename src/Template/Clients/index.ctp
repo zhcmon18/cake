@@ -7,8 +7,9 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Navigation') ?></li>
-         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
          <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>         
+         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li> 
          <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Client'), ['action' => 'add']) ?></li>
@@ -18,30 +19,30 @@
     <h3><?= __('Clients') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
-            <tr>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+            <tr>               
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('telephone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>               
+                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($clients as $client): ?>
             <tr>
-                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $client->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $client->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete # {0}?', $client->id)]) ?>
-                </td>
                 <td><?= h($client->name) ?></td>
                 <td><?= h($client->telephone) ?></td>
                 <td><?= h($client->address) ?></td>
                 <td><?= h($client->email) ?></td>
                 <td><?= h($client->created) ?></td>
-                <td><?= h($client->modified) ?></td>             
+                <td><?= h($client->modified) ?></td>
+                 <td class="actions">
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $client->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $client->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete # {0}?', $client->id)]) ?>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
