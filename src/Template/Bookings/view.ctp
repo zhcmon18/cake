@@ -14,11 +14,11 @@
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Booking'), ['action' => 'edit', $booking->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id)]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $booking->id)]) ?> </li>
     </ul>
 </nav>
 <div class="bookings view large-9 medium-8 columns content">
-    <h5>ID: <?= h($booking->id) ?></h5>
+    <h5>#: <?= h($booking->id) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('User') ?></th>
@@ -75,7 +75,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Tags', 'action' => 'view', $tags->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Tags', 'action' => 'edit', $tags->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Tags', 'action' => 'delete', $tags->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tags->id)]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Tags', 'action' => 'delete', $tags->id], ['confirm' => __('Are you sure you want to delete the tags #{0}?', $tags->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

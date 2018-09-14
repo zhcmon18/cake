@@ -34,9 +34,9 @@
         <tbody>
             <?php foreach ($bookings as $booking): ?>
             <tr>               
-                <td><?= $booking->has('user') ? $this->Html->link($booking->user->email, ['controller' => 'Users', 'action' => 'view', $booking->user->id]) : '' ?></td>
-                <td><?= $booking->has('client') ? $this->Html->link($booking->client->name, ['controller' => 'Clients', 'action' => 'view', $booking->client->id]) : '' ?></td>
-                <td><?= $booking->has('car') ? $this->Html->link($booking->car->model, ['controller' => 'Cars', 'action' => 'view', $booking->car->model]) : '' ?></td>
+                <td><?= $this->Html->link($booking->user->email, ['controller' => 'Users', 'action' => 'view', $booking->user->id])?></td>
+                <td><?= $this->Html->link($booking->client->name, ['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></td>
+                <td><?= $this->Html->link(($booking->car->model . ' ' . $booking->car->license) , ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></td>
                 <td><?= $this->Number->format($booking->current_km) ?></td>
                 <td><?= h($booking->date_service) ?></td>
                 <td><?= h($booking->payment_received ? __('Yes') : __('No')); ?></td>

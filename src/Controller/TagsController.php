@@ -12,19 +12,6 @@ use App\Controller\AppController;
  */
 class TagsController extends AppController
 {
-
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
-    public function index()
-    {
-        $tags = $this->paginate($this->Tags);
-
-        $this->set(compact('tags'));
-    }
-
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         
@@ -40,9 +27,20 @@ class TagsController extends AppController
         if (!$id) {
             return false;
         }
+    }    
+    
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|void
+     */
+    public function index()
+    {
+        $tags = $this->paginate($this->Tags);
+
+        $this->set(compact('tags'));
     }
-    
-    
+
     /**
      * View method
      *
@@ -53,7 +51,7 @@ class TagsController extends AppController
     public function view($id = null)
     {
         $tag = $this->Tags->get($id, [
-            'contain' => ['Bookings']
+            'contain' => ['Bookings'=>['Clients', 'Users', 'Cars']]
         ]);
 
         $this->set('tag', $tag);

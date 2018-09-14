@@ -51,7 +51,7 @@ class ClientsController extends AppController
     public function view($id = null)
     {
         $client = $this->Clients->get($id, [
-            'contain' => ['Bookings' => ['Users'], 'Cars']
+            'contain' => ['Bookings' => ['Users', 'Cars'], 'Cars']
         ]);
 
         $this->set('client', $client);

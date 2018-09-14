@@ -6,25 +6,25 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+        <li class="heading"><?= __('Navigation') ?></li>
+        <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>       
+        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Tag'), ['action' => 'edit', $tag->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Tag'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Tags'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Tag'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add']) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Tag'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete the tag #{0}?', $tag->id)]) ?> </li>
+        <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?> </li>       
     </ul>
 </nav>
 <div class="tags view large-9 medium-8 columns content">
     <h3><?= h($tag->title) ?></h3>
+    <h5>#: <?= h($tag->id) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Title') ?></th>
             <td><?= h($tag->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($tag->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -40,10 +40,9 @@
         <?php if (!empty($tag->bookings)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('User Id') ?></th>
-                <th scope="col"><?= __('Client Id') ?></th>
-                <th scope="col"><?= __('Car Id') ?></th>
+                <th scope="col"><?= __('User') ?></th>
+                <th scope="col"><?= __('Client') ?></th>
+                <th scope="col"><?= __('Car') ?></th>
                 <th scope="col"><?= __('Current Km') ?></th>
                 <th scope="col"><?= __('Date Service') ?></th>
                 <th scope="col"><?= __('Payment Received') ?></th>
@@ -54,10 +53,9 @@
             </tr>
             <?php foreach ($tag->bookings as $bookings): ?>
             <tr>
-                <td><?= h($bookings->id) ?></td>
-                <td><?= h($bookings->user_id) ?></td>
-                <td><?= h($bookings->client_id) ?></td>
-                <td><?= h($bookings->car_id) ?></td>
+                <td><?= $this->Html->link(($bookings['user']->email), ['controller'=>'Users', 'action'=>'view', $bookings['user']->id]) ?></td>
+                <td><?= $this->Html->link(($bookings['client']->name), ['controller'=>'Clients', 'action'=>'view', $bookings['client']->id]) ?></td>
+                <td><?= $this->Html->link(($bookings['car']->model . ' ' . $bookings['car']->license), ['controller'=>'Cars', 'action'=>'view', $bookings['car']->id]) ?></td>
                 <td><?= h($bookings->current_km) ?></td>
                 <td><?= h($bookings->date_service) ?></td>
                 <td><?= h($bookings->payment_received) ?></td>
@@ -67,7 +65,7 @@
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookings->id)]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete the booking# {0}?', $bookings->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

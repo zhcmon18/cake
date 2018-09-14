@@ -93,7 +93,7 @@ class CarsController extends AppController
     public function edit($id = null)
     {
         $car = $this->Cars->get($id, [
-            'contain' => []
+            'contain' => ['Clients']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $car = $this->Cars->patchEntity($car, $this->request->getData());
