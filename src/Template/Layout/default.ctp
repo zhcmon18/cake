@@ -42,16 +42,24 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><?php
-                    $loguser = $this->request->session()->read('Auth.User');
-                    if ($loguser) {
-                        $user = $loguser['email'];
-                        echo $this->Html->link($user . ' Logout', ['controller' => 'Users', 'action' => 'logout']);
-                    } else {
-                        echo $this->Html->link('Login', ['controller' => 'Users', 'action' => 'login']);
-                    }
+                <li>
+                    <?php
+                        $loguser = $this->request->session()->read('Auth.User');
+                        if ($loguser) {
+                            $user = $loguser['email'];
+                            echo $this->Html->link($user, ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
                     ?>
                 </li>
+                <li>
+                    <?php echo $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
+                </li>
+                <?php 
+                    } else {
+                        echo $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']);
+                    }
+                ?>
+                </li>
+                <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?></li>
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>

@@ -23,9 +23,9 @@
 </nav>
 <div class="bookings form large-9 medium-8 columns content">
     <h5>#: <?= h($booking->id) ?></h5>
-    <h5>Created by: <?= $this->Html->link($booking['user']->email,['controller' => 'Users', 'action' => 'view', $booking->user->id]) ?> (<?= $booking->created ?>)</h5>
-    <h5>Client: <?= $this->Html->link($booking['client']->name,['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></h5>
-    <h5>Car: <?= $this->Html->link(($booking['car']->model . ' ' . $booking['car']->license), ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></h5>
+    <h5><?= __('Created by:')?> <?= $this->Html->link($booking['user']->email,['controller' => 'Users', 'action' => 'view', $booking->user->id]) ?> (<?= $booking->created ?>)</h5>
+    <h5><?= __('Client')?> <?= $this->Html->link($booking['client']->name,['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></h5>
+    <h5><?= __('Car:')?> <?= $this->Html->link(($booking['car']->model . ' ' . $booking['car']->license), ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></h5>
     <?= $this->Form->create($booking) ?>
     <fieldset>
         <legend><?= __('Edit Booking') ?></legend>

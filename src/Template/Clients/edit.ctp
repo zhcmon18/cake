@@ -28,6 +28,5 @@
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->button(__('Cancel')) ?>
     <?= $this->Form->end() ?>
 </div>

@@ -21,11 +21,8 @@
 </nav>
 <div class="cars view large-9 medium-8 columns content">
     <h5>#: <?= h($car->id) ?></h5>
+    <h5>Client: <?= $this->Html->link($car->client->name, ['controller' => 'Clients', 'action' => 'view', $car->client->id])?></h5>
     <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Client') ?></th>
-            <td><?= $car->has('client') ? $this->Html->link($car->client->name, ['controller' => 'Clients', 'action' => 'view', $car->client->id]) : '' ?></td>
-        </tr>
         <tr>
             <th scope="row"><?= __('License') ?></th>
             <td><?= h($car->license) ?></td>
