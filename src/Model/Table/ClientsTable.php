@@ -42,7 +42,7 @@ class ClientsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
-
+             
         $this->hasMany('Bookings', [
             'foreignKey' => 'client_id'
         ]);

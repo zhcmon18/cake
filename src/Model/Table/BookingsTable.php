@@ -43,6 +43,7 @@ class BookingsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Translate', ['fields' => ['description']]);
 
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',

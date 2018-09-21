@@ -1,0 +1,539 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-09-17 16:22+0000\n"
+"PO-Revision-Date: 2018-09-21 10:10-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 2.1.1\n"
+"Last-Translator: \n"
+"Language: ru\n"
+
+#: Controller/BookingsController.php:84;115
+msgid "The booking has been saved."
+msgstr "Бронирование сохранено."
+
+#: Controller/BookingsController.php:88;119
+msgid "The booking could not be saved. Please, try again."
+msgstr "Бронирование не удалось сохранить. Пожалуйста, попробуйте еще раз."
+
+#: Controller/BookingsController.php:140
+msgid "The booking has been deleted."
+msgstr "Бронирование было удалено."
+
+#: Controller/BookingsController.php:142
+msgid "The booking could not be deleted. Please, try again."
+msgstr "Бронирование не может быть удалено. Пожалуйста, попробуйте еще раз."
+
+#: Controller/CarsController.php:76;101
+msgid "The car has been saved."
+msgstr "Автомобиль сохранен."
+
+#: Controller/CarsController.php:80;105
+msgid "The car could not be saved. Please, try again."
+msgstr "Автомобиль не сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/CarsController.php:124
+msgid "The car has been deleted."
+msgstr "Автомобиль был удален."
+
+#: Controller/CarsController.php:126
+msgid "The car could not be deleted. Please, try again."
+msgstr "Автомобиль нельзя удалить. Пожалуйста, попробуйте еще раз."
+
+#: Controller/ClientsController.php:71;95
+msgid "The client has been saved."
+msgstr "Клиент был сохранен."
+
+#: Controller/ClientsController.php:75;99
+msgid "The client could not be saved. Please, try again."
+msgstr "Клиент не может быть сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/ClientsController.php:116
+msgid "The client has been deleted."
+msgstr "Клиент удален."
+
+#: Controller/ClientsController.php:118
+msgid "The client could not be deleted. Please, try again."
+msgstr "Клиент не может быть удален. Пожалуйста, попробуйте еще раз."
+
+#: Controller/TagsController.php:71;96
+msgid "The tag has been saved."
+msgstr "Ярлык был сохранен."
+
+#: Controller/TagsController.php:75;100
+msgid "The tag could not be saved. Please, try again."
+msgstr "Ярлык не может быть сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/TagsController.php:118
+msgid "The tag has been deleted."
+msgstr "Ярлык удален."
+
+#: Controller/TagsController.php:120
+msgid "The tag could not be deleted. Please, try again."
+msgstr "Ярлык нельзя удалить. Пожалуйста, попробуйте еще раз."
+
+#: Controller/UsersController.php:82;106
+msgid "The user has been saved."
+msgstr "Пользователь был сохранен."
+
+#: Controller/UsersController.php:86;110
+msgid "The user could not be saved. Please, try again."
+msgstr "Пользователь не может быть сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/UsersController.php:127
+msgid "The user has been deleted."
+msgstr "Пользователь удален."
+
+#: Controller/UsersController.php:129
+msgid "The user could not be deleted. Please, try again."
+msgstr "Пользователь не может быть удален. Пожалуйста, попробуйте еще раз."
+
+#: Template/Bookings/add.ctp:9 Template/Bookings/edit.ctp:9
+#: Template/Bookings/index.ctp:9 Template/Bookings/view.ctp:9
+#: Template/Cars/add.ctp:9 Template/Cars/edit.ctp:9 Template/Cars/index.ctp:9
+#: Template/Cars/view.ctp:9 Template/Clients/add.ctp:9
+#: Template/Clients/edit.ctp:9 Template/Clients/index.ctp:9
+#: Template/Clients/view.ctp:9 Template/Tags/add.ctp:9 Template/Tags/edit.ctp:9
+#: Template/Tags/index.ctp:9 Template/Tags/view.ctp:9 Template/Users/add.ctp:9
+#: Template/Users/edit.ctp:9 Template/Users/index.ctp:9
+#: Template/Users/view.ctp:9
+msgid "Navigation"
+msgstr "Навигация"
+
+#: Template/Bookings/add.ctp:10 Template/Bookings/edit.ctp:10
+#: Template/Bookings/index.ctp:10 Template/Bookings/view.ctp:10
+#: Template/Cars/add.ctp:10 Template/Cars/edit.ctp:10
+#: Template/Cars/index.ctp:10 Template/Cars/view.ctp:10
+#: Template/Clients/add.ctp:10 Template/Clients/edit.ctp:10
+#: Template/Clients/view.ctp:10 Template/Tags/add.ctp:10
+#: Template/Tags/edit.ctp:10 Template/Tags/index.ctp:10
+#: Template/Tags/view.ctp:10 Template/Users/add.ctp:10
+#: Template/Users/edit.ctp:10 Template/Users/index.ctp:10
+#: Template/Users/view.ctp:10
+msgid "List Clients"
+msgstr "Список клиентов"
+
+#: Template/Bookings/add.ctp:11 Template/Bookings/edit.ctp:11
+#: Template/Bookings/index.ctp:11 Template/Bookings/view.ctp:12
+#: Template/Cars/add.ctp:11 Template/Cars/edit.ctp:11 Template/Cars/view.ctp:11
+#: Template/Clients/add.ctp:11 Template/Clients/edit.ctp:11
+#: Template/Clients/index.ctp:10 Template/Clients/view.ctp:11
+#: Template/Tags/add.ctp:11 Template/Tags/edit.ctp:11
+#: Template/Tags/index.ctp:11 Template/Tags/view.ctp:11
+#: Template/Users/add.ctp:11 Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:11 Template/Users/view.ctp:11
+msgid "List Cars"
+msgstr "Список автомобилей"
+
+#: Template/Bookings/add.ctp:12 Template/Bookings/edit.ctp:12
+#: Template/Bookings/view.ctp:11 Template/Cars/add.ctp:12
+#: Template/Cars/edit.ctp:12 Template/Cars/index.ctp:11
+#: Template/Cars/view.ctp:12 Template/Clients/add.ctp:12
+#: Template/Clients/edit.ctp:12 Template/Clients/index.ctp:11
+#: Template/Clients/view.ctp:12 Template/Tags/add.ctp:12
+#: Template/Tags/edit.ctp:12 Template/Tags/index.ctp:12
+#: Template/Tags/view.ctp:12 Template/Users/add.ctp:12
+#: Template/Users/edit.ctp:12 Template/Users/index.ctp:12
+#: Template/Users/view.ctp:12
+msgid "List Bookings"
+msgstr "Список бронирований"
+
+#: Template/Bookings/add.ctp:13 Template/Bookings/edit.ctp:13
+#: Template/Bookings/index.ctp:12 Template/Bookings/view.ctp:13
+#: Template/Cars/add.ctp:13 Template/Cars/edit.ctp:13
+#: Template/Cars/index.ctp:12 Template/Cars/view.ctp:13
+#: Template/Clients/add.ctp:13 Template/Clients/edit.ctp:13
+#: Template/Clients/index.ctp:12 Template/Clients/view.ctp:13
+#: Template/Tags/add.ctp:13 Template/Tags/edit.ctp:13
+#: Template/Tags/index.ctp:13 Template/Tags/view.ctp:13
+#: Template/Users/add.ctp:13 Template/Users/edit.ctp:13
+#: Template/Users/view.ctp:13
+msgid "List Users"
+msgstr "Список пользователей"
+
+#: Template/Bookings/add.ctp:14 Template/Bookings/edit.ctp:14
+#: Template/Bookings/index.ctp:13 Template/Bookings/view.ctp:14
+#: Template/Cars/add.ctp:14 Template/Cars/edit.ctp:14
+#: Template/Cars/index.ctp:13 Template/Cars/view.ctp:14
+#: Template/Clients/add.ctp:14 Template/Clients/edit.ctp:14
+#: Template/Clients/index.ctp:13 Template/Clients/view.ctp:14
+#: Template/Tags/add.ctp:14 Template/Tags/edit.ctp:14 Template/Tags/view.ctp:14
+#: Template/Users/add.ctp:14 Template/Users/edit.ctp:14
+#: Template/Users/index.ctp:13 Template/Users/view.ctp:14
+msgid "List Tags"
+msgstr "Список ярлыков"
+
+#: Template/Bookings/add.ctp:20
+msgid "New booking for"
+msgstr "Новое бронирование для"
+
+#: Template/Bookings/add.ctp:30 Template/Bookings/edit.ctp:40
+#: Template/Cars/add.ctp:28 Template/Cars/edit.ctp:34
+#: Template/Clients/add.ctp:28 Template/Clients/edit.ctp:30
+#: Template/Tags/add.ctp:26 Template/Tags/edit.ctp:29 Template/Users/add.ctp:26
+#: Template/Users/edit.ctp:29
+msgid "Submit"
+msgstr "Отправить"
+
+#: Template/Bookings/edit.ctp:15 Template/Bookings/index.ctp:31
+#: Template/Bookings/view.ctp:15;68 Template/Cars/edit.ctp:15
+#: Template/Cars/index.ctp:29 Template/Cars/view.ctp:15;65
+#: Template/Clients/edit.ctp:15 Template/Clients/index.ctp:14;29
+#: Template/Clients/view.ctp:15;64;97 Template/Tags/edit.ctp:15
+#: Template/Tags/index.ctp:14;26 Template/Tags/view.ctp:15;52
+#: Template/Users/edit.ctp:15 Template/Users/index.ctp:14;26
+#: Template/Users/view.ctp:15;50
+msgid "Actions"
+msgstr "Действия"
+
+#: Template/Bookings/edit.ctp:17 Template/Bookings/view.ctp:17
+msgid "Delete Booking"
+msgstr "Удалить бронирование"
+
+#: Template/Bookings/edit.ctp:19 Template/Bookings/view.ctp:17
+#: Template/Cars/view.ctp:81 Template/Clients/view.ctp:79
+#: Template/Users/view.ctp:66
+msgid "Are you sure you want to delete the booking #{0}?"
+msgstr "Вы действительно хотите удалить бронирование # {0} ?"
+
+#: Template/Bookings/edit.ctp:26
+msgid "Created by:"
+msgstr "Создано:"
+
+#: Template/Bookings/edit.ctp:27 Template/Bookings/view.ctp:28
+#: Template/Cars/view.ctp:57 Template/Tags/view.ctp:44
+#: Template/Users/view.ctp:42
+msgid "Client"
+msgstr "Клиент"
+
+#: Template/Bookings/edit.ctp:28
+msgid "Car:"
+msgstr "Автомобиль:"
+
+#: Template/Bookings/edit.ctp:31 Template/Bookings/view.ctp:16
+msgid "Edit Booking"
+msgstr "Изменить бронирование"
+
+#: Template/Bookings/index.ctp:17
+msgid "Bookings"
+msgstr "Бронирование"
+
+#: Template/Bookings/index.ctp:18
+msgid "Choose a client to add a booking"
+msgstr "Выберите клиента, чтобы добавить бронирование"
+
+#: Template/Bookings/index.ctp:42 Template/Bookings/view.ctp:49
+#: Template/Cars/view.ctp:74 Template/Clients/view.ctp:72
+#: Template/Users/view.ctp:59
+msgid "Yes"
+msgstr "Да"
+
+#: Template/Bookings/index.ctp:42 Template/Bookings/view.ctp:49
+#: Template/Cars/view.ctp:74 Template/Clients/view.ctp:72
+#: Template/Users/view.ctp:59
+msgid "No"
+msgstr "Нет"
+
+#: Template/Bookings/index.ctp:47 Template/Bookings/view.ctp:76
+#: Template/Cars/index.ctp:43 Template/Cars/view.ctp:79
+#: Template/Clients/index.ctp:42 Template/Clients/view.ctp:77;108
+#: Template/Tags/index.ctp:36 Template/Tags/view.ctp:66
+#: Template/Users/index.ctp:36 Template/Users/view.ctp:64
+msgid "View"
+msgstr "Детали"
+
+#: Template/Bookings/index.ctp:48 Template/Bookings/view.ctp:77
+#: Template/Cars/index.ctp:44 Template/Cars/view.ctp:80
+#: Template/Clients/index.ctp:43 Template/Clients/view.ctp:78;109
+#: Template/Tags/index.ctp:37 Template/Tags/view.ctp:67
+#: Template/Users/index.ctp:37 Template/Users/view.ctp:65
+msgid "Edit"
+msgstr "Изменить"
+
+#: Template/Bookings/index.ctp:49 Template/Bookings/view.ctp:78
+#: Template/Cars/index.ctp:45 Template/Cars/view.ctp:81
+#: Template/Clients/index.ctp:44 Template/Clients/view.ctp:79;110
+#: Template/Tags/index.ctp:38 Template/Tags/view.ctp:68
+#: Template/Users/index.ctp:38 Template/Users/view.ctp:66
+msgid "Delete"
+msgstr "Удалить"
+
+#: Template/Bookings/index.ctp:49 Template/Cars/index.ctp:45
+#: Template/Clients/index.ctp:44 Template/Clients/view.ctp:17
+#: Template/Tags/index.ctp:38 Template/Users/index.ctp:38
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Вы действительно хотите удалить # {0} ?"
+
+#: Template/Bookings/index.ctp:57 Template/Cars/index.ctp:53
+#: Template/Clients/index.ctp:52 Template/Tags/index.ctp:46
+#: Template/Users/index.ctp:46
+msgid "first"
+msgstr "первый"
+
+#: Template/Bookings/index.ctp:58 Template/Cars/index.ctp:54
+#: Template/Clients/index.ctp:53 Template/Tags/index.ctp:47
+#: Template/Users/index.ctp:47
+msgid "previous"
+msgstr "предыдущий"
+
+#: Template/Bookings/index.ctp:60 Template/Cars/index.ctp:56
+#: Template/Clients/index.ctp:55 Template/Tags/index.ctp:49
+#: Template/Users/index.ctp:49
+msgid "next"
+msgstr "следующий"
+
+#: Template/Bookings/index.ctp:61 Template/Cars/index.ctp:57
+#: Template/Clients/index.ctp:56 Template/Tags/index.ctp:50
+#: Template/Users/index.ctp:50
+msgid "last"
+msgstr "последний"
+
+#: Template/Bookings/index.ctp:63 Template/Cars/index.ctp:59
+#: Template/Clients/index.ctp:58 Template/Tags/index.ctp:52
+#: Template/Users/index.ctp:52
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr "Страница {{page}} {{pages}}, показывающая {{current}} запись из {{count}} всего"
+
+#: Template/Bookings/view.ctp:24 Template/Cars/view.ctp:56
+#: Template/Tags/view.ctp:43
+msgid "User"
+msgstr "Пользователь"
+
+#: Template/Bookings/view.ctp:32 Template/Cars/view.ctp:58
+#: Template/Clients/view.ctp:57 Template/Tags/view.ctp:45
+#: Template/Users/view.ctp:43
+msgid "Car"
+msgstr "Автомобиль"
+
+#: Template/Bookings/view.ctp:36 Template/Cars/view.ctp:62
+#: Template/Clients/view.ctp:61 Template/Tags/view.ctp:49
+#: Template/Users/view.ctp:47
+msgid "Description"
+msgstr "Описание"
+
+#: Template/Bookings/view.ctp:40 Template/Cars/view.ctp:59
+#: Template/Clients/view.ctp:58 Template/Tags/view.ctp:46
+#: Template/Users/view.ctp:44
+msgid "Current Km"
+msgstr "Текущие Км"
+
+#: Template/Bookings/view.ctp:44 Template/Cars/view.ctp:60
+#: Template/Clients/view.ctp:59 Template/Tags/view.ctp:47
+#: Template/Users/view.ctp:45
+msgid "Date Service"
+msgstr "Дата сервиса"
+
+#: Template/Bookings/view.ctp:48 Template/Cars/view.ctp:61
+#: Template/Clients/view.ctp:60 Template/Tags/view.ctp:48
+#: Template/Users/view.ctp:46
+msgid "Payment Received"
+msgstr "Платеж получен"
+
+#: Template/Bookings/view.ctp:52;66 Template/Cars/view.ctp:43;63
+#: Template/Clients/view.ctp:43;62;95 Template/Tags/view.ctp:30;50
+#: Template/Users/view.ctp:29;48
+msgid "Created"
+msgstr "Создан"
+
+#: Template/Bookings/view.ctp:56;67 Template/Cars/view.ctp:47;64
+#: Template/Clients/view.ctp:47;63;96 Template/Tags/view.ctp:34;51
+#: Template/Users/view.ctp:33;49
+msgid "Modified"
+msgstr "Модификация"
+
+#: Template/Bookings/view.ctp:61
+msgid "Related Tags"
+msgstr "Связанные ярлыки"
+
+#: Template/Bookings/view.ctp:65 Template/Tags/view.ctp:26
+msgid "Title"
+msgstr "Титр"
+
+#: Template/Bookings/view.ctp:78
+msgid "Are you sure you want to delete the tags #{0}?"
+msgstr "Вы действительно хотите удалить ярлыки # {0} ?"
+
+#: Template/Cars/add.ctp:20
+msgid "Add Car"
+msgstr "Добавить автомобиль"
+
+#: Template/Cars/edit.ctp:16 Template/Cars/view.ctp:17
+msgid "Delete Car"
+msgstr "Удалить автомобиль"
+
+#: Template/Cars/edit.ctp:16 Template/Cars/view.ctp:17
+#: Template/Clients/view.ctp:110
+msgid "Are you sure you want to delete the car #{0}?"
+msgstr "Вы действительно хотите удалить автомобиль # {0} ?"
+
+#: Template/Cars/edit.ctp:17 Template/Cars/view.ctp:18
+#: Template/Clients/view.ctp:19
+msgid "New Car"
+msgstr "Новый автомобиль"
+
+#: Template/Cars/edit.ctp:18 Template/Cars/view.ctp:19
+#: Template/Clients/view.ctp:18
+msgid "New Booking"
+msgstr "Новое бронирование"
+
+#: Template/Cars/edit.ctp:26 Template/Cars/view.ctp:16
+msgid "Edit Car"
+msgstr "Редактировать автомобиль"
+
+#: Template/Cars/index.ctp:17
+msgid "Cars"
+msgstr "Автомобили"
+
+#: Template/Cars/index.ctp:18
+msgid "Choose a client to add a car"
+msgstr "Выберите клиента, чтобы добавить автомобиль"
+
+#: Template/Cars/view.ctp:27 Template/Clients/view.ctp:91
+msgid "License"
+msgstr "Лицензия"
+
+#: Template/Cars/view.ctp:31 Template/Clients/view.ctp:92
+msgid "Model"
+msgstr "Модель"
+
+#: Template/Cars/view.ctp:35 Template/Clients/view.ctp:93
+msgid "Color"
+msgstr "Цвет"
+
+#: Template/Cars/view.ctp:39 Template/Clients/view.ctp:94
+msgid "Photo"
+msgstr "Фото"
+
+#: Template/Cars/view.ctp:52 Template/Clients/view.ctp:52
+#: Template/Tags/view.ctp:39 Template/Users/view.ctp:38
+msgid "Related Bookings"
+msgstr "Связанные бронирования"
+
+#: Template/Clients/add.ctp:20
+msgid "Add Client"
+msgstr "Добавить клиента"
+
+#: Template/Clients/edit.ctp:16 Template/Clients/view.ctp:17
+msgid "Delete Client"
+msgstr "Удалить клиента"
+
+#: Template/Clients/edit.ctp:16
+msgid "Are you sure you want to delete the client #{0}?"
+msgstr "Вы действительно хотите удалить клиента # {0} ?"
+
+#: Template/Clients/edit.ctp:22 Template/Clients/view.ctp:16
+msgid "Edit Client"
+msgstr "Изменить клиента"
+
+#: Template/Clients/index.ctp:15
+msgid "New Client"
+msgstr "Новый клиент"
+
+#: Template/Clients/index.ctp:19
+msgid "Clients"
+msgstr "Клиенты"
+
+#: Template/Clients/view.ctp:27
+msgid "Name"
+msgstr "Имя"
+
+#: Template/Clients/view.ctp:31
+msgid "Telephone"
+msgstr "Телефон"
+
+#: Template/Clients/view.ctp:35
+msgid "Address"
+msgstr "Адрес"
+
+#: Template/Clients/view.ctp:39 Template/Users/view.ctp:25
+msgid "Email"
+msgstr "Эл. адрес"
+
+#: Template/Clients/view.ctp:56
+msgid "Created by"
+msgstr "Создано"
+
+#: Template/Clients/view.ctp:87
+msgid "Related Cars"
+msgstr "Связанные автомобили"
+
+#: Template/Layout/default.ctp:54
+msgid "Logout"
+msgstr "Выйти"
+
+#: Template/Layout/default.ctp:58
+msgid "Login"
+msgstr "Авторизоваться"
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr "Ошибка"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "Назад"
+
+#: Template/Tags/add.ctp:20
+msgid "Add Tag"
+msgstr "Добавить ярлык"
+
+#: Template/Tags/edit.ctp:16 Template/Tags/view.ctp:17
+msgid "Delete Tag"
+msgstr "Удалить ярлык"
+
+#: Template/Tags/edit.ctp:16 Template/Tags/view.ctp:17
+msgid "Are you sure you want to delete the tag #{0}?"
+msgstr "Вы действительно хотите удалить ярлык # {0} ?"
+
+#: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:15
+#: Template/Tags/view.ctp:18
+msgid "New Tag"
+msgstr "Новый ярлык"
+
+#: Template/Tags/edit.ctp:23 Template/Tags/view.ctp:16
+msgid "Edit Tag"
+msgstr "Изменить ярлык"
+
+#: Template/Tags/index.ctp:19
+msgid "Tags"
+msgstr "Ярлыки"
+
+#: Template/Tags/view.ctp:68
+msgid "Are you sure you want to delete the booking# {0}?"
+msgstr "Вы действительно хотите удалить бронирование # {0} ?"
+
+#: Template/Users/add.ctp:20
+msgid "Add User"
+msgstr "Добавить пользователя"
+
+#: Template/Users/edit.ctp:16 Template/Users/view.ctp:17
+msgid "Delete User"
+msgstr "Удалить пользователя"
+
+#: Template/Users/edit.ctp:16 Template/Users/view.ctp:17
+msgid "Are you sure you want to delete the user # {0}?"
+msgstr "Вы действительно хотите удалить пользователя # {0} ?"
+
+#: Template/Users/edit.ctp:17 Template/Users/index.ctp:15
+#: Template/Users/view.ctp:18
+msgid "New User"
+msgstr "Новый пользователь"
+
+#: Template/Users/edit.ctp:23 Template/Users/view.ctp:16
+msgid "Edit User"
+msgstr "Редактировать пользователя"
+
+#: Template/Users/index.ctp:19
+msgid "Users"
+msgstr "Пользователи"
+

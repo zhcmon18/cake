@@ -55,24 +55,15 @@
             <tr>
                 <th scope="col"><?= __('Created by') ?></th>
                 <th scope="col"><?= __('Car') ?></th>
-                <th scope="col"><?= __('Current Km') ?></th>
-                <th scope="col"><?= __('Date Service') ?></th>
-                <th scope="col"><?= __('Payment Received') ?></th>
-                <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($client->bookings as $bookings): ?>
             <tr>
                 <td><?= $this->Html->link(($bookings['user']->email), ['controller' => 'Users', 'action'=> 'view', $bookings->user_id]) ?></td>
                 <td><?= $this->Html->link(($bookings['car']->model . ' ' . $bookings['car']->license), ['controller' => 'Cars', 'action' => 'view', $bookings['car']->id] ) ?></td>
-                <td><?= h($bookings->current_km) ?></td>
-                <td><?= h($bookings->date_service) ?></td>
-                <td><?= h($bookings->payment_received ? __('Yes') : __('No')) ?></td>
-                <td><?= h($bookings->description) ?></td>
+
                 <td><?= h($bookings->created) ?></td>
-                <td><?= h($bookings->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>

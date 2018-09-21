@@ -52,16 +52,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 </li>
                 <li>
                     <?php echo $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
-                </li>
                 <?php 
                     } else {
                         echo $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']);
                     }
                 ?>
+                </li>               
+                <li>
+                    <ul>
+                        <?php
+                            if($this->request->session()->read('Config.language') == 'en_US') :    
+                                echo '<li>' . $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) . '</li>';
+                                echo '<li>' . $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) . '</li>';
+                            elseif($this->request->session()->read('Config.language') == 'fr_CA') :
+                                echo '<li>' . $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) . '</li>';
+                                echo '<li>' . $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) . '</li>';
+                            else :
+                                echo '<li>' . $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) . '</li>';
+                                echo '<li>' . $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) . '</li>';
+                            endif;      
+                        ?>   
+                    </ul>
                 </li>
-                <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?></li>
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
     </nav>

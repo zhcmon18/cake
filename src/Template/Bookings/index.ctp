@@ -22,12 +22,7 @@
                 <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('client_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('car_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('current_km') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_service') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('payment_received') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('description') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -37,12 +32,7 @@
                 <td><?= $this->Html->link($booking->user->email, ['controller' => 'Users', 'action' => 'view', $booking->user->id])?></td>
                 <td><?= $this->Html->link($booking->client->name, ['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></td>
                 <td><?= $this->Html->link(($booking->car->model . ' ' . $booking->car->license) , ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></td>
-                <td><?= $this->Number->format($booking->current_km) ?></td>
-                <td><?= h($booking->date_service) ?></td>
-                <td><?= h($booking->payment_received ? __('Yes') : __('No')); ?></td>
-                <td><?= h($booking->description) ?></td>
                 <td><?= h($booking->created) ?></td>
-                <td><?= h($booking->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $booking->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $booking->id]) ?>

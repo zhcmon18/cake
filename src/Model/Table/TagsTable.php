@@ -40,6 +40,7 @@ class TagsTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->addBehavior('Translate', ['fields' => ['title']]);
 
         $this->belongsToMany('Bookings', [
             'foreignKey' => 'tag_id',

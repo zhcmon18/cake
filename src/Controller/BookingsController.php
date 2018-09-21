@@ -114,7 +114,7 @@ class BookingsController extends AppController
             if ($this->Bookings->save($booking)) {
                 $this->Flash->success(__('The booking has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'view', $id]);
             }
             $this->Flash->error(__('The booking could not be saved. Please, try again.'));
         }
