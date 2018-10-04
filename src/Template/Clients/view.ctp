@@ -20,7 +20,6 @@
     </ul>
 </nav>
 <div class="clients view large-9 medium-8 columns content">
-    <h5>#: <?= h($client->id) ?></h5>
     <h5><?= h($client->name) ?></h5>
     <table class="vertical-table">
         <tr>

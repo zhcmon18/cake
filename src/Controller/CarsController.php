@@ -12,7 +12,6 @@ use App\Controller\AppController;
  */
 class CarsController extends AppController
 {
-
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         
@@ -80,7 +79,8 @@ class CarsController extends AppController
             $this->Flash->error(__('The car could not be saved. Please, try again.'));
         }
         $clients = $this->Cars->Clients->find('list', ['limit' => 200]);
-        $this->set(compact('car', 'clients'));
+        $files = $this->Cars->files->find('list', ['limit' => 200]);
+        $this->set(compact('car', 'clients', 'files'));
     }
 
     /**

@@ -18,7 +18,6 @@
     </ul>
 </nav>
 <div class="bookings view large-9 medium-8 columns content">
-    <h5>#: <?= h($booking->id) ?></h5>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('User') ?></th>

@@ -60,7 +60,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 </li>               
                 <li>
                     <ul>
-                        <?php
+                        <?php                     
                             if($this->request->session()->read('Config.language') == 'en_US') :    
                                 echo '<li>' . $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) . '</li>';
                                 echo '<li>' . $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) . '</li>';

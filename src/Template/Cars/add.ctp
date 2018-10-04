@@ -23,6 +23,7 @@
             echo $this->Form->control('model');
             echo $this->Form->control('color');
             echo $this->Form->control('photo');
+            
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

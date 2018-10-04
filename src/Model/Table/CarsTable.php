@@ -49,6 +49,8 @@ class CarsTable extends Table
         $this->hasMany('Bookings', [
             'foreignKey' => 'car_id'
         ]);
+        
+        
     }
 
     /**

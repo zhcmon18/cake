@@ -47,6 +47,7 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
+        
         I18n::setLocale($this->request->session()->read('Config.language'));
 
         $this->loadComponent('RequestHandler', [
@@ -90,5 +91,5 @@ class AppController extends Controller
         I18n::locale($lang);
         $this->request->session()->write('Config.language', $lang);
         return $this->redirect($this->request->referer());
-    }
+    }  
 }
