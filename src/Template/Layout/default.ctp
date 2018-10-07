@@ -37,17 +37,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1><a href=""><?= $this->Html->link(__('Home'), ['controller' => 'Home', 'action' => 'index']) ?></h1>
             </li>
-        </ul>
+        </ul> 
         <div class="top-bar-section">
             <ul class="right">
                 <li>
                     <?php
-                        $loguser = $this->request->session()->read('Auth.User');
+                        $loguser = $this->request->getSession()->read('Auth.User');
                         if ($loguser) {
-                            $user = $loguser['email'];
-                            echo $this->Html->link($user, ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
+                            echo $this->Html->link($loguser['email'].' '.'('. $loguser['role'].')', ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
                     ?>
                 </li>
                 <li>
@@ -61,17 +60,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li>
                     <ul>
                         <?php                     
-                            if($this->request->session()->read('Config.language') == 'en_US') :    
-                                echo '<li>' . $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) . '</li>';
-                                echo '<li>' . $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) . '</li>';
-                            elseif($this->request->session()->read('Config.language') == 'fr_CA') :
-                                echo '<li>' . $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) . '</li>';
-                                echo '<li>' . $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) . '</li>';
-                            else :
-                                echo '<li>' . $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) . '</li>';
-                                echo '<li>' . $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) . '</li>';
-                            endif;      
-                        ?>   
+                            if($this->request->getSession()->read('Config.language') == 'en_US') : ?>  
+                                <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?> </li>
+                                <li><?= $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) ?> </li>      
+                        <?php elseif($this->request->getSession()->read('Config.language') == 'ru') : ?>
+                                <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?> </li>
+                                <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?> </li>
+                        <?php else : ?>
+                                <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?> </li>
+                                <li><?= $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) ?> </li>    
+                        <?php endif; ?>  
+                    </ul>
+                    <ul>
+                        <li> <?= $this->Html->link(__('About'), ['controller' => 'About', 'action' => 'index']) ?></li>
                     </ul>
                 </li>
             </ul>

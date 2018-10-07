@@ -20,7 +20,7 @@ class BookingsController extends AppController
             return true;
         }
         
-        if (in_array($action, ['add', 'tags'])) {
+        if (in_array($action, ['add', 'index'])) {
             return true;
         }
 

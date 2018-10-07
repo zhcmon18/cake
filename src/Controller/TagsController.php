@@ -19,7 +19,7 @@ class TagsController extends AppController
             return true;
         }
         
-        if (in_array($action, ['add', 'edit'])) {
+        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
             return true;
         }
 

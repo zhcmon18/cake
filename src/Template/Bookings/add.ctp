@@ -1,4 +1,5 @@
 <?php
+$loguser = $this->request->getSession()->read('Auth.User')
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Booking $booking
@@ -10,8 +11,13 @@
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        
+        <?php if($loguser['role'] === 'admin') :?> 
+            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <?php endif ?>
+        
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="bookings form large-9 medium-8 columns content">

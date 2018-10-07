@@ -20,14 +20,16 @@ class ClientsController extends AppController
             return true;
         }
         
-        if (in_array($action, ['add', 'edit'])) {
+        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
             return true;
         }
 
+        /*
         $id = $this->request->getParam('pass.0');
         if (!$id) {
             return false;
         }
+        */
     }
     /**
      * Index method
@@ -70,7 +72,7 @@ class ClientsController extends AppController
             if ($this->Clients->save($client)) {
                 $this->Flash->success(__('The client has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'view', $client->id]);
             }
             $this->Flash->error(__('The client could not be saved. Please, try again.'));
         }

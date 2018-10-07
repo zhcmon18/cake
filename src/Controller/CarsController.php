@@ -19,7 +19,7 @@ class CarsController extends AppController
             return true;
         }
         
-        if (in_array($action, ['add', 'edit'])) {
+        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
             return true;
         }
 
@@ -54,7 +54,7 @@ class CarsController extends AppController
     public function view($id = null)
     {
         $car = $this->Cars->get($id, [
-            'contain' => ['Clients', 'Bookings'=> ['Users', 'Clients', 'Cars']]
+            'contain' => ['Clients', 'Bookings'=> ['Users', 'Clients', 'Cars'], 'Files']
         ]);
 
         $this->set('car', $car);
@@ -93,7 +93,7 @@ class CarsController extends AppController
     public function edit($id = null)
     {
         $car = $this->Cars->get($id, [
-            'contain' => ['Clients']
+            'contain' => ['Clients', 'Files']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $car = $this->Cars->patchEntity($car, $this->request->getData());
@@ -105,7 +105,8 @@ class CarsController extends AppController
             $this->Flash->error(__('The car could not be saved. Please, try again.'));
         }
         $clients = $this->Cars->Clients->find('list', ['limit' => 200]);
-        $this->set(compact('car', 'clients'));
+        $files = $this->Cars->Files->find('list', ['limit' => 200]);
+        $this->set(compact('car', 'clients', 'files'));
     }
 
     /**

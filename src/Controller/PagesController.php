@@ -14,6 +14,7 @@
  */
 namespace App\Controller;
 
+use App\Controller\AppController;
 use Cake\Core\Configure;
 use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
@@ -66,4 +67,8 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    /*
+    public function about() {
+    }
+    */
 }

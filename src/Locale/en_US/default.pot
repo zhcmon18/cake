@@ -679,3 +679,14 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
+#: Template/Layout/default.ctp:40
+msgid "Home"
+msgstr ""
+
+#: Template/Layout/default.ctp:75
+msgid "About"
+msgstr ""
+
+#: Template/Home/index.ctp:30
+msgid "List of reserved dates"
+msgstr ""

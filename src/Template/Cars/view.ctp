@@ -1,4 +1,5 @@
 <?php
+$loguser = $this->request->getSession()->read('Auth.User')
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Car $car
@@ -6,21 +7,26 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Navigation') ?></li>
+    <li class="heading"><?= __('Navigation') ?></li>
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>       
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
+        
+        <?php if($loguser['role'] === 'admin') :?> 
+            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <?php endif ?>
+        
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Car'), ['action' => 'edit', $car->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Car'), ['action' => 'delete', $car->id], ['confirm' => __('Are you sure you want to delete the car #{0}?', $car->id)]) ?> </li>
-        <li><?= $this->Html->link(__('New Car'), ['controller' => 'Cars', 'action' => 'add', $car->client_id]) ?> </li>
-        <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add', $car->client_id]) ?> </li>      
+        
+        <?php if($loguser['role'] === 'admin') :?> 
+            <li><?= $this->Form->postLink(__('Delete Car'), ['action' => 'delete', $car->id], ['confirm' => __('Are you sure you want to delete the car #{0}?', $car->id)]) ?> </li>
+        <?php endif ?>   
+    
     </ul>
 </nav>
 <div class="cars view large-9 medium-8 columns content">
-    <h5>#: <?= h($car->id) ?></h5>
     <h5>Client: <?= $this->Html->link($car->client->name, ['controller' => 'Clients', 'action' => 'view', $car->client->id])?></h5>
     <table class="vertical-table">
         <tr>
@@ -36,10 +42,6 @@
             <td><?= h($car->color) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Photo') ?></th>
-            <td><?= h($car->photo) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($car->created) ?></td>
         </tr>
@@ -49,32 +51,39 @@
         </tr>
     </table>
     <div class="related">
+        <h4><?= __('Photos') ?></h4>
+        <?php if (!empty($car->files)): ?>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th scope="col"><?= __('Image') ?></th>
+               </tr>
+                <?php foreach ($car->files as $files): ?>
+                    <tr>
+                        <td>
+                            <?php
+                            echo $this->Html->image($files->path . $files->name, [
+                                "alt" => $files->name,
+                            ]);
+                            ?>
+                        </td>
+                    </tr>
+            <?php endforeach; ?>
+            </table>
+<?php endif; ?>
+    </div>   
+    <div class="related">
         <h4><?= __('Related Bookings') ?></h4>
         <?php if (!empty($car->bookings)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('User') ?></th>
-                <th scope="col"><?= __('Client') ?></th>
-                <th scope="col"><?= __('Car') ?></th>
-                <th scope="col"><?= __('Current Km') ?></th>
                 <th scope="col"><?= __('Date Service') ?></th>
-                <th scope="col"><?= __('Payment Received') ?></th>
-                <th scope="col"><?= __('Description') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($car->bookings as $bookings): ?>
             <tr>
                 <td><?= $this->Html->link(($bookings['user']->email), ['controller' => 'Users', 'action'=> 'view', $bookings->user_id])?></td>
-                <td><?= $this->Html->link(($bookings['client']->name), ['controller' => 'Clients', 'action' => 'view', $bookings->client_id]) ?></td>
-                <td><?= $this->Html->link(($bookings['car']->model . ' ' . $bookings['car']->license), ['controller' => 'Cars', 'action' => 'view', $bookings->car_id]) ?></td>
-                <td><?= h($bookings->current_km) ?></td>
                 <td><?= h($bookings->date_service) ?></td>
-                <td><?= h($bookings->payment_received ? __('Yes') : __('No'))  ?></td>
-                <td><?= h($bookings->description) ?></td>
-                <td><?= h($bookings->created) ?></td>
-                <td><?= h($bookings->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>

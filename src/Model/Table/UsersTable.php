@@ -69,6 +69,24 @@ class UsersTable extends Table
             ->requirePresence('password', 'create')
             ->notEmpty('password');
 
+            $validator
+            ->scalar('phone')
+            ->requirePresence('phone', 'create')
+            ->notEmpty('phone')
+            ->add('phone', [
+                'custom' => [
+                    'rule' => function ($value, $context) {
+                        $pattern = '/^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/';
+                        if (preg_match($pattern, $value)) {
+                            return true;
+                        } else {
+                            $message = _('The phone must follow the format 999-999-9999');
+                            return $message;
+                        }
+                    }
+                ]
+    ]);
+
         return $validator;
     }
 

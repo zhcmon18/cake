@@ -1,4 +1,5 @@
 <?php
+$loguser = $this->request->session()->read('Auth.User')
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Tag[]|\Cake\Collection\CollectionInterface $tags
@@ -9,8 +10,13 @@
         <li class="heading"><?= __('Navigation') ?></li>
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>  
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li> 
+         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>         
+         
+         <?php if($loguser['role'] === 'admin') : ?>
+            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+         <?php endif?>
+
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>  
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Tag'), ['action' => 'add']) ?></li>
     </ul>
@@ -22,7 +28,6 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -31,11 +36,14 @@
             <tr>
                 <td><?= h($tag->title) ?></td>
                 <td><?= h($tag->created) ?></td>
-                <td><?= h($tag->modified) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $tag->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?>
+                    
+                    <?php if($loguser['role'] === 'admin') : ?>
+                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?> 
+                    <?php endif?>
+                
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -47,8 +47,16 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
-        
-        I18n::setLocale($this->request->session()->read('Config.language'));
+
+        //$this->request->getSession()->destroy();
+
+        $language = $this->request->getSession()->read('Config.language');
+
+        if($language === null) {
+            I18n::setLocale('fr_CA');
+        } else {
+            I18n::setLocale($language);
+        }
 
         $this->loadComponent('RequestHandler', [
             'enableBeforeRedirect' => false,
@@ -83,11 +91,11 @@ class AppController extends Controller
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['view', 'index', 'changeLang']);
+        $this->Auth->allow(['changeLang']);
         
     }
     
-    public function changeLang($lang = 'en_US') {
+    public function changeLang($lang = 'fr_CA') {
         I18n::locale($lang);
         $this->request->session()->write('Config.language', $lang);
         return $this->redirect($this->request->referer());

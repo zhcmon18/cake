@@ -35,10 +35,10 @@ class Car extends Entity
         'license' => true,
         'model' => true,
         'color' => true,
-        'photo' => true,
         'created' => true,
         'modified' => true,
         'client' => true,
-        'bookings' => true
+        'bookings' => true,
+        'files' => true
     ];
 }

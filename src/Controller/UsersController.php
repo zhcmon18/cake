@@ -1,7 +1,11 @@
 <?php
 namespace App\Controller;
 
+use Cake\Core\Exception\Exception;
 use App\Controller\AppController;
+use Cake\Routing\Router;
+use Cake\Mailer\Email;
+use Cake\Utility\Text;
 
 /**
  * Users Controller
@@ -14,7 +18,7 @@ class UsersController extends AppController
 {
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['logout']);
+        $this->Auth->allow(['logout', 'login', 'activate']);
     }
     
     public function isAuthorized($user) {
@@ -22,6 +26,14 @@ class UsersController extends AppController
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
+
+        $id = $this->request->getParam('pass.0');
+        if (!$id) {
+            return false;
+        }
+
+        return $user['id'] == $id;
+        
     }
     
     public function login() {
@@ -37,7 +49,8 @@ class UsersController extends AppController
 
     public function logout() {
         $this->Flash->success('You are now logged out.');
-        return $this->redirect($this->Auth->logout());
+        $this->Auth->logout();
+        return $this->redirect(['controller' => 'Home', 'action' => 'index']);
     }
 
     /**
@@ -78,9 +91,16 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
-            if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
+            
+            $user->activation_key = $activation_key = Text::uuid();
 
+            if ($this->Users->save($user)) {
+                
+                if($this->sendEmail($user)) {
+                    $this->Flash->success(__('The user has been saved and an activation email has been sent.'));
+                } else {
+                    $this->Flash->error(__("The user has been saved, but the activation email could not be sent."));
+                }
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -130,5 +150,40 @@ class UsersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function activate($activation_key = null) {
+        $query = $this->Users->find('all', ['conditions' => ['Users.activation_key' => $activation_key, 'Users.status' => 0]]);
+        $data = $query->toArray();
+        $user = null;
+
+        if(!empty($data)){
+            $user = $this->Users->get($data[0]['id'], [
+                'contain' => []
+            ]);
+            $user->status = 1;
+            
+            if($this->Users->save($user)) {
+                $this->Flash->success(__('The account ' . $user->email  . ' has been activated.'));
+            }
+
+        }else{
+            $this->Flash->error(__("The account could not be found or it's activated already."));
+        }
+    }
+
+    public function sendEmail($user) {
+        $success = true;
+        $confirmation_link = "http://" . $_SERVER['HTTP_HOST'] . $this->request->webroot . "users/activate/" . $user->activation_key;
+
+        try {
+            $email = new Email('default');
+            $email->to($user->email);
+            $email->subject(__('Activate your account'));
+            $email->send(__('Activation link:') . ' ' . $confirmation_link);
+        } catch (Exception $ex) {
+            $success = false;
+        }
+        return $success;
     }
 }

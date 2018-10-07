@@ -8,8 +8,6 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New File'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Car Files'), ['controller' => 'CarFiles', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Car File'), ['controller' => 'CarFiles', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="files index large-9 medium-8 columns content">

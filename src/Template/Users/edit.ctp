@@ -12,6 +12,7 @@
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>       
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete the user # {0}?', $user->id)]) ?> </li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
@@ -23,6 +24,9 @@
         <legend><?= __('Edit User') ?></legend>
         <?php
             echo $this->Form->control('email');
+            echo $this->Form->control('phone');
+            $options = array('supervisor' => 'Supervisor', 'admin' => 'Admin');
+            echo $this->Form->select('role', $options, ['value' => $user->role]);
             echo $this->Form->control('password');
         ?>
     </fieldset>

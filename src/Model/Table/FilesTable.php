@@ -44,6 +44,12 @@ class FilesTable extends Table
         $this->hasMany('CarFiles', [
             'foreignKey' => 'file_id'
         ]);
+
+        $this->belongsToMany('Cars', [
+            'foreignKey' => 'file_id',
+            'targetForeignKey' => 'car_id',
+            'joinTable' => 'cars_files'
+        ]);
     }
 
     /**
@@ -54,21 +60,19 @@ class FilesTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
 
+        /*
         $validator
-            ->scalar('name')
             ->maxLength('name', 255)
             ->requirePresence('name', 'create')
             ->notEmpty('name');
-
+              
         $validator
             ->scalar('path')
             ->maxLength('path', 255)
             ->requirePresence('path', 'create')
             ->notEmpty('path');
+        */
 
         $validator
             ->boolean('status')

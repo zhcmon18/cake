@@ -536,3 +536,14 @@ msgstr "Modifier l'utilisateur"
 msgid "Users"
 msgstr "Utilisateurs"
 
+#: Template/Layout/default.ctp:40
+msgid "Home"
+msgstr "Accueil"
+
+#: Template/Layout/default.ctp:75
+msgid "About"
+msgstr "À propos"
+
+#: Template/Home/index.ctp:30
+msgid "List of reserved dates"
+msgstr "Liste des dates réservées"

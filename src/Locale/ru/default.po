@@ -537,3 +537,15 @@ msgstr "Редактировать пользователя"
 msgid "Users"
 msgstr "Пользователи"
 
+#: Template/Layout/default.ctp:40
+msgid "Home"
+msgstr "На главную"
+
+#: Template/Layout/default.ctp:75
+msgid "About"
+msgstr "О сайте"
+
+#: Template/Home/index.ctp:30
+msgid "List of reserved dates"
+msgstr "Список зарезервированных дат"
+
