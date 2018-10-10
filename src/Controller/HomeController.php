@@ -13,9 +13,16 @@ class HomeController extends AppController {
 
     public function index() {
         $bookingsTable = TableRegistry::get('bookings');
-        $bookings = $bookingsTable->find('all');
+        
+        $this->paginate = [
+            'order' => [ 
+                'bookings.date_service' => 'desc'
+            ]
+        ];
 
-        $this->set('bookings', $bookings);
+        $bookings = $this->paginate($bookingsTable);
+
+        $this->set(compact('bookings'));
     }
 
 }

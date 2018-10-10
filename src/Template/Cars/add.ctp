@@ -12,9 +12,12 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
         
-        <?php if($loguser['role'] === 'admin') :?> 
-            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <?php endif ?>
+        <?php 
+            if($loguser['role'] === 'admin') :?> 
+                <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <?php 
+            endif 
+        ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
@@ -28,9 +31,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
             echo $this->Form->control('license');
             echo $this->Form->control('model');
             echo $this->Form->control('color');
-            echo $this->Form->control('files._ids', ['options' => $files, 'label' => __('Photos')]);
-            //echo $this->Form->control('photo');
-            
+            echo $this->Form->control('files._ids', ['options' => $files, 'label' => __('Photos')]);  
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

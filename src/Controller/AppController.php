@@ -91,7 +91,7 @@ class AppController extends Controller
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['changeLang']);
+        $this->Auth->allow(['changeLang', 'login', 'activate']);
         
     }
     

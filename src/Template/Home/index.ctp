@@ -29,10 +29,17 @@ if ($loguser != null) : ?>
 <div class="bookings view large-9 medium-8 columns content">
     <h3><?= __('List of reserved dates') ?></h3>
     <table class="vertical-table">
-        <?php foreach($bookings as $booking) :?>
-        <tr>
-            <th scope="row"><?= $booking->date_service->i18nFormat('yyyy-MM-dd HH:mm') ?></th>
-        </tr>
-        <?php endforeach ?>
+        <thead>
+            <tr>
+                <th scope="col"><?= $this->Paginator->sort('date_service') ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($bookings as $booking) :?>
+            <tr>
+                <th scope="row"><?= $booking->date_service->i18nFormat('yyyy-MM-dd HH:mm') ?></th>
+            </tr>
+            <?php endforeach ?>
+        </tbody>
     </table>
 </div>

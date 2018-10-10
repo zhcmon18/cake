@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Core\Configure;
 
 /**
  * Files Controller
@@ -104,14 +105,17 @@ class FilesController extends AppController
         $file = $this->Files->get($id, [
             'contain' => []
         ]);
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
+           
             $file = $this->Files->patchEntity($file, $this->request->getData());
             if ($this->Files->save($file)) {
-                $this->Flash->success(__('The file has been saved.'));
+
+                $this->Flash->success(__('The photo has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The file could not be saved. Please, try again.'));
+            $this->Flash->error(__('The photo could not be saved. Please, try again.'));
         }
         $this->set(compact('file'));
     }

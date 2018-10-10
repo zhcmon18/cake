@@ -17,8 +17,15 @@ $loguser = $this->request->session()->read('Auth.User')
          <?php endif?>
 
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>  
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Tag'), ['action' => 'add']) ?></li>
+        
+        <?php 
+            if($loguser['status'] == 1) : ?>
+                <li class="heading"><?= __('Actions') ?></li>
+                <li><?= $this->Html->link(__('New Tag'), ['action' => 'add']) ?></li>
+         <?php 
+            endif
+        ?> 
+    
     </ul>
 </nav>
 <div class="tags index large-9 medium-8 columns content">
@@ -38,8 +45,14 @@ $loguser = $this->request->session()->read('Auth.User')
                 <td><?= h($tag->created) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $tag->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?>
                     
+                    <?php 
+                        if($loguser['status'] == 1) : ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $tag->id]) ?>
+                    <?php 
+                        endif
+                    ?>
+
                     <?php if($loguser['role'] === 'admin') : ?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id)]) ?> 
                     <?php endif?>

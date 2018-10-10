@@ -18,16 +18,26 @@ $loguser = $this->request->getSession()->read('Auth.User')
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
-        <li class="heading"><?= __('Actions') ?></li>  
-        <li><?= $this->Html->link(__('Edit Booking'), ['action' => 'edit', $booking->id]) ?> </li>
         
-        <?php if($loguser['role'] === 'admin') :?> 
-            <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $booking->id)]) ?> </li>
-        <? endif?>
+        <?php
+            if(($loguser['status'] == 1 && $loguser['id'] == $booking->user_id)) :?>
+                <li class="heading"><?= __('Actions') ?></li>  
+                <li><?= $this->Html->link(__('Edit Booking'), ['action' => 'edit', $booking->id]) ?> </li>
+        <?php
+            endif
+        ?>
+        
+        <?php 
+            if($loguser['role'] === 'admin') :?> 
+                <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $booking->id)]) ?> </li>
+        <?php 
+            endif
+        ?>
    
     </ul>
 </nav>
 <div class="bookings view large-9 medium-8 columns content">
+    <h3><?= __('Booking') ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('User') ?></th>
@@ -35,11 +45,11 @@ $loguser = $this->request->getSession()->read('Auth.User')
         </tr>
         <tr>
             <th scope="row"><?= __('Client') ?></th>
-            <td><?= $booking->has('client') ? $this->Html->link($booking->client->name, ['controller' => 'Clients', 'action' => 'view', $booking->client->name]) : '' ?></td>
+            <td><?= $booking->has('client') ? $this->Html->link($booking->client->name, ['controller' => 'Clients', 'action' => 'view', $booking->client->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Car') ?></th>
-            <td><?= $booking->has('car') ? $this->Html->link($booking->car->model, ['controller' => 'Cars', 'action' => 'view', $booking->car->model]) : '' ?></td>
+            <td><?= $booking->has('car') ? $this->Html->link($booking->car->model, ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Description') ?></th>

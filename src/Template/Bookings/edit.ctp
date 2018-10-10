@@ -19,10 +19,13 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
           
-        <?php if($loguser['role'] === 'admin') :?> 
-            <li class="heading"><?= __('Actions') ?></li>
-            <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $booking->id)]) ?> </li>
-        <? endif?>
+        <?php 
+            if($loguser['role'] === 'admin') :?> 
+                <li class="heading"><?= __('Actions') ?></li>
+                <li><?= $this->Form->postLink(__('Delete Booking'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $booking->id)]) ?> </li>
+        <? 
+            endif
+        ?>
     
     </ul>
 </nav>
@@ -35,7 +38,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <legend><?= __('Edit Booking') ?></legend>
         <?php
             echo $this->Form->control('current_km');
-            echo $this->Form->date('date_service');
+            echo $this->Form->control('date_service');
             echo $this->Form->control('payment_received');
             echo $this->Form->control('description');
             echo $this->Form->control('tags._ids', ['options' => $tags]);

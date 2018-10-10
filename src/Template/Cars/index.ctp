@@ -11,9 +11,12 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
         
-        <?php if($loguser['role'] === 'admin') :?> 
-            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <?php endif ?>
+        <?php 
+            if($loguser['role'] === 'admin') :?> 
+                <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <?php 
+            endif 
+        ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>          
@@ -39,12 +42,19 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <td><?= h($car->model) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $car->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $car->id]) ?>
                     
-                    <?php if($loguser['role'] === 'admin') :?> 
+                    <?php if($loguser['status'] == 1) : ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $car->id]) ?>
+                    <?php
+                       endif
+                    ?>
+
+                    <?php 
+                        if($loguser['role'] === 'admin') :?> 
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $car->id], ['confirm' => __('Are you sure you want to delete # {0}?', $car->id)]) ?>
-                    <?php endif ?>
-                
+                    <?php 
+                        endif 
+                    ?>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -1,4 +1,5 @@
 <?php
+ $loguser = $this->request->getSession()->read('Auth.User');
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -42,21 +43,23 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul> 
         <div class="top-bar-section">
             <ul class="right">
+            <?php if ($loguser) : ?>
+                <?php if($loguser['status'] == 0) :?>
+                    <li style="padding: 10px 5px 0 0;">
+                        <?= __('Inactif') ?>
+                    </li>
+                <?php endif ?>    
                 <li>
-                    <?php
-                        $loguser = $this->request->getSession()->read('Auth.User');
-                        if ($loguser) {
-                            echo $this->Html->link($loguser['email'].' '.'('. $loguser['role'].')', ['controller' => 'Users', 'action' => 'view', $loguser['id']]);
-                    ?>
+                    <?= $this->Html->link($loguser['email'].' '.'('. $loguser['role'].')', ['controller' => 'Users', 'action' => 'view', $loguser['id']]) ?>
                 </li>
                 <li>
-                    <?php echo $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
-                <?php 
-                    } else {
-                        echo $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']);
-                    }
-                ?>
-                </li>               
+                    <?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
+                </li> 
+                <?php else : ?>
+                <li>
+                    <?= $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']) ?>
+                </li>         
+                <?php endif ?>
                 <li>
                     <ul>
                         <?php                     

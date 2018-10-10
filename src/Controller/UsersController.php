@@ -18,7 +18,7 @@ class UsersController extends AppController
 {
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['logout', 'login', 'activate']);
+        $this->Auth->allow(['logout']);
     }
     
     public function isAuthorized($user) {
@@ -155,7 +155,6 @@ class UsersController extends AppController
     public function activate($activation_key = null) {
         $query = $this->Users->find('all', ['conditions' => ['Users.activation_key' => $activation_key, 'Users.status' => 0]]);
         $data = $query->toArray();
-        $user = null;
 
         if(!empty($data)){
             $user = $this->Users->get($data[0]['id'], [

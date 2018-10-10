@@ -11,14 +11,23 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
         
-        <?php if($loguser['role'] === 'admin') :?> 
-            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <?php endif ?>
+        <?php 
+            if($loguser['role'] === 'admin') :?> 
+                <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <?php 
+            endif 
+        ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Car'), ['action' => 'edit', $car->id]) ?> </li>
+        
+        <?php 
+            if($loguser['status'] == 1) :?>
+                <li class="heading"><?= __('Actions') ?></li>
+                <li><?= $this->Html->link(__('Edit Car'), ['action' => 'edit', $car->id]) ?> </li>
+        <?php 
+            endif
+        ?>
         
         <?php if($loguser['role'] === 'admin') :?> 
             <li><?= $this->Form->postLink(__('Delete Car'), ['action' => 'delete', $car->id], ['confirm' => __('Are you sure you want to delete the car #{0}?', $car->id)]) ?> </li>
@@ -27,8 +36,12 @@ $loguser = $this->request->getSession()->read('Auth.User')
     </ul>
 </nav>
 <div class="cars view large-9 medium-8 columns content">
-    <h5>Client: <?= $this->Html->link($car->client->name, ['controller' => 'Clients', 'action' => 'view', $car->client->id])?></h5>
+    <h3><?= __('Car') ?></h3>
     <table class="vertical-table">
+    <tr>
+        <th scope="row"><?= __('Client') ?></th>
+            <td><?= $this->Html->link($car->client->name, ['controller' => 'Clients', 'action' => 'view', $car->client->id]) ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('License') ?></th>
             <td><?= h($car->license) ?></td>
@@ -54,9 +67,6 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <h4><?= __('Photos') ?></h4>
         <?php if (!empty($car->files)): ?>
             <table cellpadding="0" cellspacing="0">
-                <tr>
-                    <th scope="col"><?= __('Image') ?></th>
-               </tr>
                 <?php foreach ($car->files as $files): ?>
                     <tr>
                         <td>
@@ -69,7 +79,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                     </tr>
             <?php endforeach; ?>
             </table>
-<?php endif; ?>
+        <?php endif ?>
     </div>   
     <div class="related">
         <h4><?= __('Related Bookings') ?></h4>
@@ -86,8 +96,21 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <td><?= h($bookings->date_service) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $bookings->id)]) ?>
+                    
+                    <?php 
+                        if($loguser['status'] == 1 && $loguser['id'] === $bookings->user_id) :?> 
+                            <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
+                    <?php 
+                        endif 
+                    ?>
+
+                    <?php 
+                        if($loguser['role'] === 'admin') :?> 
+                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $bookings->id)]) ?>
+                    <?php 
+                        endif 
+                    ?>
+                
                 </td>
             </tr>
             <?php endforeach; ?>

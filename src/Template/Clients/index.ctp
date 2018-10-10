@@ -11,15 +11,24 @@ $loguser = $this->request->session()->read('Auth.User')
          <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
          <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>         
          
-         <?php if($loguser['role'] === 'admin') : ?>
-            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-         <?php endif?> 
+         <?php 
+            if($loguser['role'] === 'admin') : ?>
+                <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+         <?php 
+            endif
+        ?> 
          
-         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
 
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Client'), ['action' => 'add']) ?></li>
+        <?php
+            if ($loguser['status'] == 1): ?>
+                <li class="heading"><?= __('Actions') ?></li>
+                <li><?= $this->Html->link(__('New Client'), ['action' => 'add']) ?></li>
+        <?php 
+            endif
+        ?>
+
     </ul>
 </nav>
 <div class="clients index large-9 medium-8 columns content">
@@ -30,8 +39,6 @@ $loguser = $this->request->session()->read('Auth.User')
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('telephone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('address') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -41,14 +48,22 @@ $loguser = $this->request->session()->read('Auth.User')
                 <td><?= h($client->name) ?></td>
                 <td><?= h($client->telephone) ?></td>
                 <td><?= h($client->address) ?></td>
-                <td><?= h($client->email) ?></td>
-                <td><?= h($client->created) ?></td>
                  <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $client->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $client->id]) ?>
-                    <?php if($loguser['role'] == 'admin') :?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete # {0}?', $client->id)]) ?>
-                    <?php endif?>
+                    
+                    <?php 
+                        if($loguser['status'] == 1) : ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $client->id]) ?>
+                    <?php 
+                        endif
+                    ?>       
+                    <?php 
+                        if($loguser['role'] == 'admin') : ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete # {0}?', $client->id)]) ?>
+                    <?php 
+                        endif 
+                    ?>
+
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -145,6 +145,27 @@ select[multiple] {
     min-height:150px;
     background: none;
 }
+
+select[name='date_service[month]'] {
+	min-width: 100px;
+}
+
+select[name='date_service[year]'] {
+	min-width: 65px;
+}
+
+select[name='date_service[day]'] {
+	min-width: 50px;
+}
+
+select[name='date_service[hour]'] {
+	min-width: 50px;
+}
+
+select[name='date_service[minute]'] {
+	min-width: 50px;
+}
+
 input[type=checkbox],
 input[type=radio] {
     margin-right: 0.5em;
@@ -154,7 +175,7 @@ input[type=radio] {
 .time select,
 .datetime select {
     display: inline;
-    width: auto;
+	width: auto;
     margin-right: 10px;
 }
 

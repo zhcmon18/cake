@@ -39,7 +39,7 @@ class BookingsTable extends Table
         parent::initialize($config);
 
         $this->setTable('bookings');
-        $this->setDisplayField('id');
+        $this->setDisplayField('description');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
@@ -82,7 +82,12 @@ class BookingsTable extends Table
             ->notEmpty('current_km');
 
         $validator
-            ->date('date_service')
+        ->integer('car_id')
+        ->requirePresence('car_id', 'create')
+        ->notEmpty('car_id');
+
+        $validator
+            ->dateTime('date_service')
             ->requirePresence('date_service', 'create')
             ->notEmpty('date_service');
 

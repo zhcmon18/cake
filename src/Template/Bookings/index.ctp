@@ -11,9 +11,12 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
         
-        <?php if($loguser['role'] === 'admin') :?> 
-            <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <?php endif ?>
+        <?php 
+            if($loguser['role'] === 'admin') :?> 
+                <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
+        <?php 
+            endif 
+        ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li> 
@@ -40,11 +43,21 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <td><?= $this->Html->link(($booking->car->model . ' ' . $booking->car->license) , ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></td>
                 <td><?= h($booking->date_service) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $booking->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $booking->id]) ?>
-                    <?php if($loguser['role'] == 'admin') :?>
+                <?= $this->Html->link(__('View'), ['action' => 'view', $booking->id]) ?>
+                
+                <?php 
+                    if($loguser['status'] == 1 && $loguser['id'] == $booking->user_id) : ?>
+                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $booking->id]) ?>
+                <?php 
+                    endif
+                ?>        
+                <?php 
+                    if($loguser['role'] == 'admin') :?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $booking->id], ['confirm' => __('Are you sure you want to delete # {0}?', $booking->id)]) ?>
-                    <?php endif?>
+                <?php 
+                    endif 
+                ?>
+                
                 </td>
             </tr>
             <?php endforeach; ?>

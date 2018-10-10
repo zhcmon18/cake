@@ -20,7 +20,7 @@ class BookingsController extends AppController
             return true;
         }
         
-        if (in_array($action, ['add', 'index'])) {
+        if (in_array($action, ['add', 'index', 'view'])) {
             return true;
         }
 
@@ -46,7 +46,7 @@ class BookingsController extends AppController
             'contain' => ['Users', 'Clients', 'Cars']
         ];
         $bookings = $this->paginate($this->Bookings);
-
+        
         $this->set(compact('bookings'));
     }
 
