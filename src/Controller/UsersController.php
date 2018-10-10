@@ -153,11 +153,10 @@ class UsersController extends AppController
     }
 
     public function activate($activation_key = null) {
-        $query = $this->Users->find('all', ['conditions' => ['Users.activation_key' => $activation_key, 'Users.status' => 0]]);
-        $data = $query->toArray();
+        $query = $this->Users->find('all', ['conditions' => ['Users.activation_key' => $activation_key, 'Users.status' => 0]])->first();
 
-        if(!empty($data)){
-            $user = $this->Users->get($data[0]['id'], [
+        if(!empty($query)){
+            $user = $this->Users->get($query['id'], [
                 'contain' => []
             ]);
             $user->status = 1;

@@ -46,7 +46,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <?= $this->Html->link(__('View'), ['action' => 'view', $booking->id]) ?>
                 
                 <?php 
-                    if($loguser['status'] == 1 && $loguser['id'] == $booking->user_id) : ?>
+                    if(($loguser['status'] == 1 && $loguser['id'] == $booking->user_id) || $loguser['role'] === 'admin') : ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $booking->id]) ?>
                 <?php 
                     endif

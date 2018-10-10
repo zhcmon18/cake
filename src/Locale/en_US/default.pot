@@ -690,3 +690,43 @@ msgstr ""
 #: Template/Home/index.ctp:30
 msgid "List of reserved dates"
 msgstr ""
+
+#: Template/Home/index.ctp:16
+msgid "List Photos"
+msgstr ""
+
+#: Template/Files/index.ctp:27
+msgid "New Photo"
+msgstr ""
+
+#: Template/Files/index.ctp:34
+msgid "Photos"
+msgstr ""
+
+#: Template/Files/index.ctp:39
+msgid "Path"
+msgstr ""
+
+#: Template/Bookings/view.ctp:40
+msgid "Booking"
+msgstr ""
+
+#: Template/Users/view.ctp:25
+msgid "Edit Account"
+msgstr ""
+
+#: Template/Users/view.ctp:45
+msgid "Phone"
+msgstr ""
+
+#: Template/Users/view.ctp:49
+msgid "Role"
+msgstr ""
+
+#: Template/Users/view.ctp:53
+msgid "Actif"
+msgstr ""
+
+#: Template/Users/view.ctp:25
+msgid "Actif"
+msgstr ""

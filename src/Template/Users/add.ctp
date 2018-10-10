@@ -22,7 +22,7 @@
         <?php
             echo $this->Form->control('email');
             echo $this->Form->control('phone');
-            echo $this->Form->control('password');
+            echo $this->Form->control('password', ['title' => 'Password']);
             echo $this->Form->label('Role');
             $options = array('supervisor' => 'Supervisor', 'admin' => 'Admin');
             echo $this->Form->select('role', $options);

@@ -36,7 +36,7 @@ $loguser = $this->request->session()->read('Auth.User')
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('path') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('path', ['title' => __('Path')]) ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>

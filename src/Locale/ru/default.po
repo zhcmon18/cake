@@ -549,3 +549,42 @@ msgstr "О сайте"
 msgid "List of reserved dates"
 msgstr "Список зарезервированных дат"
 
+#: Template/Home/index.ctp:16
+msgid "List Photos"
+msgstr "Список Фото"
+
+#: Template/Files/index.ctp:27
+msgid "New Photo"
+msgstr "Новое Фото"
+
+#: Template/Files/index.ctp:34
+msgid "Photos"
+msgstr "Фото"
+
+#: Template/Files/index.ctp:39
+msgid "Path"
+msgstr "Путь"
+
+#: Template/Bookings/view.ctp:40
+msgid "Booking"
+msgstr "Бронирование"
+
+#: Template/Users/view.ctp:25
+msgid "Edit Account"
+msgstr "Изменить аккаунт"
+
+#: Template/Users/view.ctp:45
+msgid "Phone"
+msgstr "Телефон"
+
+#: Template/Users/view.ctp:49
+msgid "Role"
+msgstr "Роль"
+
+#: Template/Users/view.ctp:53
+msgid "Actif"
+msgstr "Активен"
+
+#: Template/Users/view.ctp:25
+msgid "Password"
+msgstr "Пароль"
