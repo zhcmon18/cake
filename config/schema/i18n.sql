@@ -13,6 +13,6 @@ CREATE TABLE i18n (
     field varchar(255) NOT NULL,
     content text,
     PRIMARY KEY (id),
-    UNIQUE INDEX I18N_LOCALE_FIELD(locale, model, foreign_key, field),
+    UNIQUE INDEX I18N_LOCALE_FIELD(locale, model(100), foreign_key, field(100),
     INDEX I18N_FIELD(model, foreign_key, field)
 );

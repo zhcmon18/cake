@@ -83,7 +83,7 @@ class BookingsController extends AppController
             if ($this->Bookings->save($booking)) {
                 $this->Flash->success(__('The booking has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'Clients', 'action' => 'view', $id]);
             }
             $this->Flash->error(__('The booking could not be saved. Please, try again.'));
         }
@@ -106,6 +106,7 @@ class BookingsController extends AppController
         $booking = $this->Bookings->get($id, [
             'contain' => ['Users', 'Clients', 'Cars', 'Tags']
         ]);
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $booking = $this->Bookings->patchEntity($booking, 
                     $this->request->getData(),

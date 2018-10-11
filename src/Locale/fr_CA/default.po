@@ -579,3 +579,21 @@ msgstr "Rôle"
 #: Template/Users/view.ctp:25
 msgid "Password"
 msgstr "Mot de passe"
+
+msgid "The user has been saved and an activation email has been sent."
+msgstr "L'utilisateur a été sauvegardé et un courriel d'activation a été envoyé."
+
+msgid "The user has been saved, but the activation email could not be sent."
+msgstr "L'utilisateur a été sauvegardé, mais le courriel d'activation ne peut pas être envoyer."
+
+msgid "The account ' . $user->email  . ' has been activated."
+msgstr "Le compte ' . $user-"email . ' a été activé."
+
+msgid "The account could not be found or it's activated already."
+msgstr "Le compte n'existe pas ou il est déjà activé."
+
+msgid "You are now logged out."
+msgstr "Vous êtes déconnecté"
+
+msgid "Your username or password is incorrect."
+msgstr "Le nom d'utilisateur ou le nom de passe ne sont pas corrects."

@@ -57,11 +57,13 @@ class BookingsTable extends Table
             'foreignKey' => 'car_id',
             'joinType' => 'INNER'
         ]);
+        
         $this->belongsToMany('Tags', [
             'foreignKey' => 'booking_id',
             'targetForeignKey' => 'tag_id',
             'joinTable' => 'bookings_tags'
         ]);
+        
     }
 
     /**

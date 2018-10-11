@@ -28,7 +28,7 @@ class TagsController extends AppController
             return false;
         }
     }    
-    
+
     /**
      * Index method
      *

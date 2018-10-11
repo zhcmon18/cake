@@ -588,3 +588,24 @@ msgstr "Активен"
 #: Template/Users/view.ctp:25
 msgid "Password"
 msgstr "Пароль"
+
+msgid "The user has been saved and an activation email has been sent."
+msgstr "Пользователь был сохранен и письмо было отправлено."
+
+msgid "The user has been saved, but the activation email could not be sent."
+msgstr "Пользователь был сохранен, но письмо не может быть отправлено."
+
+msgid "The account ' . $user->email  . ' has been activated."
+msgstr "Аккаунт ' . $user-"email . ' активирован."
+
+msgid "The account could not be found or it's activated already."
+msgstr "Аккаунт не существует или он уже активирован."
+
+msgid "You are now logged out."
+msgstr "Вы закончили сессию."
+
+msgid "Your username or password is incorrect."
+msgstr "Имя пользователя или пароль неверны."
+
+msgid "Inactif"
+msgstr "Неактивен"

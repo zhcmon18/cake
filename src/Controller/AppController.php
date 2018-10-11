@@ -52,7 +52,7 @@ class AppController extends Controller
 
         $language = $this->request->getSession()->read('Config.language');
 
-        if($language === null) {
+        if(!$language) {
             I18n::setLocale('fr_CA');
         } else {
             I18n::setLocale($language);
@@ -95,7 +95,7 @@ class AppController extends Controller
         
     }
     
-    public function changeLang($lang = 'fr_CA') {
+    public function changeLang($lang = 'en_US') {
         I18n::locale($lang);
         $this->request->session()->write('Config.language', $lang);
         return $this->redirect($this->request->referer());

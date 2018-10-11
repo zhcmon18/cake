@@ -6482,3 +6482,49 @@ Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 141
 
 
 
+2018-10-11 16:16:02 Error: [InvalidArgumentException] The Tags association is not defined on Bookings.
+Request URL: /bookings/edit/1
+Referer URL: http://localhost/car_service_center/bookings/edit/1
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(539): Cake\ORM\Table->getAssociation('Tags')
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(365): Cake\ORM\EagerLoader->_normalizeContain(Object(App\Model\Table\BookingsTable), 'Tags', Array, Array)
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(495): Cake\ORM\EagerLoader->normalized(Object(App\Model\Table\BookingsTable))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\EagerLoader.php(466): Cake\ORM\EagerLoader->attachableAssociations(Object(App\Model\Table\BookingsTable))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Query.php(1157): Cake\ORM\EagerLoader->attachAssociations(Object(Cake\ORM\Query), Object(App\Model\Table\BookingsTable), true)
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Query.php(1106): Cake\ORM\Query->_transformQuery()
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(138): Cake\ORM\Query->sql()
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Connection.php(275): Cake\Database\Driver\Mysql->prepare(Object(Cake\ORM\Query))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Connection.php(282): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Connection.php(332): Cake\Database\Connection->prepare(Object(Cake\ORM\Query))
+#11 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(68): Cake\Database\Connection->Cake\Database\{closure}()
+#12 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Connection.php(337): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#13 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Query.php(219): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#14 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Query.php(1127): Cake\Database\Query->execute()
+#15 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(309): Cake\ORM\Query->_execute()
+#16 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Query.php(1074): Cake\ORM\Query->_all()
+#17 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(471): Cake\ORM\Query->all()
+#18 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(482): Cake\ORM\Query->first()
+#19 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php(1613): Cake\ORM\Query->firstOrFail()
+#20 C:\Program Files (x86)\Ampps\www\car_service_center\src\Controller\BookingsController.php(107): Cake\ORM\Table->get(Array, Array)
+#21 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\BookingsController->edit('1')
+#22 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#23 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\BookingsController))
+#24 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(107): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#36 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#37 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#38 C:\Program Files (x86)\Ampps\www\car_service_center\webroot\index.php(40): Cake\Http\Server->run()
+#39 {main}
+
+
