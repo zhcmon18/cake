@@ -28,7 +28,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
             echo $this->Form->control('car_id', ['options' => $cars]);
             echo $this->Form->control('current_km');
             echo $this->Form->control('date_service');
-            echo $this->Form->control('payment_received');
+            echo $this->Form->control('payment_received', ['type' => 'checkbox']);
             echo $this->Form->control('description');
             echo $this->Form->control('tags._ids', ['options' => $tags]);
         ?>

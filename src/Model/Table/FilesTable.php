@@ -58,22 +58,10 @@ class FilesTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-    public function validationDefault(Validator $validator)
+
+     /*
+     public function validationDefault(Validator $validator)
     {
-
-        /*
-        $validator
-            ->maxLength('name', 255)
-            ->requirePresence('name', 'create')
-            ->notEmpty('name');
-              
-        $validator
-            ->scalar('path')
-            ->maxLength('path', 255)
-            ->requirePresence('path', 'create')
-            ->notEmpty('path');
-        */
-
         $validator
             ->boolean('status')
             ->requirePresence('status', 'create')
@@ -81,4 +69,5 @@ class FilesTable extends Table
 
         return $validator;
     }
+    */
 }

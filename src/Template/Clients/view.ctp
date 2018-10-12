@@ -9,7 +9,7 @@ $loguser = $this->request->session()->read('Auth.User')
     <ul class="side-nav">
     <li class="heading"><?= __('Navigation') ?></li>
         <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__("List Cars"), ['controller' => 'Cars', 'action' => 'index_client']) ?> </li>
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>       
         
         <?php 
@@ -68,6 +68,7 @@ $loguser = $this->request->session()->read('Auth.User')
             <td><?= h($client->modified) ?></td>
         </tr>
     </table>
+    <?= $this->Html->link(__("Show Client's cars"), ['controller' => 'Clients', 'action' => 'view_cars', $client->id]) ?>
     <div class="related">
         <h4><?= __('Related Bookings') ?></h4>
         <?php if (!empty($client->bookings)): ?>
@@ -101,43 +102,6 @@ $loguser = $this->request->session()->read('Auth.User')
                         endif 
                     ?> 
                 
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Cars') ?></h4>
-        <?php if (!empty($client->cars)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('License') ?></th>
-                <th scope="col"><?= __('Model') ?></th>
-                <th scope="col"><?= __('Color') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($client->cars as $cars): ?>
-            <tr>
-                <td><?= $this->Html->link($cars->license, ['controller' => 'Cars', 'action' => 'view', $cars-> id]) ?></td>
-                <td><?= h($cars->model) ?></td>
-                <td><?= h($cars->color) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Cars', 'action' => 'view', $cars->id]) ?>
-
-                    <?php 
-                        if($loguser['status'] == 1) : ?>
-                        <?= $this->Html->link(__('Edit'), ['controller' => 'Cars', 'action' => 'edit', $cars->id]) ?>
-                    <?php 
-                        endif
-                    ?>       
-                     <?php 
-                        if($loguser['role'] === 'admin') :?>
-                             <?= $this->Form->postLink(__('Delete'), ['controller' => 'Cars', 'action' => 'delete', $cars->id], ['confirm' => __('Are you sure you want to delete the car #{0}?', $cars->id)]) ?>
-                    <?php 
-                        endif 
-                    ?> 
-
                 </td>
             </tr>
             <?php endforeach; ?>

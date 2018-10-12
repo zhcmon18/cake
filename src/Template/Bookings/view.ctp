@@ -20,7 +20,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
         
         <?php
-            if(($loguser['status'] == 1 && $loguser['id'] == $booking->user_id)) :?>
+            if(($loguser['status'] == 1 && $loguser['id'] == $booking->user_id) || $loguser['role'] === 'admin') :?>
                 <li class="heading"><?= __('Actions') ?></li>  
                 <li><?= $this->Html->link(__('Edit Booking'), ['action' => 'edit', $booking->id]) ?> </li>
         <?php

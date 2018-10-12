@@ -8,7 +8,7 @@ $loguser = $this->request->session()->read('Auth.User')
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Navigation') ?></li>
-        <li><?= $this->Html->link(__('List Clients'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('List Bookings'), ['controller' => 'Bookings', 'action' => 'index']) ?> </li>
         
@@ -29,7 +29,7 @@ $loguser = $this->request->session()->read('Auth.User')
         <legend><?= __('Add Photo') ?></legend>
         <?php
             echo $this->Form->control(__('name'), ['type' => 'file']);
-            echo $this->Form->control('status');
+            echo $this->Form->control('status', ['type' => 'checkbox']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

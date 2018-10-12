@@ -751,3 +751,9 @@ msgstr ""
 
 msgid "Login"
 msgstr ""
+
+msgid "Tag"
+msgstr ""
+
+msgid "Show Client's cars"
+msgstr ""

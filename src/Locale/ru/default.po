@@ -551,11 +551,11 @@ msgstr "Список зарезервированных дат"
 
 #: Template/Home/index.ctp:16
 msgid "List Photos"
-msgstr "Список Фото"
+msgstr "Список фото"
 
 #: Template/Files/index.ctp:27
 msgid "New Photo"
-msgstr "Новое Фото"
+msgstr "Новое фото"
 
 #: Template/Files/index.ctp:34
 msgid "Photos"
@@ -609,3 +609,12 @@ msgstr "Имя пользователя или пароль неверны."
 
 msgid "Inactif"
 msgstr "Неактивен"
+
+msgid "Tag"
+msgstr "Ярлык"
+
+msgid "Show Client's cars"
+msgstr "Показать автомобили клиента"
+
+msgid "Add Photo"
+msgstr "Добавить фото"

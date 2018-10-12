@@ -94,11 +94,6 @@ class BookingsTable extends Table
             ->notEmpty('date_service');
 
         $validator
-            ->boolean('payment_received')
-            ->requirePresence('payment_received', 'create')
-            ->notEmpty('payment_received');
-
-        $validator
             ->scalar('description')
             ->maxLength('description', 255)
             ->requirePresence('description', 'create')

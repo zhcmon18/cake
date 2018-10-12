@@ -20,7 +20,7 @@ class ClientsController extends AppController
             return true;
         }
         
-        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
+        if (in_array($action, ['add', 'edit', 'view', 'index', 'viewCars'])) {
             return true;
         }
 
@@ -54,6 +54,15 @@ class ClientsController extends AppController
     {
         $client = $this->Clients->get($id, [
             'contain' => ['Bookings' => ['Users', 'Cars'], 'Cars']
+        ]);
+
+        $this->set('client', $client);
+    }
+
+    public function viewCars($id = null)
+    {
+        $client = $this->Clients->get($id, [
+            'contain' => ['Cars']
         ]);
 
         $this->set('client', $client);

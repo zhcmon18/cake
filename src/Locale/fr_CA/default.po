@@ -65,19 +65,19 @@ msgstr "Le client n'a pas pu être supprimé. Veuillez réessayer."
 
 #: Controller/TagsController.php:71;96
 msgid "The tag has been saved."
-msgstr "La balise a été enregistrée."
+msgstr "L'étiquette a été enregistrée."
 
 #: Controller/TagsController.php:75;100
 msgid "The tag could not be saved. Please, try again."
-msgstr "La balise n'a pas pu être enregistrée. Veuillez réessayer."
+msgstr "L'étiquette n'a pas pu être enregistrée. Veuillez réessayer."
 
 #: Controller/TagsController.php:118
 msgid "The tag has been deleted."
-msgstr "La balise a été supprimée."
+msgstr "L'étiquette a été supprimée."
 
 #: Controller/TagsController.php:120
 msgid "The tag could not be deleted. Please, try again."
-msgstr "La balise n'a pas pu être supprimée. Veuillez réessayer."
+msgstr "L'étiquette n'a pas pu être supprimée. Veuillez réessayer."
 
 #: Controller/UsersController.php:82;106
 msgid "The user has been saved."
@@ -168,7 +168,7 @@ msgstr "Liste des utilisateurs"
 #: Template/Users/add.ctp:14 Template/Users/edit.ctp:14
 #: Template/Users/index.ctp:13 Template/Users/view.ctp:14
 msgid "List Tags"
-msgstr "Liste de balises"
+msgstr "Liste des étiquettes"
 
 #: Template/Bookings/add.ctp:20
 msgid "New booking for"
@@ -352,7 +352,7 @@ msgstr "Modifié"
 
 #: Template/Bookings/view.ctp:61
 msgid "Related Tags"
-msgstr "Balises associées"
+msgstr "Étiquettes associées"
 
 #: Template/Bookings/view.ctp:65 Template/Tags/view.ctp:26
 msgid "Title"
@@ -360,7 +360,7 @@ msgstr "Titre"
 
 #: Template/Bookings/view.ctp:78
 msgid "Are you sure you want to delete the tags #{0}?"
-msgstr "Êtes-vous sûr de vouloir supprimer les balises # {0} ?"
+msgstr "Êtes-vous sûr de vouloir supprimer les étiquettes # {0} ?"
 
 #: Template/Cars/add.ctp:20
 msgid "Add Car"
@@ -484,28 +484,28 @@ msgstr "Arrière"
 
 #: Template/Tags/add.ctp:20
 msgid "Add Tag"
-msgstr "Ajouter une balise"
+msgstr "Ajouter une étiquette"
 
 #: Template/Tags/edit.ctp:16 Template/Tags/view.ctp:17
 msgid "Delete Tag"
-msgstr "Supprimer la balise"
+msgstr "Supprimer l'étiquette"
 
 #: Template/Tags/edit.ctp:16 Template/Tags/view.ctp:17
 msgid "Are you sure you want to delete the tag #{0}?"
-msgstr "Êtes-vous sûr de vouloir supprimer la balise # {0} ?"
+msgstr "Êtes-vous sûr de vouloir supprimer L'étiquette # {0} ?"
 
 #: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:15
 #: Template/Tags/view.ctp:18
 msgid "New Tag"
-msgstr "Nouvelle balise"
+msgstr "Nouvelle étiquette"
 
 #: Template/Tags/edit.ctp:23 Template/Tags/view.ctp:16
 msgid "Edit Tag"
-msgstr "Modifier la balise"
+msgstr "Modifier l'étiquette"
 
 #: Template/Tags/index.ctp:19
 msgid "Tags"
-msgstr "Les balises"
+msgstr "Les étiquettes"
 
 #: Template/Tags/view.ctp:68
 msgid "Are you sure you want to delete the booking# {0}?"
@@ -550,7 +550,7 @@ msgstr "Liste des dates réservées"
 
 #: Template/Home/index.ctp:16
 msgid "List Photos"
-msgstr "Liste Photos"
+msgstr "Liste des photos"
 
 #: Template/Files/index.ctp:27
 msgid "New Photo"
@@ -597,3 +597,12 @@ msgstr "Vous êtes déconnecté"
 
 msgid "Your username or password is incorrect."
 msgstr "Le nom d'utilisateur ou le nom de passe ne sont pas corrects."
+
+msgid "Tag"
+msgstr "L'étiquette"
+
+msgid "Show Client's cars"
+msgstr "Afficher les voitures du Client"
+
+msgid "Add Photo"
+msgstr "Ajouter une photo"

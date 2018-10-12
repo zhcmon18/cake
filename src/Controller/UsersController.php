@@ -160,6 +160,7 @@ class UsersController extends AppController
                 'contain' => []
             ]);
             $user->status = 1;
+            $user->activation_key = '';
             
             if($this->Users->save($user)) {
                 $this->Flash->success(__('The account ' . $user->email  . ' has been activated.'));
