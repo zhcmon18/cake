@@ -618,3 +618,12 @@ msgstr "Показать автомобили клиента"
 
 msgid "Add Photo"
 msgstr "Добавить фото"
+
+msgid "Resend"
+msgstr "Отправить"
+
+msgid "The email has been resent."
+msgstr "Письмо отправлено."
+
+msgid "The account could not be resent."
+msgstr "Письмо не может быть отправлено."

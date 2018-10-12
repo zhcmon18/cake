@@ -40,11 +40,11 @@
                     <?php if($user->role !== 'admin') :?>
                         <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
                     <?php endif ?>
-                
+                    <?php if($user->status == '0') :?>
+                        <?= $this->Form->Html->link(__('Resend'), ['action' => 'resendEmail', $user->id]) ?>
+                    <?php endif ?>
                 </td>
                 
-                
-            
             </tr>
             <?php endforeach; ?>
         </tbody>

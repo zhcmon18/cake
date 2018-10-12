@@ -176,13 +176,34 @@ class UsersController extends AppController
         $confirmation_link = "http://" . $_SERVER['HTTP_HOST'] . $this->request->webroot . "users/activate/" . $user->activation_key;
 
         try {
-            $email = new Email('default');
-            $email->to($user->email);
-            $email->subject(__('Activate your account'));
-            $email->send(__('Activation link:') . ' ' . $confirmation_link);
+            $this->email($user->email, $confirmation_link);
         } catch (Exception $ex) {
             $success = false;
         }
         return $success;
+    }
+
+    public function resendEmail($id = null) {
+        $user = $this->Users->get($id, [
+            'contain' => []
+        ]);
+        
+        $confirmation_link = "http://" . $_SERVER['HTTP_HOST'] . $this->request->webroot . "users/activate/" . $user->activation_key;
+
+        try {
+            $this->email($user->email, $confirmation_link);
+            $this->Flash->success(__('The email has been resent.'));
+
+        } catch (Exception $ex) {
+            $this->Flash->error(__("The account could not be resent."));
+        }
+        return $this->redirect(['action' => 'index']);
+    }
+
+    public function email($emailTo, $confirmation_link) {
+        $email = new Email('default');
+        $email->to($emailTo);
+        $email->subject(__('Activate your account'));
+        $email->send(__('Activation link:') . ' ' . $confirmation_link);
     }
 }

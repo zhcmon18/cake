@@ -606,3 +606,12 @@ msgstr "Afficher les voitures du Client"
 
 msgid "Add Photo"
 msgstr "Ajouter une photo"
+
+msgid "Resend"
+msgstr "Renvoyer"
+
+msgid "The email has been resent."
+msgstr "Le courriel a été renvoyé."
+
+msgid "The account could not be resent."
+msgstr "Le courriel ne peut pas être renvoyé."

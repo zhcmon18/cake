@@ -757,3 +757,12 @@ msgstr ""
 
 msgid "Show Client's cars"
 msgstr ""
+
+msgid "Resend"
+msgstr ""
+
+msgid "The email has been resent."
+msgstr ""
+
+msgid "The account could not be resent."
+msgstr ""
