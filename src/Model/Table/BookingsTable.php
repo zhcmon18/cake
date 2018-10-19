@@ -63,7 +63,6 @@ class BookingsTable extends Table
             'targetForeignKey' => 'tag_id',
             'joinTable' => 'bookings_tags'
         ]);
-        
     }
 
     /**

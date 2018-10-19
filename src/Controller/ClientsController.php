@@ -85,7 +85,18 @@ class ClientsController extends AppController
             }
             $this->Flash->error(__('The client could not be saved. Please, try again.'));
         }
-        $this->set(compact('client'));
+        $this->loadModel('Categories');
+        $categories = $this->Categories->find('list', ['limit' => 200]);
+
+        $categories = $categories->toArray();
+        reset($categories);
+        $category_id = key($categories);
+
+        $subcategories = $this->Clients->Subcategories->find('list', [
+            'conditions' => ['Subcategories.category_id' => $category_id],
+        ]);
+
+        $this->set(compact('client', 'categories', 'subcategories'));
     }
 
     /**

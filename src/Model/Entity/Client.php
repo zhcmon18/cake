@@ -39,6 +39,7 @@ class Client extends Entity
         'created' => true,
         'modified' => true,
         'bookings' => true,
-        'cars' => true
+        'cars' => true,
+        'subcategory_id' => true
     ];
 }

@@ -1,5 +1,12 @@
 <?php
-$loguser = $this->request->session()->read('Auth.User')
+$loguser = $this->request->getSession()->read('Auth.User');
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Subcategories",
+    "action" => "getByCategory",
+    "_ext" => "json"
+]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client $client
@@ -28,6 +35,8 @@ $loguser = $this->request->session()->read('Auth.User')
     <fieldset>
         <legend><?= __('Add Client') ?></legend>
         <?php
+            echo $this->Form->control('category_id', ['options' => $categories, 'label' => __('Abonnement')]);
+            echo $this->Form->control('subcategory_id', ['options' => $subcategories, 'label' => __('Promotion')]);
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

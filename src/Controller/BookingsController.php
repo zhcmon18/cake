@@ -79,7 +79,7 @@ class BookingsController extends AppController
             
             $booking->user_id = $this->Auth->user('id');
             $booking->client_id = $id;
-            
+
             if ($this->Bookings->save($booking)) {
                 $this->Flash->success(__('The booking has been saved.'));
 
@@ -87,7 +87,7 @@ class BookingsController extends AppController
             }
             $this->Flash->error(__('The booking could not be saved. Please, try again.'));
         }
-        
+
         $clients = $this->Bookings->Clients->find('list', ['conditions' => ['Clients.id' => $id]]);
         $cars = $this->Bookings->Cars->find('list', ['conditions' => ['Cars.client_id' => $id]]);
         $tags = $this->Bookings->Tags->find('list', ['limit' => 200]);

@@ -49,6 +49,10 @@ class ClientsTable extends Table
         $this->hasMany('Cars', [
             'foreignKey' => 'client_id'
         ]);
+
+        $this->belongsTo('Subcategories', [
+            'foreignKey' => 'subcategory_id'
+        ]);
     }
 
     /**
