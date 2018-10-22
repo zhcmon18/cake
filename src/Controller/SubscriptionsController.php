@@ -4,13 +4,13 @@ namespace App\Controller;
 use App\Controller\AppController;
 
 /**
- * Categories Controller
+ * Subscriptions Controller
  *
- * @property \App\Model\Table\CategoriesTable $Categories
+ * @property \App\Model\Table\SubscriptionsTable $Subscriptions
  *
  * @method \App\Model\Entity\Category[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class CategoriesController extends AppController
+class SubscriptionsController extends AppController
 {
 
     /**
@@ -20,7 +20,7 @@ class CategoriesController extends AppController
      */
     public function index()
     {
-        $categories = $this->paginate($this->Categories);
+        $categories = $this->paginate($this->Subscriptions);
 
         $this->set(compact('categories'));
     }
@@ -34,7 +34,7 @@ class CategoriesController extends AppController
      */
     public function view($id = null)
     {
-        $category = $this->Categories->get($id, [
+        $category = $this->Subscriptions->get($id, [
             'contain' => ['Subcategories']
         ]);
 
@@ -48,10 +48,10 @@ class CategoriesController extends AppController
      */
     public function add()
     {
-        $category = $this->Categories->newEntity();
+        $category = $this->Subscriptions->newEntity();
         if ($this->request->is('post')) {
-            $category = $this->Categories->patchEntity($category, $this->request->getData());
-            if ($this->Categories->save($category)) {
+            $category = $this->Subscriptions->patchEntity($category, $this->request->getData());
+            if ($this->Subscriptions->save($category)) {
                 $this->Flash->success(__('The category has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
@@ -70,12 +70,12 @@ class CategoriesController extends AppController
      */
     public function edit($id = null)
     {
-        $category = $this->Categories->get($id, [
+        $category = $this->Subscriptions->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $category = $this->Categories->patchEntity($category, $this->request->getData());
-            if ($this->Categories->save($category)) {
+            $category = $this->Subscriptions->patchEntity($category, $this->request->getData());
+            if ($this->Subscriptions->save($category)) {
                 $this->Flash->success(__('The category has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
@@ -95,8 +95,8 @@ class CategoriesController extends AppController
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $category = $this->Categories->get($id);
-        if ($this->Categories->delete($category)) {
+        $category = $this->Subscriptions->get($id);
+        if ($this->Subscriptions->delete($category)) {
             $this->Flash->success(__('The category has been deleted.'));
         } else {
             $this->Flash->error(__('The category could not be deleted. Please, try again.'));

@@ -49,7 +49,7 @@ class AppController extends Controller
         parent::initialize();
 
         //$this->request->getSession()->destroy();
-
+        
         $language = $this->request->getSession()->read('Config.language');
 
         if(!$language) {

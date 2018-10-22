@@ -37,6 +37,8 @@ $loguser = $this->request->session()->read('Auth.User')
     <fieldset>
         <legend><?= __('Edit Client') ?></legend>
         <?php
+            echo $this->Form->control('category_id', ['options' => $categories, 'label' => __('Abonnement')]);
+            echo $this->Form->control('subcategory_id', ['options' => $subcategories, 'label' => __('Promotion')]);
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

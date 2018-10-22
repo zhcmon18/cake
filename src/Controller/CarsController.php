@@ -36,6 +36,9 @@ class CarsController extends AppController
      */
     public function index()
     {
+        debug($this->Cars->newEntity());
+        die();
+
         $this->paginate = [
             'contain' => ['Clients']
         ];
@@ -56,6 +59,8 @@ class CarsController extends AppController
         $car = $this->Cars->get($id, [
             'contain' => ['Clients', 'Bookings'=> ['Users', 'Clients', 'Cars'], 'Files']
         ]);
+
+        $this->Cars->
 
         $this->set('car', $car);
     }
