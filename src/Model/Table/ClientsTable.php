@@ -50,8 +50,8 @@ class ClientsTable extends Table
             'foreignKey' => 'client_id'
         ]);
 
-        $this->belongsTo('Subcategories', [
-            'foreignKey' => 'subcategory_id'
+        $this->belongsTo('Promotions', [
+            'foreignKey' => 'promotion_id'
         ]);
     }
 

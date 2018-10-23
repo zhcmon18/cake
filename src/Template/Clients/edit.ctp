@@ -1,5 +1,13 @@
 <?php
-$loguser = $this->request->session()->read('Auth.User')
+$loguser = $this->request->session()->read('Auth.User');
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Promotions",
+    "action" => "getBySubscription",
+    "_ext" => "json"
+]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Clients/edit', ['block' => 'scriptBottom']);
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client $client
@@ -20,7 +28,7 @@ $loguser = $this->request->session()->read('Auth.User')
         ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
 
         <?php 
             if($loguser['role'] === 'admin') :?>
@@ -37,8 +45,8 @@ $loguser = $this->request->session()->read('Auth.User')
     <fieldset>
         <legend><?= __('Edit Client') ?></legend>
         <?php
-            echo $this->Form->control('category_id', ['options' => $categories, 'label' => __('Abonnement')]);
-            echo $this->Form->control('subcategory_id', ['options' => $subcategories, 'label' => __('Promotion')]);
+            echo $this->Form->control('subscription_id', ['options' => $subscriptions, 'default' => $client['promotion']->subscription_id]);
+            echo $this->Form->control('promotion_id', ['options' => $promotions, 'default' => $client['promotion']->id]);
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

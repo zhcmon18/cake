@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use App\Model\Entity\Subscription;
 
 /**
  * Clients Controller
@@ -53,7 +54,7 @@ class ClientsController extends AppController
     public function view($id = null)
     {
         $client = $this->Clients->get($id, [
-            'contain' => ['Bookings' => ['Users', 'Cars'], 'Cars']
+            'contain' => ['Bookings' => ['Users', 'Cars'], 'Cars', 'Promotions' => ['Subscriptions']]
         ]);
 
         $this->set('client', $client);
@@ -85,18 +86,13 @@ class ClientsController extends AppController
             }
             $this->Flash->error(__('The client could not be saved. Please, try again.'));
         }
-        $this->loadModel('Categories');
-        $categories = $this->Categories->find('list', ['limit' => 200]);
 
-        $categories = $categories->toArray();
-        reset($categories);
-        $category_id = key($categories);
+        $subscriptions = $this->getSubscriptions();
+        $subscription_id = key($subscriptions);
 
-        $subcategories = $this->Clients->Subcategories->find('list', [
-            'conditions' => ['Subcategories.category_id' => $category_id],
-        ]);
+        $promotions = $this->getPromotions($subscription_id);
 
-        $this->set(compact('client', 'categories', 'subcategories'));
+        $this->set(compact('client', 'subscriptions', 'promotions'));
     }
 
     /**
@@ -109,7 +105,7 @@ class ClientsController extends AppController
     public function edit($id = null)
     {
         $client = $this->Clients->get($id, [
-            'contain' => []
+            'contain' => ['Promotions' => ['Subscriptions']]
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $client = $this->Clients->patchEntity($client, $this->request->getData());
@@ -120,7 +116,11 @@ class ClientsController extends AppController
             }
             $this->Flash->error(__('The client could not be saved. Please, try again.'));
         }
-        $this->set(compact('client'));
+
+        $subscriptions = $this->getSubscriptions();
+        $promotions = $this->getPromotions($client->promotion->subscription_id);
+
+        $this->set(compact('client', 'subscriptions', 'promotions'));
     }
 
     /**
@@ -141,5 +141,23 @@ class ClientsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function getSubscriptions() {
+        $this->loadModel('Subscriptions');
+        $subscriptions = $this->Subscriptions->find('list', ['limit' => 200]);
+
+        $subscriptions = $subscriptions->toArray();
+        reset($subscriptions);
+
+        return $subscriptions;
+    }
+
+    public function getPromotions($subscription_id) {
+        $promotions = $this->Clients->Promotions->find('list', [
+            'conditions' => ['Promotions.subscription_id' => $subscription_id],
+        ]);
+
+        return $promotions;
     }
 }

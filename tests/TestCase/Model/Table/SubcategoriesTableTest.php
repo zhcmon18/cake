@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\SubcategoriesTable;
+use App\Model\Table\PromotionsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\SubcategoriesTable Test Case
+ * App\Model\Table\PromotionsTable Test Case
  */
-class SubcategoriesTableTest extends TestCase
+class PromotionsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\SubcategoriesTable
+     * @var \App\Model\Table\PromotionsTable
      */
-    public $Subcategories;
+    public $Promotions;
 
     /**
      * Fixtures
@@ -24,8 +24,8 @@ class SubcategoriesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.subcategories',
-        'app.categories'
+        'app.promotions',
+        'app.subscriptions'
     ];
 
     /**
@@ -36,8 +36,8 @@ class SubcategoriesTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::getTableLocator()->exists('Subcategories') ? [] : ['className' => SubcategoriesTable::class];
-        $this->Subcategories = TableRegistry::getTableLocator()->get('Subcategories', $config);
+        $config = TableRegistry::getTableLocator()->exists('Promotions') ? [] : ['className' => PromotionsTable::class];
+        $this->Promotions = TableRegistry::getTableLocator()->get('Promotions', $config);
     }
 
     /**
@@ -47,7 +47,7 @@ class SubcategoriesTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Subcategories);
+        unset($this->Promotions);
 
         parent::tearDown();
     }

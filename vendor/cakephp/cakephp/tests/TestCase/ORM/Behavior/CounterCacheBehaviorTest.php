@@ -68,7 +68,7 @@ class CounterCacheBehaviorTest extends TestCase
             'connection' => $this->connection
         ]);
 
-        $this->category = $this->getTableLocator()->get('Categories', [
+        $this->category = $this->getTableLocator()->get('Subscriptions', [
             'table' => 'counter_cache_categories',
             'connection' => $this->connection
         ]);
@@ -238,13 +238,13 @@ class CounterCacheBehaviorTest extends TestCase
     public function testUpdate()
     {
         $this->post->belongsTo('Users');
-        $this->post->belongsTo('Categories');
+        $this->post->belongsTo('Subscriptions');
 
         $this->post->addBehavior('CounterCache', [
             'Users' => [
                 'post_count'
             ],
-            'Categories' => [
+            'Subscriptions' => [
                 'post_count'
             ],
         ]);

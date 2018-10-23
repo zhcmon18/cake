@@ -33,7 +33,7 @@ class FixturizedTestCase extends TestCase
      */
     public function testFixtureLoadOnDemand()
     {
-        $this->loadFixtures('Categories');
+        $this->loadFixtures('Subscriptions');
     }
 
     /**
@@ -46,7 +46,7 @@ class FixturizedTestCase extends TestCase
         $this->loadFixtures();
         $article = $this->getTableLocator()->get('Articles')->get(1);
         $this->assertSame(1, $article->id);
-        $category = $this->getTableLocator()->get('Categories')->get(1);
+        $category = $this->getTableLocator()->get('Subscriptions')->get(1);
         $this->assertSame(1, $category->id);
     }
 

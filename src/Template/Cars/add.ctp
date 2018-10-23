@@ -20,7 +20,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="cars form large-9 medium-8 columns content">
@@ -31,7 +31,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
             echo $this->Form->control('license');
             echo $this->Form->control('model');
             echo $this->Form->control('color');
-            echo $this->Form->control('files._ids', ['options' => $files, 'label' => __('Photos')]);  
+            echo $this->Form->control('photos._ids', ['options' => $photos, 'label' => __('Photos')]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

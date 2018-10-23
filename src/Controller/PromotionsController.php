@@ -19,12 +19,11 @@ class PromotionsController extends AppController
 
     public function getBySubscription() {
         $subscription_id = $this->request->query('subscription_id');
-
         $promotions = $this->Promotions->find('all', [
             'conditions' => ['Promotions.subscription_id' => $subscription_id],
         ]);
         $this->set('promotions', $promotions);
-        $this->set('_serialize', ['Promotions']);
+        $this->set('_serialize', ['promotions']);
     }
 
     /**
@@ -35,7 +34,7 @@ class PromotionsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Subscriptions']
+            'contain' => ['subscriptions']
         ];
         $promotions = $this->paginate($this->Promotions);
 
@@ -52,7 +51,7 @@ class PromotionsController extends AppController
     public function view($id = null)
     {
         $promotion = $this->Promotions->get($id, [
-            'contain' => ['Subscriptions']
+            'contain' => ['subscriptions']
         ]);
 
         $this->set('promotion', $promotion);
@@ -75,8 +74,8 @@ class PromotionsController extends AppController
             }
             $this->Flash->error(__('The promotion could not be saved. Please, try again.'));
         }
-        $Subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
-        $this->set(compact('promotion', 'Subscriptions'));
+        $subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
+        $this->set(compact('promotion', 'subscriptions'));
     }
 
     /**
@@ -100,8 +99,8 @@ class PromotionsController extends AppController
             }
             $this->Flash->error(__('The promotion could not be saved. Please, try again.'));
         }
-        $Subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
-        $this->set(compact('promotion', 'Subscriptions'));
+        $subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
+        $this->set(compact('promotion', 'subscriptions'));
     }
 
     /**

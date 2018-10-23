@@ -190,10 +190,10 @@ class AssociationCollectionTest extends TestCase
     {
         $belongsTo = new BelongsTo('');
         $this->associations->add('Users', $belongsTo);
-        $this->associations->add('Categories', $belongsTo);
+        $this->associations->add('Subscriptions', $belongsTo);
         $this->assertEquals(['users', 'categories'], $this->associations->keys());
 
-        $this->associations->remove('Categories');
+        $this->associations->remove('Subscriptions');
         $this->assertEquals(['users'], $this->associations->keys());
     }
 
@@ -340,13 +340,13 @@ class AssociationCollectionTest extends TestCase
             ->getMock();
         $mockTwo = $this->getMockBuilder('Cake\ORM\Association\BelongsTo')
             ->setMethods(['saveAssociated'])
-            ->setConstructorArgs(['Categories', [
+            ->setConstructorArgs(['Subscriptions', [
                 'sourceTable' => $table
             ]])
             ->getMock();
 
         $this->associations->add('Parents', $mockOne);
-        $this->associations->add('Categories', $mockTwo);
+        $this->associations->add('Subscriptions', $mockTwo);
 
         $entity = new Entity();
         $entity->set('parent', ['key' => 'value']);

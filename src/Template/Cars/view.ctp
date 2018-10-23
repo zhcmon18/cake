@@ -20,7 +20,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
         
         <?php 
             if($loguser['status'] == 1) :?>
@@ -66,14 +66,14 @@ $loguser = $this->request->getSession()->read('Auth.User')
     </table>
     <div class="related">
         <h4><?= __('Photos') ?></h4>
-        <?php if (!empty($car->files)): ?>
+        <?php if (!empty($car->photos)): ?>
             <table cellpadding="0" cellspacing="0">
-                <?php foreach ($car->files as $files): ?>
+                <?php foreach ($car->photos as $photos): ?>
                     <tr>
                         <td>
                             <?php
-                            echo $this->Html->image($files->path . $files->name, [
-                                "alt" => $files->name,
+                            echo $this->Html->image($photos->path . $photos->name, [
+                                "alt" => $photos->name,
                             ]);
                             ?>
                         </td>

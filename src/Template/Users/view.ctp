@@ -20,7 +20,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('Edit Account'), ['action' => 'edit', $user->id]) ?> </li>
         

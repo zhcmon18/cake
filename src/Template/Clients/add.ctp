@@ -1,8 +1,8 @@
 <?php
 $loguser = $this->request->getSession()->read('Auth.User');
 $urlToLinkedListFilter = $this->Url->build([
-    "controller" => "Subcategories",
-    "action" => "getByCategory",
+    "controller" => "Promotions",
+    "action" => "getBySubscription",
     "_ext" => "json"
 ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
@@ -27,7 +27,7 @@ echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
         ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="clients form large-9 medium-8 columns content">
@@ -35,8 +35,8 @@ echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
     <fieldset>
         <legend><?= __('Add Client') ?></legend>
         <?php
-            echo $this->Form->control('category_id', ['options' => $categories, 'label' => __('Abonnement')]);
-            echo $this->Form->control('subcategory_id', ['options' => $subcategories, 'label' => __('Promotion')]);
+            echo $this->Form->control('subscription_id', ['options' => $subscriptions]);
+            echo $this->Form->control('promotion_id', ['options' => $promotions]);
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

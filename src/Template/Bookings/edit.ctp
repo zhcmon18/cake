@@ -17,7 +17,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <?php endif ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
           
         <?php 
             if($loguser['role'] === 'admin') :?> 

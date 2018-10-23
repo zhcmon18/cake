@@ -752,8 +752,8 @@ class TableTest extends TestCase
      */
     public function testSelfJoinAssociations()
     {
-        $Categories = $this->getTableLocator()->get('Categories');
-        $options = ['className' => 'Categories'];
+        $Categories = $this->getTableLocator()->get('Subscriptions');
+        $options = ['className' => 'Subscriptions'];
         $Categories->hasMany('Children', ['foreignKey' => 'parent_id'] + $options);
         $Categories->belongsTo('Parent', $options);
 
@@ -791,9 +791,9 @@ class TableTest extends TestCase
 
         $fields = ['id', 'parent_id', 'name'];
         $result = $Categories->find('all')
-            ->select(['Categories.id', 'Categories.parent_id', 'Categories.name'])
+            ->select(['Subscriptions.id', 'Subscriptions.parent_id', 'Subscriptions.name'])
             ->contain(['Children' => ['fields' => $fields], 'Parent' => ['fields' => $fields]])
-            ->where(['Categories.id' => 2])
+            ->where(['Subscriptions.id' => 2])
             ->first()
             ->toArray();
 

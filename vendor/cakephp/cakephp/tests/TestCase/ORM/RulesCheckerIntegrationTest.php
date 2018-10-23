@@ -591,13 +591,13 @@ class RulesCheckerIntegrationTest extends TestCase
         $entity = new Entity([
             'name' => 'A Category',
         ]);
-        $table = $this->getTableLocator()->get('Categories');
-        $table->belongsTo('Categories', [
+        $table = $this->getTableLocator()->get('Subscriptions');
+        $table->belongsTo('Subscriptions', [
             'foreignKey' => 'parent_id',
             'bindingKey' => 'id',
         ]);
         $rules = $table->rulesChecker();
-        $rules->add($rules->existsIn('parent_id', 'Categories'));
+        $rules->add($rules->existsIn('parent_id', 'Subscriptions'));
         $this->assertTrue($table->checkRules($entity, RulesChecker::CREATE));
         $this->assertEmpty($entity->getError('parent_id'));
     }

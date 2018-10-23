@@ -20,7 +20,7 @@ $loguser = $this->request->session()->read('Auth.User')
         ?>
         
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
         
         <?php
             if ($loguser['status'] == 1): ?>
@@ -58,6 +58,14 @@ $loguser = $this->request->session()->read('Auth.User')
         <tr>
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($client->email) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Subscription') ?></th>
+            <td><?= h($client->promotion->subscription->name) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Promotion') ?></th>
+            <td><?= h($client->promotion->name) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>

@@ -553,15 +553,15 @@ msgstr "Список зарезервированных дат"
 msgid "List Photos"
 msgstr "Список фото"
 
-#: Template/Files/index.ctp:27
+#: Template/Photos/index.ctp:27
 msgid "New Photo"
 msgstr "Новое фото"
 
-#: Template/Files/index.ctp:34
+#: Template/Photos/index.ctp:34
 msgid "Photos"
 msgstr "Фото"
 
-#: Template/Files/index.ctp:39
+#: Template/Photos/index.ctp:39
 msgid "Path"
 msgstr "Путь"
 
@@ -596,7 +596,7 @@ msgid "The user has been saved, but the activation email could not be sent."
 msgstr "Пользователь был сохранен, но письмо не может быть отправлено."
 
 msgid "The account ' . $user->email  . ' has been activated."
-msgstr "Аккаунт ' . $user-"email . ' активирован."
+msgstr "Аккаунт ' . $user->email . ' активирован."
 
 msgid "The account could not be found or it's activated already."
 msgstr "Аккаунт не существует или он уже активирован."

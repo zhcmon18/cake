@@ -39,6 +39,6 @@ class Car extends Entity
         'modified' => true,
         'client' => true,
         'bookings' => true,
-        'files' => true
+        'photos' => true
     ];
 }

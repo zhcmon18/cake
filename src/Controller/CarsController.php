@@ -34,10 +34,7 @@ class CarsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
-    {
-        debug($this->Cars->newEntity());
-        die();
+    public function index() {
 
         $this->paginate = [
             'contain' => ['Clients']
@@ -57,10 +54,8 @@ class CarsController extends AppController
     public function view($id = null)
     {
         $car = $this->Cars->get($id, [
-            'contain' => ['Clients', 'Bookings'=> ['Users', 'Clients', 'Cars'], 'Files']
+            'contain' => ['Clients', 'Bookings'=> ['Users', 'Clients', 'Cars'], 'Photos']
         ]);
-
-        $this->Cars->
 
         $this->set('car', $car);
     }
@@ -84,8 +79,8 @@ class CarsController extends AppController
             $this->Flash->error(__('The car could not be saved. Please, try again.'));
         }
         $clients = $this->Cars->Clients->find('list', ['limit' => 200]);
-        $files = $this->Cars->files->find('list', ['limit' => 200]);
-        $this->set(compact('car', 'clients', 'files'));
+        $photos = $this->Cars->Photos->find('list', ['limit' => 200]);
+        $this->set(compact('car', 'clients', 'photos'));
     }
 
     /**
@@ -98,7 +93,7 @@ class CarsController extends AppController
     public function edit($id = null)
     {
         $car = $this->Cars->get($id, [
-            'contain' => ['Clients', 'Files']
+            'contain' => ['Clients', 'Photos']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $car = $this->Cars->patchEntity($car, $this->request->getData());
@@ -110,8 +105,8 @@ class CarsController extends AppController
             $this->Flash->error(__('The car could not be saved. Please, try again.'));
         }
         $clients = $this->Cars->Clients->find('list', ['limit' => 200]);
-        $files = $this->Cars->Files->find('list', ['limit' => 200]);
-        $this->set(compact('car', 'clients', 'files'));
+        $photos = $this->Cars->Photos->find('list', ['limit' => 200]);
+        $this->set(compact('car', 'clients', 'photos'));
     }
 
     /**

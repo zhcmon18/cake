@@ -136,7 +136,7 @@ class Initial extends AbstractMigration
                 'limit' => 11,
                 'null' => false,
             ])
-            ->addColumn('file_id', 'integer', [
+            ->addColumn('photo_id', 'integer', [
                 'default' => null,
                 'limit' => 11,
                 'null' => false,
@@ -148,7 +148,7 @@ class Initial extends AbstractMigration
             )
             ->addIndex(
                 [
-                    'file_id',
+                    'photo_id',
                 ]
             )
             ->create();
@@ -196,7 +196,7 @@ class Initial extends AbstractMigration
             )
             ->create();
 
-        $this->table('files')
+        $this->table('photos')
             ->addColumn('name', 'string', [
                 'default' => null,
                 'limit' => 255,
@@ -409,7 +409,7 @@ class Initial extends AbstractMigration
                 ]
             )
             ->addForeignKey(
-                'file_id',
+                'photo_id',
                 'files',
                 'id',
                 [
@@ -451,7 +451,7 @@ class Initial extends AbstractMigration
                 'car_id'
             )
             ->dropForeignKey(
-                'file_id'
+                'photo_id'
             )->save();
 
         $this->table('bookings')->drop()->save();
@@ -459,7 +459,7 @@ class Initial extends AbstractMigration
         $this->table('cars')->drop()->save();
         $this->table('cars_files')->drop()->save();
         $this->table('clients')->drop()->save();
-        $this->table('files')->drop()->save();
+        $this->table('photos')->drop()->save();
         $this->table('i18n')->drop()->save();
         $this->table('tags')->drop()->save();
         $this->table('users')->drop()->save();

@@ -16,7 +16,7 @@ $loguser = $this->request->session()->read('Auth.User')
             <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
          <?php endif?>
 
-        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Files', 'action' => 'index']) ?></li>  
+        <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
         
         <?php 
             if($loguser['status'] == 1) : ?>

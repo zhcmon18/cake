@@ -8,7 +8,7 @@ use App\Controller\AppController;
  *
  * @property \App\Model\Table\SubscriptionsTable $Subscriptions
  *
- * @method \App\Model\Entity\Category[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @method \App\Model\Entity\subscription[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class SubscriptionsController extends AppController
 {
@@ -20,25 +20,25 @@ class SubscriptionsController extends AppController
      */
     public function index()
     {
-        $categories = $this->paginate($this->Subscriptions);
+        $subscriptions = $this->paginate($this->Subscriptions);
 
-        $this->set(compact('categories'));
+        $this->set(compact('subscriptions'));
     }
 
     /**
      * View method
      *
-     * @param string|null $id Category id.
+     * @param string|null $id subscription id.
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
     {
-        $category = $this->Subscriptions->get($id, [
-            'contain' => ['Subcategories']
+        $subscription = $this->Subscriptions->get($id, [
+            'contain' => ['Promotions']
         ]);
 
-        $this->set('category', $category);
+        $this->set('subscription', $subscription);
     }
 
     /**
@@ -48,58 +48,58 @@ class SubscriptionsController extends AppController
      */
     public function add()
     {
-        $category = $this->Subscriptions->newEntity();
+        $subscription = $this->Subscriptions->newEntity();
         if ($this->request->is('post')) {
-            $category = $this->Subscriptions->patchEntity($category, $this->request->getData());
-            if ($this->Subscriptions->save($category)) {
-                $this->Flash->success(__('The category has been saved.'));
+            $subscription = $this->Subscriptions->patchEntity($subscription, $this->request->getData());
+            if ($this->Subscriptions->save($subscription)) {
+                $this->Flash->success(__('The subscription has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The category could not be saved. Please, try again.'));
+            $this->Flash->error(__('The subscription could not be saved. Please, try again.'));
         }
-        $this->set(compact('category'));
+        $this->set(compact('subscription'));
     }
 
     /**
      * Edit method
      *
-     * @param string|null $id Category id.
+     * @param string|null $id subscription id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
     {
-        $category = $this->Subscriptions->get($id, [
+        $subscription = $this->Subscriptions->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $category = $this->Subscriptions->patchEntity($category, $this->request->getData());
-            if ($this->Subscriptions->save($category)) {
-                $this->Flash->success(__('The category has been saved.'));
+            $subscription = $this->Subscriptions->patchEntity($subscription, $this->request->getData());
+            if ($this->Subscriptions->save($subscription)) {
+                $this->Flash->success(__('The subscription has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The category could not be saved. Please, try again.'));
+            $this->Flash->error(__('The subscription could not be saved. Please, try again.'));
         }
-        $this->set(compact('category'));
+        $this->set(compact('subscription'));
     }
 
     /**
      * Delete method
      *
-     * @param string|null $id Category id.
+     * @param string|null $id subscription id.
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
-        $category = $this->Subscriptions->get($id);
-        if ($this->Subscriptions->delete($category)) {
-            $this->Flash->success(__('The category has been deleted.'));
+        $subscription = $this->Subscriptions->get($id);
+        if ($this->Subscriptions->delete($subscription)) {
+            $this->Flash->success(__('The subscription has been deleted.'));
         } else {
-            $this->Flash->error(__('The category could not be deleted. Please, try again.'));
+            $this->Flash->error(__('The subscription could not be deleted. Please, try again.'));
         }
 
         return $this->redirect(['action' => 'index']);

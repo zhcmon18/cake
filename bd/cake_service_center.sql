@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 11, 2018 at 11:37 PM
+-- Generation Time: Oct 23, 2018 at 08:56 PM
 -- Server version: 5.6.37
--- PHP Version: 5.6.31
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -103,20 +103,20 @@ INSERT INTO `cars` (`id`, `client_id`, `license`, `model`, `color`, `created`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cars_files`
+-- Table structure for table `cars_photos`
 --
 
-CREATE TABLE IF NOT EXISTS `cars_files` (
+CREATE TABLE IF NOT EXISTS `cars_photos` (
   `id` int(11) NOT NULL,
   `car_id` int(11) NOT NULL,
-  `file_id` int(11) NOT NULL
+  `photo_id` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `cars_files`
+-- Dumping data for table `cars_photos`
 --
 
-INSERT INTO `cars_files` (`id`, `car_id`, `file_id`) VALUES
+INSERT INTO `cars_photos` (`id`, `car_id`, `photo_id`) VALUES
 (1, 1, 1),
 (2, 2, 2),
 (3, 5, 3),
@@ -148,32 +148,6 @@ INSERT INTO `clients` (`id`, `name`, `slug`, `telephone`, `address`, `email`, `c
 (1, 'Pavel Zaharciuc', 'Pavel-Zaharciuc', '450-333-3336', '111 Rue Test', 'pavelz@mail.com', '2018-10-11 15:23:32', '2018-10-11 15:25:26'),
 (2, 'Michel Schreyer', 'Michel-Schreyer', '450-222-3434', '1600 Rue Street', 'schreyerm@mail.com', '2018-10-11 15:26:51', '2018-10-11 15:26:51'),
 (3, 'Yousef Bokari', 'Yousef-Bokari', '514-545-2323', '3455 Rue Quelquepart', 'bokariy@mail.com', '2018-10-11 15:37:34', '2018-10-11 15:37:34');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `files`
---
-
-CREATE TABLE IF NOT EXISTS `files` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `path` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `created` datetime NOT NULL,
-  `modified` datetime NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `files`
---
-
-INSERT INTO `files` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
-(1, 'bmwE38.jpg', 'Files/', '2018-10-11 22:45:53', '2018-10-11 22:45:53', 1),
-(2, 'nissanPath.jpg', 'Files/', '2018-10-11 22:48:41', '2018-10-11 22:48:41', 1),
-(3, 'corolla2017.jpg', 'Files/', '2018-10-11 22:54:31', '2018-10-11 22:54:31', 1),
-(4, 'GT2017.jpg', 'Files/', '2018-10-11 22:54:47', '2018-10-11 22:54:47', 1),
-(5, 'Gti2017.jpg', 'Files/', '2018-10-11 22:55:01', '2018-10-11 22:55:01', 1);
 
 -- --------------------------------------------------------
 
@@ -228,6 +202,62 @@ CREATE TABLE IF NOT EXISTS `phinxlog` (
   `end_time` timestamp NULL DEFAULT NULL,
   `breakpoint` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `phinxlog`
+--
+
+INSERT INTO `phinxlog` (`version`, `migration_name`, `start_time`, `end_time`, `breakpoint`) VALUES
+(20181011234245, 'Initial', '2018-10-12 03:42:46', '2018-10-12 03:42:46', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `photos`
+--
+
+CREATE TABLE IF NOT EXISTS `photos` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `path` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 = Active, 0 = Inactive'
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`id`, `name`, `path`, `created`, `modified`, `status`) VALUES
+(1, 'bmwE38.jpg', 'Files/', '2018-10-11 22:45:53', '2018-10-11 22:45:53', 1),
+(2, 'nissanPath.jpg', 'Files/', '2018-10-11 22:48:41', '2018-10-11 22:48:41', 1),
+(3, 'corolla2017.jpg', 'Files/', '2018-10-11 22:54:31', '2018-10-11 22:54:31', 1),
+(4, 'GT2017.jpg', 'Files/', '2018-10-11 22:54:47', '2018-10-11 22:54:47', 1),
+(5, 'Gti2017.jpg', 'Files/', '2018-10-11 22:55:01', '2018-10-11 22:55:01', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `promotions`
+--
+
+CREATE TABLE IF NOT EXISTS `promotions` (
+  `id` int(11) NOT NULL,
+  `subscription_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscriptions`
+--
+
+CREATE TABLE IF NOT EXISTS `subscriptions` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -308,11 +338,11 @@ ALTER TABLE `cars`
   ADD KEY `client_id` (`client_id`);
 
 --
--- Indexes for table `cars_files`
+-- Indexes for table `cars_photos`
 --
-ALTER TABLE `cars_files`
+ALTER TABLE `cars_photos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `file_id` (`file_id`),
+  ADD KEY `file_id` (`photo_id`),
   ADD KEY `car_id` (`car_id`);
 
 --
@@ -321,12 +351,6 @@ ALTER TABLE `cars_files`
 ALTER TABLE `clients`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id` (`id`);
-
---
--- Indexes for table `files`
---
-ALTER TABLE `files`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `i18n`
@@ -341,6 +365,24 @@ ALTER TABLE `i18n`
 --
 ALTER TABLE `phinxlog`
   ADD PRIMARY KEY (`version`);
+
+--
+-- Indexes for table `photos`
+--
+ALTER TABLE `photos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `promotions`
+--
+ALTER TABLE `promotions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tags`
@@ -370,9 +412,9 @@ ALTER TABLE `bookings`
 ALTER TABLE `cars`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `cars_files`
+-- AUTO_INCREMENT for table `cars_photos`
 --
-ALTER TABLE `cars_files`
+ALTER TABLE `cars_photos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `clients`
@@ -380,15 +422,25 @@ ALTER TABLE `cars_files`
 ALTER TABLE `clients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `files`
---
-ALTER TABLE `files`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
 -- AUTO_INCREMENT for table `i18n`
 --
 ALTER TABLE `i18n`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+--
+-- AUTO_INCREMENT for table `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `promotions`
+--
+ALTER TABLE `promotions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tags`
 --
@@ -425,11 +477,11 @@ ALTER TABLE `cars`
   ADD CONSTRAINT `cars_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `cars_files`
+-- Constraints for table `cars_photos`
 --
-ALTER TABLE `cars_files`
-  ADD CONSTRAINT `cars_files_ibfk_1` FOREIGN KEY (`car_id`) REFERENCES `cars` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `cars_files_ibfk_2` FOREIGN KEY (`file_id`) REFERENCES `files` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `cars_photos`
+  ADD CONSTRAINT `cars_photos_ibfk_1` FOREIGN KEY (`car_id`) REFERENCES `cars` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `cars_photos_ibfk_2` FOREIGN KEY (`photo_id`) REFERENCES `photos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
