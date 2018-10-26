@@ -1,5 +1,12 @@
 <?php
-$loguser = $this->request->session()->read('Auth.User')
+$loguser = $this->request->session()->read('Auth.User');
+$urlToCarsAutocompletedemoJson = $this->Url->build([
+    "controller" => "Clients",
+    "action" => "findClients",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToCarsAutocompletedemoJson . '";', ['block' => true]);
+echo $this->Html->script('Clients/search', ['block' => 'scriptBottom']);
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client[]|\Cake\Collection\CollectionInterface $clients
@@ -32,6 +39,16 @@ $loguser = $this->request->session()->read('Auth.User')
     </ul>
 </nav>
 <div class="clients index large-9 medium-8 columns content">
+    <?= $this->Form->create('Clients') ?>
+    <fieldset>
+        <legend><?= __('Search Client') ?></legend>
+            <?php
+                echo $this->Form->input('name', ['id' => 'autocomplete']);
+                echo $this->Form->button(__('View'), ['controller' => 'Tags', 'action' => 'index']);
+            ?>
+    </fieldset>
+
+    <?= $this->Form->end() ?>
     <h3><?= __('Clients') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -48,7 +65,7 @@ $loguser = $this->request->session()->read('Auth.User')
                 <td><?= h($client->name) ?></td>
                 <td><?= h($client->telephone) ?></td>
                 <td><?= h($client->address) ?></td>
-                 <td class="actions">
+                    <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $client->id]) ?>
                     
                     <?php 

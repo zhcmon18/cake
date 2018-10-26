@@ -32,6 +32,25 @@ class ClientsController extends AppController
         }
         */
     }
+
+    public function findClients() {
+
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Clients->find('all', array(
+                'conditions' => array('Clients.name LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['name'], 'value' => $result['name']);
+            }
+            echo json_encode($resultArr);
+        }
+    }
+
     /**
      * Index method
      *
@@ -88,7 +107,7 @@ class ClientsController extends AppController
         }
 
         $subscriptions = $this->getSubscriptions();
-        $subscription_id = key($subscriptions);
+        $subscription_id = $this->getIdSubscription($subscriptions);
 
         $promotions = $this->getPromotions($subscription_id);
 
@@ -118,8 +137,14 @@ class ClientsController extends AppController
         }
 
         $subscriptions = $this->getSubscriptions();
-        $promotions = $this->getPromotions($client->promotion->subscription_id);
-
+        
+        if(isset($client->promotion->subscription_id)) {
+            $promotions = $this->getPromotions($client->promotion->subscription_id);
+        } else {
+            $subscription_id = $this->getIdSubscription($subscriptions);
+            $promotions = $this->getPromotions($subscription_id);
+        }
+        
         $this->set(compact('client', 'subscriptions', 'promotions'));
     }
 
@@ -159,5 +184,9 @@ class ClientsController extends AppController
         ]);
 
         return $promotions;
+    }
+
+    public function getIdSubscription($subscriptions) {
+        return $subscription_id = key($subscriptions);
     }
 }

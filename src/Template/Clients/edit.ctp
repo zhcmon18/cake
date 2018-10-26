@@ -6,7 +6,7 @@ $urlToLinkedListFilter = $this->Url->build([
     "_ext" => "json"
 ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
-echo $this->Html->script('Clients/edit', ['block' => 'scriptBottom']);
+echo $this->Html->script('Clients/add-edit', ['block' => 'scriptBottom']);
 
 /**
  * @var \App\View\AppView $this
@@ -45,8 +45,13 @@ echo $this->Html->script('Clients/edit', ['block' => 'scriptBottom']);
     <fieldset>
         <legend><?= __('Edit Client') ?></legend>
         <?php
-            echo $this->Form->control('subscription_id', ['options' => $subscriptions, 'default' => $client['promotion']->subscription_id]);
-            echo $this->Form->control('promotion_id', ['options' => $promotions, 'default' => $client['promotion']->id]);
+            if(isset($client['promotion']->subscription_id)) {
+                echo $this->Form->control('subscription_id', ['options' => $subscriptions, 'default' => $client['promotion']->subscription_id]);
+                echo $this->Form->control('promotion_id', ['options' => $promotions, 'default' => $client['promotion']->id]);
+            } else {
+                echo $this->Form->control('subscription_id', ['options' => $subscriptions]);
+                echo $this->Form->control('promotion_id', ['options' => $promotions]);
+            }
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

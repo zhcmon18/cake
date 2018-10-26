@@ -6,7 +6,7 @@ $urlToLinkedListFilter = $this->Url->build([
     "_ext" => "json"
 ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
-echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
+echo $this->Html->script('Clients/add-edit', ['block' => 'scriptBottom']);
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client $client
