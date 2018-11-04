@@ -31,6 +31,8 @@ class ClientsController extends AppController
             return false;
         }
         */
+
+
     }
 
     public function findClients() {
@@ -45,8 +47,9 @@ class ClientsController extends AppController
 
             $resultArr = array();
             foreach ($results as $result) {
-                $resultArr[] = array('label' => $result['name'], 'value' => $result['name']);
+                $resultArr[] = array('label' => [$result['name'] . ' ('  . $result['telephone'] . ')'], 'value' => $result['name']);
             }
+
             echo json_encode($resultArr);
         }
     }
@@ -72,6 +75,11 @@ class ClientsController extends AppController
      */
     public function view($id = null)
     {
+        /*
+        if($id == null) {
+            $postData = $this->request->getData();
+        }
+        */
         $client = $this->Clients->get($id, [
             'contain' => ['Bookings' => ['Users', 'Cars'], 'Cars', 'Promotions' => ['Subscriptions']]
         ]);

@@ -16,7 +16,7 @@ class TagsTableTest extends TestCase
      *
      * @var \App\Model\Table\TagsTable
      */
-    public $Tags;
+    public $TagsTable;
 
     /**
      * Fixtures
@@ -25,7 +25,10 @@ class TagsTableTest extends TestCase
      */
     public $fixtures = [
         'app.tags',
-        'app.bookings'
+        'app.tags_title_translation',
+        'app.i18n',
+        'app.bookings',
+        'core.translates'
     ];
 
     /**
@@ -37,7 +40,7 @@ class TagsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Tags') ? [] : ['className' => TagsTable::class];
-        $this->Tags = TableRegistry::getTableLocator()->get('Tags', $config);
+        $this->TagsTable = TableRegistry::getTableLocator()->get('Tags', $config);
     }
 
     /**
@@ -47,7 +50,7 @@ class TagsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Tags);
+        unset($this->TagsTable);
 
         parent::tearDown();
     }

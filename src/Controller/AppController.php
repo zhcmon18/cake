@@ -47,8 +47,6 @@ class AppController extends Controller
     public function initialize()
     {
         parent::initialize();
-
-        //$this->request->getSession()->destroy();
         
         $language = $this->request->getSession()->read('Config.language');
 

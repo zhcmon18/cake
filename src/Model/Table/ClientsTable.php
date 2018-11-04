@@ -113,5 +113,12 @@ class ClientsTable extends Table
             // trim slug to maximum length defined in schema
             $entity->slug = substr($sluggedName, 0, 191);
         }
-    } 
+    }
+
+    public function findActive (Query $query, array $options) {
+        $query->where([
+            $this->alias() . '.active' => 1
+        ]);
+        return $query;
+    }
 }

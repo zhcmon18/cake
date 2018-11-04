@@ -17,28 +17,26 @@ class BookingsFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'user_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'client_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'car_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'current_km' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'date_service' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-        'payment_received' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-        'description' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
-        'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        'id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'autoIncrement' => true, 'precision' => null, 'comment' => null],
+        'user_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'autoIncrement' => null],
+        'client_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'autoIncrement' => null],
+        'car_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'autoIncrement' => null],
+        'current_km' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'autoIncrement' => null],
+        'date_service' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null],
+        'payment_received' => ['type' => 'tinyinteger', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null],
+        'description' => ['type' => 'string', 'length' => null, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'fixed' => null, 'collate' => null],
+        'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null],
+        'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null],
         '_indexes' => [
-            'client_id' => ['type' => 'index', 'columns' => ['client_id', 'car_id'], 'length' => []],
-            'fk_voitures_reservations' => ['type' => 'index', 'columns' => ['car_id'], 'length' => []],
-            'user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
+            'idx_client_id' => ['type' => 'index', 'columns' => ['client_id'], 'length' => []],
+            'idx_car_id' => ['type' => 'index', 'columns' => ['car_id'], 'length' => []],
+            'idx_user_id' => ['type' => 'index', 'columns' => ['user_id'], 'length' => []],
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'fk_user_id' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'cascade', 'delete' => 'noAction', 'length' => []],
-        ],
-        '_options' => [
-            'engine' => 'InnoDB',
-            'collation' => 'utf8_unicode_ci'
+            'client_id_fk' => ['type' => 'foreign', 'columns' => ['client_id'], 'references' => ['clients', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'car_id_fk' => ['type' => 'foreign', 'columns' => ['car_id'], 'references' => ['cars', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
+            'user_id_fk' => ['type' => 'foreign', 'columns' => ['user_id'], 'references' => ['users', 'id'], 'update' => 'cascade', 'delete' => 'cascade', 'length' => []],
         ],
     ];
     // @codingStandardsIgnoreEnd
@@ -56,13 +54,37 @@ class BookingsFixture extends TestFixture
                 'user_id' => 1,
                 'client_id' => 1,
                 'car_id' => 1,
-                'current_km' => 1,
-                'date_service' => '2018-09-01',
+                'current_km' => 10000,
+                'date_service' => null,
                 'payment_received' => 1,
-                'description' => 'Lorem ipsum dolor sit amet',
-                'created' => '2018-09-01 20:48:09',
-                'modified' => '2018-09-01 20:48:09'
+                'description' => 'Test description One',
+                'created' => null,
+                'modified' => null
             ],
+            [
+                'id' => 2,
+                'user_id' => 1,
+                'client_id' => 2,
+                'car_id' => 2,
+                'current_km' => 15000,
+                'date_service' => null,
+                'payment_received' => 0,
+                'description' => 'Test description Two',
+                'created' => null,
+                'modified' => null
+            ],
+            [
+                'id' => 3,
+                'user_id' => 1,
+                'client_id' => 3,
+                'car_id' => 3,
+                'current_km' => 20000,
+                'date_service' => null,
+                'payment_received' => 1,
+                'description' => 'Test description Three',
+                'created' => null,
+                'modified' => null
+            ]
         ];
         parent::init();
     }

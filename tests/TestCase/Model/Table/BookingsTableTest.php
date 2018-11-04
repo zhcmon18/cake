@@ -16,7 +16,7 @@ class BookingsTableTest extends TestCase
      *
      * @var \App\Model\Table\BookingsTable
      */
-    public $Bookings;
+    public $BookingsTable;
 
     /**
      * Fixtures
@@ -25,10 +25,13 @@ class BookingsTableTest extends TestCase
      */
     public $fixtures = [
         'app.bookings',
+        'app.bookings_description_translation',
+        'app.i18n',
         'app.users',
         'app.clients',
         'app.cars',
-        'app.tags'
+        'app.tags',
+        'core.translates'
     ];
 
     /**
@@ -40,7 +43,7 @@ class BookingsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Bookings') ? [] : ['className' => BookingsTable::class];
-        $this->Bookings = TableRegistry::getTableLocator()->get('Bookings', $config);
+        $this->BookingsTable = TableRegistry::getTableLocator()->get('Bookings', $config);
     }
 
     /**
@@ -50,7 +53,7 @@ class BookingsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Bookings);
+        unset($this->BookingsTable);
 
         parent::tearDown();
     }
@@ -81,6 +84,26 @@ class BookingsTableTest extends TestCase
      * @return void
      */
     public function testBuildRules()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test findTagged method
+     *
+     * @return void
+     */
+    public function testFindTagged()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test beforeSave method
+     *
+     * @return void
+     */
+    public function testBeforeSave()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

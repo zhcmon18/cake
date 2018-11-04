@@ -17,9 +17,21 @@ class TagsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.tags',
+        'app.tags_title_translation',
+        'app.i18n',
         'app.bookings',
-        'app.bookings_tags'
+        'core.translates'
     ];
+
+    /**
+     * Test isAuthorized method
+     *
+     * @return void
+     */
+    public function testIsAuthorized()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method

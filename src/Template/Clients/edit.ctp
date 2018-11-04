@@ -56,6 +56,7 @@ echo $this->Html->script('Clients/add-edit', ['block' => 'scriptBottom']);
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');
             echo $this->Form->control('email');
+            echo $this->Form->control('active', ['type' => 'checkbox', 'label' => __('Active')]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

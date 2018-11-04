@@ -29,7 +29,7 @@ class BookingsSeed extends AbstractSeed
                 'payment_received' => '1',
                 'description' => 'Problème avec le moteur.',
                 'created' => '2018-10-11 15:43:40',
-                'modified' => '2018-10-11 16:03:03',
+                'modified' => '2018-11-03 16:53:34',
             ],
             [
                 'id' => '2',

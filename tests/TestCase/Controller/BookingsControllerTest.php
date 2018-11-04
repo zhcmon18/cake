@@ -17,12 +17,24 @@ class BookingsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.bookings',
+        'app.bookings_description_translation',
+        'app.i18n',
         'app.users',
         'app.clients',
         'app.cars',
         'app.tags',
-        'app.bookings_tags'
+        'core.translates'
     ];
+
+    /**
+     * Test isAuthorized method
+     *
+     * @return void
+     */
+    public function testIsAuthorized()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
 
     /**
      * Test index method
@@ -70,6 +82,16 @@ class BookingsControllerTest extends IntegrationTestCase
      * @return void
      */
     public function testDelete()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test tags method
+     *
+     * @return void
+     */
+    public function testTags()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

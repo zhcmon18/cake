@@ -21,3 +21,1176 @@ Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 164
 
 
 
+2018-11-03 18:12:50 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Bookings in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 33]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testFindActive() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:02:56 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$records in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 110]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailOK() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 110
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:10:14 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Calients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 125]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailOK() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 125
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:12:40 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 117]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 117
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:12:58 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 117]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 117
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:23:39 Notice: Notice (8): Undefined property: App\Test\TestCase\Controller\ClientsControllerTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testAdd() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 53
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:26:27 Notice: Notice (8): Undefined property: App\Test\TestCase\Controller\ClientsControllerTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testAdd() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 53
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 21:49:37 Notice: Notice (8): Undefined property: App\Test\TestCase\Controller\ClientsControllerTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testAdd() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 53
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 23:07:01 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php, line 2404]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 2404
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 1353
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 91
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 23:07:01 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php, line 2414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 2414
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 1353
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 91
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 23:09:05 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php, line 2404]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 2404
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 1353
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 93
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 23:09:05 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php, line 2414]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 2414
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 1353
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 93
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-03 23:59:43 Notice: Notice (8): Undefined variable: data in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 104]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testAdd() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 104
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 00:36:20 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 159
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:07:23 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 67
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:07:23 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 67
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:07:23 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 68]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 67
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:12:11 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 67
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:12:11 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 68]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 67
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:14:26 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 159
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:17:02 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 159
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 01:17:20 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 159]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 159
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:04:43 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:04:43 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:04:43 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 68]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:04:44 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 160]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 160
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:01 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:01 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:01 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 68]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:03 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 160]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 160
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:32 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:32 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 64]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 64
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:32 Notice: Notice (8): Trying to get property of non-object in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 68]
+Request URL: /clients/view/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+include - APP/Template\Clients\view.ctp, line 68
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1240
+Cake\View\View::_render() - CORE\src\View\View.php, line 1201
+Cake\View\View::render() - CORE\src\View\View.php, line 803
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 777
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 126
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 94
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 235
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Middleware\CsrfProtectionMiddleware::__invoke() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 103
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 156
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 98
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 98
+Cake\TestSuite\MiddlewareDispatcher::execute() - CORE\src\TestSuite\MiddlewareDispatcher.php, line 149
+Cake\TestSuite\IntegrationTestCase::_sendRequest() - CORE\src\TestSuite\IntegrationTestCase.php, line 495
+Cake\TestSuite\IntegrationTestCase::get() - CORE\src\TestSuite\IntegrationTestCase.php, line 375
+App\Test\TestCase\Controller\ClientsControllerTest::testView() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 68
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 03:05:34 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 160]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 160
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:14:33 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 104]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testFindActive() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 104
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:14:33 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 151]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testSaving() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 151
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:14:33 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 163]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testEditing() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 163
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:14:33 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 173]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testDeleting() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 173
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:14:33 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 186]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailOK() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 186
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:14:33 Notice: Notice (8): Undefined property: App\Test\TestCase\Model\Table\ClientsTableTest::$Clients in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 194]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 194
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:16:31 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 195]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 195
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:17:29 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 196]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 196
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 17:28:10 Notice: Notice (8): Use of undefined constant ca - assumed 'ca' in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Model\Table\ClientsTableTest.php, line 196]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Model\Table\ClientsTableTest::testValidateEmailFail() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 196
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 18:11:17 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 32]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::createAuth() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 32
+App\Test\TestCase\Controller\ClientsControllerTest::testIndex() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 82
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 18:12:13 Notice: Notice (8): Array to string conversion in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 32]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::createAuth() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 32
+App\Test\TestCase\Controller\ClientsControllerTest::testIndex() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 82
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 19:00:04 Notice: Notice (8): Undefined property: Cake\ORM\Query::$name in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 185]
+Request URL: /clients/edit/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 185
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 19:01:56 Notice: Notice (8): Undefined property: Cake\ORM\Query::$name in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 186]
+Request URL: /clients/edit/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 186
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-04 19:03:01 Notice: Notice (8): Undefined index: name in [C:\Program Files (x86)\Ampps\www\car_service_center\tests\TestCase\Controller\ClientsControllerTest.php, line 186]
+Request URL: /clients/edit/1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+App\Test\TestCase\Controller\ClientsControllerTest::testEdit() - ROOT\tests\TestCase\Controller\ClientsControllerTest.php, line 186
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+

@@ -37,8 +37,18 @@ class PromotionsFixture extends TestFixture
             [
                 'id' => 1,
                 'subscription_id' => 1,
-                'name' => 'Lorem ipsum dolor sit amet'
+                'name' => 'Test Promotion One'
             ],
+            [
+                'id' => 2,
+                'subscription_id' => 2,
+                'name' => 'Test Promotion Two'
+            ],
+            [
+                'id' => 3,
+                'subscription_id' => 3,
+                'name' => 'Test Promotion 3'
+            ]
         ];
         parent::init();
     }

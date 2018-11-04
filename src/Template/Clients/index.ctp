@@ -5,8 +5,10 @@ $urlToCarsAutocompletedemoJson = $this->Url->build([
     "action" => "findClients",
     "_ext" => "json"
         ]);
+echo $this->Html->script('Clients/test');
 echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToCarsAutocompletedemoJson . '";', ['block' => true]);
 echo $this->Html->script('Clients/search', ['block' => 'scriptBottom']);
+
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client[]|\Cake\Collection\CollectionInterface $clients
@@ -39,16 +41,15 @@ echo $this->Html->script('Clients/search', ['block' => 'scriptBottom']);
     </ul>
 </nav>
 <div class="clients index large-9 medium-8 columns content">
-    <?= $this->Form->create('Clients') ?>
+    <?= $this->Form->create($clients/*, ['url' => ['action' => 'view']]*/) ?>
     <fieldset>
         <legend><?= __('Search Client') ?></legend>
             <?php
-                echo $this->Form->input('name', ['id' => 'autocomplete']);
-                echo $this->Form->button(__('View'), ['controller' => 'Tags', 'action' => 'index']);
+                echo $this->Form->control('name', ['id' => 'autocomplete']);
             ?>
     </fieldset>
-
     <?= $this->Form->end() ?>
+
     <h3><?= __('Clients') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

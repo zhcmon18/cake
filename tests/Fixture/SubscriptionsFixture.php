@@ -35,8 +35,16 @@ class SubscriptionsFixture extends TestFixture
         $this->records = [
             [
                 'id' => 1,
-                'name' => 'Lorem ipsum dolor sit amet'
+                'name' => 'Test Subscription One'
             ],
+            [
+                'id' => 2,
+                'name' => 'Test Subscription Two'
+            ],
+            [
+                'id' => 3,
+                'name' => 'Test Subscription Three'
+            ]
         ];
         parent::init();
     }
