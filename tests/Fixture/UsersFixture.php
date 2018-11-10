@@ -51,6 +51,17 @@ class UsersFixture extends TestFixture
                 'activation_key' => null,
                 'status' => 1
             ],
+            [
+                'id' => 2,
+                'email' => 'testAuthTwo@mail.com',
+                'phone' => '222-222-2222',
+                'role' => 'supervisor',
+                'password' => 'supervisor',
+                'created' => null,
+                'modified' => null,
+                'activation_key' => null,
+                'status' => 1
+            ],
         ];
         parent::init();
     }

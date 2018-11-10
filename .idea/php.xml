@@ -73,6 +73,12 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/friendsofcake/crud" />
+      <path value="$PROJECT_DIR$/vendor/admad/cakephp-jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/friendsofcake/bootstrap-ui" />
+      <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/friendsofcake/cakepdf" />
     </include_path>
   </component>
   <component name="PhpUnit">

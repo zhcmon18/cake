@@ -25,8 +25,8 @@ class BookingsTableTest extends TestCase
      */
     public $fixtures = [
         'app.bookings',
-        'app.bookings_description_translation',
-        'app.i18n',
+        //'app.bookings_description_translation',
+        //'app.i18n',
         'app.users',
         'app.clients',
         'app.cars',

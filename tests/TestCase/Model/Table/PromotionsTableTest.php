@@ -16,7 +16,7 @@ class PromotionsTableTest extends TestCase
      *
      * @var \App\Model\Table\PromotionsTable
      */
-    public $PromotionsTable;
+    public $Promotions;
 
     /**
      * Fixtures
@@ -38,7 +38,7 @@ class PromotionsTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Promotions') ? [] : ['className' => PromotionsTable::class];
-        $this->PromotionsTable = TableRegistry::getTableLocator()->get('Promotions', $config);
+        $this->Promotions = TableRegistry::getTableLocator()->get('Promotions', $config);
     }
 
     /**
@@ -48,7 +48,7 @@ class PromotionsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->PromotionsTable);
+        unset($this->Promotions);
 
         parent::tearDown();
     }

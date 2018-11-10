@@ -37,6 +37,9 @@ class SubscriptionsTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
+        $this->addBehavior('Timestamp');
+
+
         $this->hasMany('Promotions', [
             'foreignKey' => 'subscription_id'
         ]);

@@ -12,6 +12,7 @@ class ClientsControllerTest extends IntegrationTestCase
 {
 
     public $AuthAdmin;
+    public $AuthSuper;
     public $Clients;
     public $Cars;
 
@@ -28,10 +29,16 @@ class ClientsControllerTest extends IntegrationTestCase
         $this->Cars = TableRegistry::get('Cars');
 
         $usersTable = TableRegistry::get('users');
-        $user = $usersTable->find('all', ['conditions' => ['Users.role' => 'admin']])->first()->toArray();
+        $userAdmin = $usersTable->find('all', ['conditions' => ['Users.role' => 'admin']])->first()->toArray();
+        $userSuper = $usersTable->find('all', ['conditions' => ['Users.role' => 'supervisor']])->first()->toArray();
         $this->AuthAdmin = [
             'Auth' => [
-                'User' => $user
+                'User' => $userAdmin
+            ]
+        ];
+        $this->AuthSuper = [
+            'Auth' => [
+                'User' => $userSuper
             ]
         ];
     }
@@ -44,6 +51,7 @@ class ClientsControllerTest extends IntegrationTestCase
     public function tearDown()
     {
         unset($this->AuthAdmin);
+        unset($this->AuthSuper);
         unset($this->Clients);
         unset($this->Cars);
 
@@ -71,7 +79,13 @@ class ClientsControllerTest extends IntegrationTestCase
      */
     public function testIsAuthorized()
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->session($this->AuthSuper);
+
+        $this->enableCsrfToken();
+        $this->enableSecurityToken();
+        $this->delete('/clients/delete/1');
+
+        $this->assertSession('You are not authorized to access that location.', 'Flash.flash.0.message');
     }
 
     /**
@@ -178,7 +192,7 @@ class ClientsControllerTest extends IntegrationTestCase
     public function testAddUnauthenticatedFail() {
         $this->get('/clients/add');
 
-        $this->assertRedirect(['controller' => 'Users', 'action' => 'login']);
+        $this->assertRedirect(['controller' => 'Users', 'action' => 'login', 'redirect' => '/clients/add']);
     }
 
     /**

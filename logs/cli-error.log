@@ -5051,3 +5051,200 @@ Stack Trace:
 #25 {main}
 
 
+2018-11-09 15:31:22 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 234]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 159
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 234
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 2409
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 1353
+App\Test\TestCase\Model\Table\ClientsTableTest::testEditing() - ROOT\tests\TestCase\Model\Table\ClientsTableTest.php, line 132
+ReflectionMethod::invokeArgs() - [internal], line ??
+PHPUnit\Framework\TestCase::runTest() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 1071
+PHPUnit\Framework\TestCase::runBare() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 939
+PHPUnit\Framework\TestResult::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestResult.php, line 698
+PHPUnit\Framework\TestCase::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT\vendor\phpunit\phpunit\src\Framework\TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT\vendor\phpunit\phpunit\src\TextUI\TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT\vendor\phpunit\phpunit\src\TextUI\Command.php, line 148
+[main] - ROOT\vendor\phpunit\phpunit\phpunit, line 53
+
+
+
+2018-11-09 16:08:15 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\AboutFixture" not found. Fixture "app.about" was referenced in test case "App\Test\TestCase\Controller\AboutControllerTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\AboutControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\AboutControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\AboutControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\AboutControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\AboutControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-09 16:09:44 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\BookingsDescriptionTranslationFixture" not found. Fixture "app.bookings_description_translation" was referenced in test case "App\Test\TestCase\Controller\BookingsControllerTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-09 16:11:20 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\BookingsDescriptionTranslationFixture" not found. Fixture "app.bookings_description_translation" was referenced in test case "App\Test\TestCase\Controller\BookingsControllerTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-09 16:11:40 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\I18nFixture" not found. Fixture "app.i18n" was referenced in test case "App\Test\TestCase\Controller\BookingsControllerTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\BookingsControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-09 16:11:56 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\TagsTitleTranslationFixture" not found. Fixture "app.tags_title_translation" was referenced in test case "App\Test\TestCase\Controller\TagsControllerTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Controller\TagsControllerTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Controller\TagsControllerTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Controller\TagsControllerTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Controller\TagsControllerTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Controller\TagsControllerTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-09 16:12:21 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\BookingsDescriptionTranslationFixture" not found. Fixture "app.bookings_description_translation" was referenced in test case "App\Test\TestCase\Model\Table\BookingsTableTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Model\Table\BookingsTableTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Model\Table\BookingsTableTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\BookingsTableTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Model\Table\BookingsTableTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Model\Table\BookingsTableTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-09 16:12:52 Error: [UnexpectedValueException] Referenced fixture class "App\Test\Fixture\TagsTitleTranslationFixture" not found. Fixture "app.tags_title_translation" was referenced in test case "App\Test\TestCase\Model\Table\TagsTableTest". in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php on line 228
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureManager.php(103): Cake\TestSuite\Fixture\FixtureManager->_loadFixtures(Object(App\Test\TestCase\Model\Table\TagsTableTest))
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\TestSuite\Fixture\FixtureInjector.php(97): Cake\TestSuite\Fixture\FixtureManager->fixturize(Object(App\Test\TestCase\Model\Table\TagsTableTest))
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(395): Cake\TestSuite\Fixture\FixtureInjector->startTest(Object(App\Test\TestCase\Model\Table\TagsTableTest))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestResult.php(637): PHPUnit\Framework\TestResult->startTest(Object(App\Test\TestCase\Model\Table\TagsTableTest))
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestCase.php(894): PHPUnit\Framework\TestResult->run(Object(App\Test\TestCase\Model\Table\TagsTableTest))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestCase->run(Object(PHPUnit\Framework\TestResult))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\Framework\TestSuite.php(755): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(545): PHPUnit\Framework\TestSuite->run(Object(PHPUnit\Framework\TestResult))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(195): PHPUnit\TextUI\TestRunner->doRun(Object(PHPUnit\Framework\TestSuite), Array, true)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\src\TextUI\Command.php(148): PHPUnit\TextUI\Command->run(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\phpunit\phpunit\phpunit(53): PHPUnit\TextUI\Command::main()
+#11 {main}
+
+
+2018-11-10 16:15:46 Error: [Cake\Database\Exception] Unable to parse column type from "" in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\SqliteSchema.php on line 55
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\SqliteSchema.php(145): Cake\Database\Schema\SqliteSchema->_convertColumn('')
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(134): Cake\Database\Schema\SqliteSchema->convertColumnDescription(Object(Cake\Database\Schema\TableSchema), Array)
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'promotions', Array, Object(Cake\Database\Schema\TableSchema))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('promotions', Array)
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('promotions')
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(324): Cake\ORM\Table->getSchema()
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\PromotionsTable), Array)
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\PromotionsTable))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\PromotionsTable), 'promotions', 'Promotions')
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Promotions')
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('Promotions')
+#11 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files (x86)\Ampps\www\car_service_center\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-11-10 16:17:19 Error: [Cake\Database\Exception] Unable to parse column type from "" in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\SqliteSchema.php on line 55
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\SqliteSchema.php(145): Cake\Database\Schema\SqliteSchema->_convertColumn('')
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(134): Cake\Database\Schema\SqliteSchema->convertColumnDescription(Object(Cake\Database\Schema\TableSchema), Array)
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'promotions', Array, Object(Cake\Database\Schema\TableSchema))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('promotions', Array)
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('promotions')
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(324): Cake\ORM\Table->getSchema()
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(221): Bake\Shell\Task\ModelTask->findBelongsTo(Object(App\Model\Table\PromotionsTable), Array)
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(130): Bake\Shell\Task\ModelTask->getAssociations(Object(App\Model\Table\PromotionsTable))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableContext(Object(App\Model\Table\PromotionsTable), 'promotions', 'Promotions')
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(100): Bake\Shell\Task\ModelTask->bake('Promotions')
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\ModelTask->main('promotions')
+#11 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files (x86)\Ampps\www\car_service_center\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2018-11-10 16:18:15 Error: [Cake\Database\Exception] Unable to parse column type from "" in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\SqliteSchema.php on line 55
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\SqliteSchema.php(145): Cake\Database\Schema\SqliteSchema->_convertColumn('')
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(134): Cake\Database\Schema\SqliteSchema->convertColumnDescription(Object(Cake\Database\Schema\TableSchema), Array)
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'promotions', Array, Object(Cake\Database\Schema\TableSchema))
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('promotions', Array)
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php(548): Cake\Database\Schema\CachedCollection->describe('promotions')
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\TemplateTask->main('promotions')
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(342): Cake\Console\Shell->runCommand(Array, true)
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(164): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 C:\Program Files (x86)\Ampps\www\car_service_center\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2018-11-10 17:24:37 Error: [RuntimeException] Unknown command `cake load`. Run `cake --help` to get the list of valid commands. in C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 321
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Console\CommandRunner.php(159): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'load')
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+

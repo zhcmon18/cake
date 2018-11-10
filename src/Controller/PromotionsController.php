@@ -6,24 +6,25 @@ use App\Controller\AppController;
 /**
  * Promotions Controller
  *
- * @property \App\Model\Table\PromotionsTable $promotions
+ * @property \App\Model\Table\PromotionsTable $Promotions
  *
- * @method \App\Model\Entity\promotion[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @method \App\Model\Entity\Promotion[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class PromotionsController extends AppController
 {
-    public function initialize() {
-        parent::initialize();
-        $this->Auth->allow(['getBySubscription']);
-    }
 
-    public function getBySubscription() {
-        $subscription_id = $this->request->query('subscription_id');
-        $promotions = $this->Promotions->find('all', [
-            'conditions' => ['Promotions.subscription_id' => $subscription_id],
-        ]);
-        $this->set('promotions', $promotions);
-        $this->set('_serialize', ['promotions']);
+    public function isAuthorized($user) {
+
+        $action = $this->request->getParam('action');
+
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
+            return true;
+        }
+
     }
 
     /**
@@ -34,24 +35,24 @@ class PromotionsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['subscriptions']
+            'contain' => ['Subscriptions', 'Clients']
         ];
         $promotions = $this->paginate($this->Promotions);
 
-        $this->set(compact('Promotions'));
+        $this->set(compact('promotions'));
     }
 
     /**
      * View method
      *
-     * @param string|null $id promotion id.
+     * @param string|null $id Promotion id.
      * @return \Cake\Http\Response|void
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function view($id = null)
     {
         $promotion = $this->Promotions->get($id, [
-            'contain' => ['subscriptions']
+            'contain' => ['Subscriptions', 'Clients']
         ]);
 
         $this->set('promotion', $promotion);
@@ -81,7 +82,7 @@ class PromotionsController extends AppController
     /**
      * Edit method
      *
-     * @param string|null $id promotion id.
+     * @param string|null $id Promotion id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
@@ -106,7 +107,7 @@ class PromotionsController extends AppController
     /**
      * Delete method
      *
-     * @param string|null $id promotion id.
+     * @param string|null $id Promotion id.
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */

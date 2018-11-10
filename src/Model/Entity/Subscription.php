@@ -26,6 +26,8 @@ class Subscription extends Entity
     protected $_accessible = [
         'name' => true,
         'clients' => true,
-        'promotions' => true
+        'promotions' => true,
+        'created' => true,
+        'modified' => true
     ];
 }

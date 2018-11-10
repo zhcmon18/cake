@@ -9,8 +9,11 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $subscription_id
  * @property string $name
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  *
  * @property \App\Model\Entity\Subscription $subscription
+ * @property \App\Model\Entity\Client[] $clients
  */
 class Promotion extends Entity
 {
@@ -27,6 +30,9 @@ class Promotion extends Entity
     protected $_accessible = [
         'subscription_id' => true,
         'name' => true,
-        'subscription' => true
+        'created' => true,
+        'modified' => true,
+        'subscription' => true,
+        'clients' => true
     ];
 }

@@ -13,6 +13,20 @@ use App\Controller\AppController;
 class SubscriptionsController extends AppController
 {
 
+    public function isAuthorized($user) {
+
+        $action = $this->request->getParam('action');
+
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
+            return true;
+        }
+
+    }
+
     /**
      * Index method
      *

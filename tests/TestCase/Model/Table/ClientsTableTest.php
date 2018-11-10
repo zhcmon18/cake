@@ -121,13 +121,17 @@ class ClientsTableTest extends TestCase
     }
 
     public function testEditing() {
-        $client = $this->Clients->find('all', ['conditions' => ['active' => false]])->first();
+        $clientBeforeSave = $this->Clients->find('all', ['conditions' => ['active' => false]])->first();
 
-        $client->active = true;
+        $id = $clientBeforeSave->id;
 
-        $this->Clients->save($client);
+        $clientBeforeSave->active = true;
 
-        $this->assertEquals(true, $client->active);
+        $this->Clients->save($clientBeforeSave);
+
+        $clientAfterSave = $this->Clients->find('all', ['conditions' => ['id' => $id]])->first();
+
+        $this->assertEquals(true, $clientAfterSave->active);
     }
 
     public function testDeleting() {
@@ -148,16 +152,29 @@ class ClientsTableTest extends TestCase
 
         $errors = $this->Clients->validationDefault(new Validator())->errors($client);
 
-        $this->assertTrue(empty($errors));
+        $this->assertTrue(empty($errors['email']));
     }
 
     public function testValidateEmailFail () {
         $client = $this->Clients->find('all')->first()->toArray();
-        $client['email'] = @mail.ca;
+        $client['email'] = '@mail.ca';
 
         $errors = $this->Clients->validationDefault(new Validator())->errors($client);
 
         $this->assertTrue(!empty($errors['email']));
+    }
+
+    public function testSaveEvilScript() {
+        $client = $this->Clients->find('all')->first();
+        $id = $client->id;
+
+        $client->name = '<script>alert("Surprise!")</script>';
+
+        $this->Clients->save($client);
+
+        $clientAfterSave = $this->Clients->find('all', ['conditions' => ['id' => $id]])->first();
+
+        $this->assertEquals('&lt;script&gt;alert(&quot;Surprise!&quot;)&lt;/script&gt;', $clientAfterSave->name);
     }
 
     /**

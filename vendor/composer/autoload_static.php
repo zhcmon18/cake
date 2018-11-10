@@ -83,6 +83,10 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
             'JsonSchema\\' => 11,
             'Jasny\\Twig\\' => 11,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -92,6 +96,7 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         ),
         'C' => 
         array (
+            'Crud\\' => 5,
             'Composer\\XdebugHandler\\' => 23,
             'Composer\\Spdx\\' => 14,
             'Composer\\Semver\\' => 16,
@@ -101,10 +106,12 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
             'Cake\\Composer\\' => 14,
             'Cake\\Chronos\\' => 13,
             'Cake\\' => 5,
+            'CakePdf\\' => 8,
             'CakePHP\\' => 8,
         ),
         'B' => 
         array (
+            'BootstrapUI\\' => 12,
             'Bake\\' => 5,
         ),
         'A' => 
@@ -113,6 +120,7 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
             'App\\Test\\' => 9,
             'App\\' => 4,
             'Ajgl\\Twig\\Extension\\' => 20,
+            'ADmad\\JwtAuth\\' => 14,
         ),
     );
 
@@ -227,6 +235,10 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         array (
             0 => __DIR__ . '/..' . '/jasny/twig-extensions/src',
         ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -242,6 +254,10 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         'DebugKit\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/debug_kit/src',
+        ),
+        'Crud\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/crud/src',
         ),
         'Composer\\XdebugHandler\\' => 
         array (
@@ -279,9 +295,17 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         array (
             0 => __DIR__ . '/..' . '/cakephp/cakephp/src',
         ),
+        'CakePdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/cakepdf/src',
+        ),
         'CakePHP\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/cakephp-codesniffer/CakePHP',
+        ),
+        'BootstrapUI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofcake/bootstrap-ui/src',
         ),
         'Bake\\' => 
         array (
@@ -302,6 +326,10 @@ class ComposerStaticInitd9d1e181ad33cc6ee4853f287711d238
         'Ajgl\\Twig\\Extension\\' => 
         array (
             0 => __DIR__ . '/..' . '/ajgl/breakpoint-twig-extension/src',
+        ),
+        'ADmad\\JwtAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/admad/cakephp-jwt-auth/src',
         ),
     );
 

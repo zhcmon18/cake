@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Promotions Model
  *
  * @property \App\Model\Table\SubscriptionsTable|\Cake\ORM\Association\BelongsTo $Subscriptions
+ * @property \App\Model\Table\ClientsTable|\Cake\ORM\Association\HasMany $Clients
  *
  * @method \App\Model\Entity\Promotion get($primaryKey, $options = [])
  * @method \App\Model\Entity\Promotion newEntity($data = null, array $options = [])
@@ -19,6 +20,8 @@ use Cake\Validation\Validator;
  * @method \App\Model\Entity\Promotion patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\Promotion[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\Promotion findOrCreate($search, callable $callback = null, $options = [])
+ *
+ * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
 class PromotionsTable extends Table
 {
@@ -37,10 +40,11 @@ class PromotionsTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
+        $this->addBehavior('Timestamp');
+
         $this->belongsTo('Subscriptions', [
             'foreignKey' => 'subscription_id'
         ]);
-
         $this->hasMany('Clients', [
             'foreignKey' => 'promotion_id'
         ]);

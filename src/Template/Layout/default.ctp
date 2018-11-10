@@ -41,7 +41,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?php
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
-            'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+            'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
         ], ['block' => 'scriptLibraries']
     );
     ?>

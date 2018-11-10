@@ -48,7 +48,19 @@ Router::extensions(['json', 'xml']);
  */
 Router::defaultRouteClass(DashedRoute::class);
 
+Router::prefix('api', function ($routes) {
+    $routes->extensions(['json', 'xml', 'pdf']);
+    $routes->resources('Subscriptions');
+
+
+});
+
+Router::prefix('Admin', function ($routes) {
+    $routes->fallbacks('InflectedRoute');
+});
+
 Router::scope('/', function (RouteBuilder $routes) {
+
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file
