@@ -78,9 +78,9 @@ class CarsController extends AppController
             }
             $this->Flash->error(__('The car could not be saved. Please, try again.'));
         }
-        $clients = $this->Cars->Clients->find('list', ['limit' => 200]);
+        $client = $this->Cars->Clients->find('all', ['conditions' => ['Clients.id' => $id]])->first();
         $photos = $this->Cars->Photos->find('list', ['limit' => 200]);
-        $this->set(compact('car', 'clients', 'photos'));
+        $this->set(compact('car', 'client', 'photos'));
     }
 
     /**

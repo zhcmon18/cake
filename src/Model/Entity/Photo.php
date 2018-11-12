@@ -11,9 +11,9 @@ use Cake\ORM\Entity;
  * @property string $path
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
- * @property bool $status
+ * @property int $status
  *
- * @property \App\Model\Entity\CarFile[] $car_files
+ * @property \App\Model\Entity\Car[] $cars
  */
 class Photo extends Entity
 {
@@ -33,5 +33,6 @@ class Photo extends Entity
         'created' => true,
         'modified' => true,
         'status' => true,
+        'cars' => true
     ];
 }

@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * Photos Model
  *
- * @property \App\Model\Table\CarPhotosTable|\Cake\ORM\Association\HasMany $CarPhotos
+ * @property \App\Model\Table\CarsTable|\Cake\ORM\Association\BelongsToMany $Cars
  *
  * @method \App\Model\Entity\Photo get($primaryKey, $options = [])
  * @method \App\Model\Entity\Photo newEntity($data = null, array $options = [])
@@ -41,12 +41,6 @@ class PhotosTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        /*
-        $this->hasMany('CarPhotos', [
-            'foreignKey' => 'photo_id'
-        ]);
-        */
-
         $this->belongsToMany('Cars', [
             'foreignKey' => 'photo_id',
             'targetForeignKey' => 'car_id',
@@ -60,16 +54,23 @@ class PhotosTable extends Table
      * @param \Cake\Validation\Validator $validator Validator instance.
      * @return \Cake\Validation\Validator
      */
-
-     /*
-     public function validationDefault(Validator $validator)
+    public function validationDefault(Validator $validator)
     {
         $validator
-            ->boolean('status')
-            ->requirePresence('status', 'create')
-            ->notEmpty('status');
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->scalar('name')
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
+
+        $validator
+            ->scalar('path')
+            ->requirePresence('path', 'create')
+            ->notEmpty('path');
+
 
         return $validator;
     }
-    */
 }

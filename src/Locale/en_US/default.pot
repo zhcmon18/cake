@@ -724,11 +724,11 @@ msgid "Role"
 msgstr ""
 
 #: Template/Users/view.ctp:53
-msgid "Actif"
+msgid "Active"
 msgstr ""
 
 #: Template/Users/view.ctp:25
-msgid "Actif"
+msgid "Active"
 msgstr ""
 
 msgid "The user has been saved and an activation email has been sent."
@@ -766,3 +766,59 @@ msgstr ""
 
 msgid "The account could not be resent."
 msgstr ""
+
+
+msgid "List Subscriptions (Monopage)"
+msgstr ""
+
+msgid "List Subscriptions (View Admin)"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "List Promotions"
+msgstr ""
+
+msgid "Subscriptions"
+msgstr ""
+
+msgid "Subscription"
+msgstr ""
+
+msgid "New Subscription"
+msgstr ""
+
+msgid "New Promotion"
+msgstr ""
+
+msgid "Edit Subscription"
+msgstr ""
+
+msgid "Edit Promotion"
+msgstr ""
+
+msgid "Add Photo"
+msgstr ""
+
+msgid "New Photo"
+msgstr ""
+
+msgid "Edit Photo"
+msgstr ""
+
+msgid "Download in format pdf"
+msgstr ""
+
+msgid "Delete Photo"
+msgstr ""
+
+msgid "Delete Subscription"
+msgstr ""
+
+msgid "Delete Promotion"
+msgstr ""
+
+msgid "Add Promotion"
+msgstr ""
+

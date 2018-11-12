@@ -627,3 +627,57 @@ msgstr "Письмо отправлено."
 
 msgid "The account could not be resent."
 msgstr "Письмо не может быть отправлено."
+
+msgid "List Subscriptions (Monopage)"
+msgstr "Список подписок (Одна страница)"
+
+msgid "List Subscriptions (View Admin)"
+msgstr "Список подписок (Одна страница)"
+
+msgid "Inactive"
+msgstr "Неактивен"
+
+msgid "List Promotions"
+msgstr "Список скидок"
+
+msgid "Subscriptions"
+msgstr "Подписки"
+
+msgid "Subscription"
+msgstr "Подписка"
+
+msgid "New Subscription"
+msgstr "Новая подписка"
+
+msgid "New Promotion"
+msgstr "Новая скидка"
+
+msgid "Edit Subscription"
+msgstr "Изменить подписку"
+
+msgid "Edit Promotion"
+msgstr "Изменить скидку"
+
+msgid "Add Photo"
+msgstr "Добавить фото"
+
+msgid "New Photo"
+msgstr "Новая фото"
+
+msgid "Edit Photo"
+msgstr "Изменить фото"
+
+msgid "Download in format pdf"
+msgstr "Скачать в формате pdf"
+
+msgid "Delete Photo"
+msgstr "Удалить фото"
+
+msgid "Delete Subscription"
+msgstr "Удалить подписку"
+
+msgid "Delete Promotion"
+msgstr "Удалить скидку"
+
+msgid "Add Promotion"
+msgstr "Добавить скидку"

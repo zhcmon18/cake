@@ -17,18 +17,9 @@ class PhotosControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.photos',
-        'app.cars'
+        'app.cars',
+        'app.cars_photos'
     ];
-
-    /**
-     * Test isAuthorized method
-     *
-     * @return void
-     */
-    public function testIsAuthorized()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
 
     /**
      * Test index method

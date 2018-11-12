@@ -45,6 +45,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
         ], ['block' => 'scriptLibraries']
     );
+    echo $this->Html->script('Default/navigation', ['block' => 'scriptBottom']);
     ?>
 
 </head>
@@ -60,7 +61,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?php if ($loguser) : ?>
                 <?php if($loguser['status'] == 0) :?>
                     <li style="padding: 10px 5px 0 0;">
-                        <?= __('Inactif') ?>
+                        <?= __('Inactive') ?>
                     </li>
                 <?php endif ?>
                 <li>

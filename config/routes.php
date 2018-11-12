@@ -47,9 +47,10 @@ Router::extensions(['json', 'xml']);
  *
  */
 Router::defaultRouteClass(DashedRoute::class);
+Router::extensions(['pdf']);
 
 Router::prefix('api', function ($routes) {
-    $routes->extensions(['json', 'xml', 'pdf']);
+    $routes->extensions(['json', 'xml']);
     $routes->resources('Subscriptions');
 
 

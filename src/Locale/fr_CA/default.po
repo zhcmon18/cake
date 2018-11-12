@@ -554,7 +554,7 @@ msgstr "Liste des photos"
 
 #: Template/Photos/index.ctp:27
 msgid "New Photo"
-msgstr "Nouvelle Photo"
+msgstr "Nouvelle photo"
 
 #: Template/Photos/index.ctp:39
 msgid "Path"
@@ -604,9 +604,6 @@ msgstr "L'étiquette"
 msgid "Show Client's cars"
 msgstr "Afficher les voitures du Client"
 
-msgid "Add Photo"
-msgstr "Ajouter une photo"
-
 msgid "Resend"
 msgstr "Renvoyer"
 
@@ -615,3 +612,54 @@ msgstr "Le courriel a été renvoyé."
 
 msgid "The account could not be resent."
 msgstr "Le courriel ne peut pas être renvoyé."
+
+msgid "List Subscriptions (Monopage)"
+msgstr "Liste des abonnements (Monopage)"
+
+msgid "List Subscriptions (View Admin)"
+msgstr "Liste des abonnements (Vue Admin)"
+
+msgid "Inactive"
+msgstr "Inactif"
+
+msgid "List Promotions"
+msgstr "Liste des promotions"
+
+msgid "Subscriptions"
+msgstr "Abonnements"
+
+msgid "Subscription"
+msgstr "Abonnement"
+
+msgid "New Subscription"
+msgstr "Nouvel abonnement"
+
+msgid "New Promotion"
+msgstr "Nouvelle promotion"
+
+msgid "Edit Subscription"
+msgstr "Modifier l'abonnemnet"
+
+msgid "Edit Promotion"
+msgstr "Modifier la promotion"
+
+msgid "Add Photo"
+msgstr "Ajouter une photo"
+
+msgid "Edit Photo"
+msgstr "Modifier la photo"
+
+msgid "Download in format pdf"
+msgstr "Télécharger en format pdf"
+
+msgid "Delete Photo"
+msgstr "Supprimer la photo"
+
+msgid "Delete Subscription"
+msgstr "Supprimer l'abonnemnet"
+
+msgid "Delete Promotion"
+msgstr "Supprimer la promotion"
+
+msgid "Add Promotion"
+msgstr "Ajouter une promotion"

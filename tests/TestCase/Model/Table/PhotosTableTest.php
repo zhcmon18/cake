@@ -16,7 +16,7 @@ class PhotosTableTest extends TestCase
      *
      * @var \App\Model\Table\PhotosTable
      */
-    public $PhotosTable;
+    public $Photos;
 
     /**
      * Fixtures
@@ -37,7 +37,7 @@ class PhotosTableTest extends TestCase
     {
         parent::setUp();
         $config = TableRegistry::getTableLocator()->exists('Photos') ? [] : ['className' => PhotosTable::class];
-        $this->PhotosTable = TableRegistry::getTableLocator()->get('Photos', $config);
+        $this->Photos = TableRegistry::getTableLocator()->get('Photos', $config);
     }
 
     /**
@@ -47,7 +47,7 @@ class PhotosTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->PhotosTable);
+        unset($this->Photos);
 
         parent::tearDown();
     }

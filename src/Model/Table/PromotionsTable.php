@@ -64,7 +64,7 @@ class PromotionsTable extends Table
 
         $validator
             ->scalar('name')
-            ->allowEmpty('name');
+            ->notEmpty('name');
 
         return $validator;
     }

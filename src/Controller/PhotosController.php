@@ -2,7 +2,6 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-use Cake\Core\Configure;
 
 /**
  * Photos Controller
@@ -13,24 +12,21 @@ use Cake\Core\Configure;
  */
 class PhotosController extends AppController
 {
-
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-        
+
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
-        
-        if (in_array($action, ['add', 'edit', 'index', 'view'])) {
+
+        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
             return true;
         }
 
-        /*
         $id = $this->request->getParam('pass.0');
         if (!$id) {
             return false;
         }
-        */
     }
 
     /**
@@ -55,7 +51,7 @@ class PhotosController extends AppController
     public function view($id = null)
     {
         $photo = $this->Photos->get($id, [
-            'contain' => []
+            'contain' => ['Cars']
         ]);
 
         $this->set('photo', $photo);
@@ -90,7 +86,8 @@ class PhotosController extends AppController
                 $this->Flash->error(__('Please choose a photo to upload.'));
             }
         }
-        $this->set(compact('photo'));
+        $cars = $this->Photos->Cars->find('list', ['limit' => 200]);
+        $this->set(compact('photo', 'cars'));
     }
 
     /**
@@ -103,21 +100,19 @@ class PhotosController extends AppController
     public function edit($id = null)
     {
         $photo = $this->Photos->get($id, [
-            'contain' => []
+            'contain' => ['Cars']
         ]);
-        
         if ($this->request->is(['patch', 'post', 'put'])) {
-           
             $photo = $this->Photos->patchEntity($photo, $this->request->getData());
             if ($this->Photos->save($photo)) {
-
                 $this->Flash->success(__('The photo has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The photo could not be saved. Please, try again.'));
         }
-        $this->set(compact('photo'));
+        $cars = $this->Photos->Cars->find('list', ['limit' => 200]);
+        $this->set(compact('photo', 'cars'));
     }
 
     /**

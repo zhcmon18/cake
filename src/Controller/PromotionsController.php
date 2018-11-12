@@ -13,6 +13,11 @@ use App\Controller\AppController;
 class PromotionsController extends AppController
 {
 
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['getBySubscription']);
+    }
+
     public function isAuthorized($user) {
 
         $action = $this->request->getParam('action');
@@ -25,6 +30,15 @@ class PromotionsController extends AppController
             return true;
         }
 
+    }
+
+    public function getBySubscription() {
+        $subscription_id = $this->request->query('subscription_id');
+        $promotions = $this->Promotions->find('all', [
+            'conditions' => ['Promotions.subscription_id' => $subscription_id],
+        ]);
+        $this->set('promotions', $promotions);
+        $this->set('_serialize', ['promotions']);
     }
 
     /**
@@ -75,7 +89,8 @@ class PromotionsController extends AppController
             }
             $this->Flash->error(__('The promotion could not be saved. Please, try again.'));
         }
-        $subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
+        $subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200, 'conditions' => ['NOT' => ['Subscriptions.name' => 'Aucun abonnement']]]);
+        //$subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
         $this->set(compact('promotion', 'subscriptions'));
     }
 
@@ -100,7 +115,6 @@ class PromotionsController extends AppController
             }
             $this->Flash->error(__('The promotion could not be saved. Please, try again.'));
         }
-        $subscriptions = $this->Promotions->Subscriptions->find('list', ['limit' => 200]);
         $this->set(compact('promotion', 'subscriptions'));
     }
 
