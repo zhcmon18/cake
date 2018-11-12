@@ -22,7 +22,7 @@
         Le site offre une mono-page Ajax pour les abonnements, ainsi qu’une vue spéciale pour les utilisateurs administrateurs.
     </p>
     <p>
-        Les listes liées, l’auto-complétion et la production des documents pdf sont offertes pour les Clients (page d'accueil, ajouter un client et afficher un client).
+        Les listes liées, l’auto-complétion et la production des documents pdf sont offertes pour les Clients (page d'accueil des clients, ajouter un client et afficher un client).
     </p>
     <h4>La base de données actuelle:</h4>
     <?= $this->Html->image('bd_actuelle.jpg', ['alt' => 'BD actuelle']); ?>

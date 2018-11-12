@@ -24638,3 +24638,66 @@ Stack Trace:
 #15 {main}
 
 
+2018-11-12 17:39:53 Error: Fatal Error (1): Call to undefined function isEmpty() in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 75]
+Request URL: /clients/view/4
+Referer URL: http://localhost/car_service_center/clients
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-12 17:39:53 Error: [Cake\Error\FatalErrorException] Call to undefined function isEmpty() in C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp on line 75
+Request URL: /clients/view/4
+Referer URL: http://localhost/car_service_center/clients
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\Program File...', 75)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-12 18:07:11 Error: Fatal Error (4): syntax error, unexpected end of file in [C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp, line 146]
+Request URL: /clients/view/4
+Referer URL: http://localhost/car_service_center/clients
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 229
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 110
+[main] - [internal], line ??
+
+
+
+2018-11-12 18:07:11 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file in C:\Program Files (x86)\Ampps\www\car_service_center\src\Template\Clients\view.ctp on line 146
+Request URL: /clients/view/4
+Referer URL: http://localhost/car_service_center/clients
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(110): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\Program File...', 146)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2018-11-12 18:20:53 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "clients"
+Request URL: /clients/view/6
+Referer URL: http://localhost/car_service_center/clients/view-cars/4
+Stack Trace:
+#0 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\ORM\Table.php(1613): Cake\ORM\Query->firstOrFail()
+#1 C:\Program Files (x86)\Ampps\www\car_service_center\src\Controller\ClientsController.php(91): Cake\ORM\Table->get('6', Array)
+#2 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Controller\Controller.php(596): App\Controller\ClientsController->view('6')
+#3 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#4 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ClientsController))
+#5 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(156): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(98): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files (x86)\Ampps\www\car_service_center\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files (x86)\Ampps\www\car_service_center\webroot\index.php(40): Cake\Http\Server->run()
+#18 {main}
+
+

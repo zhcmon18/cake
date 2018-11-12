@@ -663,3 +663,12 @@ msgstr "Supprimer la promotion"
 
 msgid "Add Promotion"
 msgstr "Ajouter une promotion"
+
+msgid "Search Client"
+msgstr "Rechercher un client"
+
+msgid "Active"
+msgstr "Actif"
+
+msgid "Promotion"
+msgstr ""

@@ -632,7 +632,7 @@ msgid "List Subscriptions (Monopage)"
 msgstr "Список подписок (Одна страница)"
 
 msgid "List Subscriptions (View Admin)"
-msgstr "Список подписок (Одна страница)"
+msgstr "Список подписок (Вид админ)"
 
 msgid "Inactive"
 msgstr "Неактивен"
@@ -681,3 +681,12 @@ msgstr "Удалить скидку"
 
 msgid "Add Promotion"
 msgstr "Добавить скидку"
+
+msgid "Search Client"
+msgstr "Найти клиента"
+
+msgid "Active"
+msgstr "Активен"
+
+msgid "Promotion"
+msgstr "Скидка"

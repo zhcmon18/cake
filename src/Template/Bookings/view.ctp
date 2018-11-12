@@ -91,15 +91,15 @@ $loguser = $this->request->getSession()->read('Auth.User')
         </tr>
     </table>
     <div class="related">
-        <h4><?= __('Related Tags') ?></h4>
         <?php if (!empty($booking->tags)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <?php foreach ($booking->tags as $tags): ?>
-            <tr>
-                <td><?= $this->Html->link($tags->title, ['controller' => 'Tags', 'action' => 'view', $tags->id]) ?></td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
+            <h4><?= __('Related Tags') ?></h4>
+            <table cellpadding="0" cellspacing="0">
+                <?php foreach ($booking->tags as $tags): ?>
+                <tr>
+                    <td><?= $this->Html->link($tags->title, ['controller' => 'Tags', 'action' => 'view', $tags->id]) ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
         <?php endif; ?>
     </div>
 </div>

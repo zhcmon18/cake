@@ -47,7 +47,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
     </ul>
 </nav>
 <div class="photos view large-9 medium-8 columns content">
-    <h3><?= h($photo->name) ?></h3>
+    <h3><?= __('Photo') ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Name') ?></th>
@@ -59,7 +59,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
         </tr>
         <tr>
             <th scope="row"><?= __('Status') ?></th>
-            <td><?= $this->Number->format($photo->status) ?></td>
+            <td><?= h($photo->status ? __('Active') : __('Inactive')); ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -71,32 +71,32 @@ $loguser = $this->request->getSession()->read('Auth.User');
         </tr>
     </table>
     <div class="related">
-        <h4><?= __('Related Cars') ?></h4>
         <?php if (!empty($photo->cars)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('License') ?></th>
-                <th scope="col"><?= __('Model') ?></th>
-                <th scope="col"><?= __('Color') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($photo->cars as $cars): ?>
-            <tr>
-                <td><?= h($cars->license) ?></td>
-                <td><?= h($cars->model) ?></td>
-                <td><?= h($cars->color) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Cars', 'action' => 'view', $cars->id]) ?>
-                    <?php if($loguser['status'] == 1) : ?>
-                        <?= $this->Html->link(__('Edit'), ['controller' => 'Cars', 'action' => 'edit', $cars->id]) ?>
-                        <?php if($loguser['role'] == 'admin') : ?>
-                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Cars', 'action' => 'delete', $cars->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cars->id)]) ?>
+            <h4><?= __('Related Cars') ?></h4>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th scope="col"><?= __('License') ?></th>
+                    <th scope="col"><?= __('Model') ?></th>
+                    <th scope="col"><?= __('Color') ?></th>
+                    <th scope="col" class="actions"><?= __('Actions') ?></th>
+                </tr>
+                <?php foreach ($photo->cars as $cars): ?>
+                <tr>
+                    <td><?= h($cars->license) ?></td>
+                    <td><?= h($cars->model) ?></td>
+                    <td><?= h($cars->color) ?></td>
+                    <td class="actions">
+                        <?= $this->Html->link(__('View'), ['controller' => 'Cars', 'action' => 'view', $cars->id]) ?>
+                        <?php if($loguser['status'] == 1) : ?>
+                            <?= $this->Html->link(__('Edit'), ['controller' => 'Cars', 'action' => 'edit', $cars->id]) ?>
+                            <?php if($loguser['role'] == 'admin') : ?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Cars', 'action' => 'delete', $cars->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cars->id)]) ?>
+                            <?php endif ?>
                         <?php endif ?>
-                    <?php endif ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
         <?php endif; ?>
     </div>
 </div>

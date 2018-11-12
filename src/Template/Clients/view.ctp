@@ -1,5 +1,16 @@
 <?php
-$loguser = $this->request->getSession()->read('Auth.User')
+$loguser = $this->request->getSession()->read('Auth.User');
+
+$subscription;
+$promotion;
+
+if($client->promotion == null) {
+    $subscription = __('Aucun abonnement');
+    $promotion = __('Non');
+} else {
+    $subscription = $client->promotion->subscription->name;
+    $promotion = $client->promotion->name;
+}
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client $client
@@ -37,7 +48,9 @@ $loguser = $this->request->getSession()->read('Auth.User')
                     <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
                     <hr>
                     <li><?= $this->Html->link(__('New Car'), ['controller' => 'Cars', 'action' => 'add', $client->id]) ?> </li>
-                    <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add', $client->id]) ?> </li>
+                    <?php if (!empty($client->cars)): ?>
+                        <li><?= $this->Html->link(__('New Booking'), ['controller' => 'Bookings', 'action' => 'add', $client->id]) ?> </li>
+                    <?php endif ?>
                     <li><?= $this->Html->link(__('Edit Client'), ['controller' => 'Clients', 'action' => 'edit', $client->id]) ?> </li>
                     <?php if($loguser['role'] === 'admin') :?>
                         <li><?= $this->Form->postLink(__('Delete Client'), ['controller' => 'Clients', 'action' => 'delete', $client->id], ['confirm' => __('Are you sure you want to delete the client # {0}?', $client->id)]) ?> </li>
@@ -69,11 +82,11 @@ $loguser = $this->request->getSession()->read('Auth.User')
         </tr>
         <tr>
             <th scope="row"><?= __('Subscription') ?></th>
-            <td><?= h($client->promotion->subscription->name) ?></td>
+            <td><?= h($subscription) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Promotion') ?></th>
-            <td><?= h($client->promotion->name) ?></td>
+            <td><?= h($promotion) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Active') ?></th>
@@ -88,10 +101,12 @@ $loguser = $this->request->getSession()->read('Auth.User')
             <td><?= h($client->modified) ?></td>
         </tr>
     </table>
-    <?= $this->Html->link(__("Show Client's cars"), ['controller' => 'Clients', 'action' => 'view_cars', $client->id]) ?>
+    <?php
+        if(!empty($client->cars)) {
+            echo $this->Html->link(__("Show Client's cars"), ['controller' => 'Clients', 'action' => 'view_cars', $client->id]); } ?>
     <div class="related">
-        <h4><?= __('Related Bookings') ?></h4>
         <?php if (!empty($client->bookings)): ?>
+            <h4><?= __('Related Bookings') ?></h4>
             <table cellpadding="0" cellspacing="0">
                 <tr>
                     <th scope="col"><?= __('Created by') ?></th>

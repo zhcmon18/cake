@@ -51,10 +51,10 @@
         <tbody>
             <?php foreach ($client->cars as $car): ?>
             <tr>
-                <td><?= $this->Html->link($car->license, ['controller' => 'Cars', 'action' => 'view', $car->id]) ?></td>
+                <td><?= h($car->license) ?></td>
                 <td><?= h($car->model) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $car->id]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Cars', 'action' => 'view', $car->id]) ?>
                     
                     <?php if($loguser['status'] == 1) : ?>
                         <?= $this->Html->link(__('Edit'), ['controller' => 'Cars', 'action' => 'edit', $car->id]) ?>

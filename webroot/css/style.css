@@ -588,3 +588,17 @@ table td {
     background-color: #fafafa;
     color: #116d76;
 }
+
+.dropdown button:after {
+    width: 0;
+    height: 0;
+    border: 0.313em solid transparent;
+    /* 5 */
+    border-bottom: none;
+    border-top-color: #15848F;
+    content:'';
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    right: -0.313em;
+}

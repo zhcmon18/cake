@@ -9,7 +9,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
     <ul class="side-nav">
 
         <div class="dropdown">
-            <button id="navbtn" class="dropbtn"><?= __('Navigation') ?></button>
+            <button id="navbtn" class="dropbtn"><?= __('Navigation')?></button>
             <div id="dropnav" class="dropdown-content">
                 <li><?= $this->Html->link(__('List Clients'), ['controller' => 'Clients', 'action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('List Cars'), ['controller' => 'Cars', 'action' => 'index']) ?> </li>

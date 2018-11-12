@@ -72,39 +72,37 @@ $loguser = $this->request->getSession()->read('Auth.User')
         </tr>
     </table>
     <div class="related">
-        <h4><?= __('Related Bookings') ?></h4>
-        
         <?php if (!empty($user->bookings)): ?>
-        
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Client') ?></th>
-                <th scope="col"><?= __('Car') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
+            <h4><?= __('Related Bookings') ?></h4>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <th scope="col"><?= __('Client') ?></th>
+                    <th scope="col"><?= __('Car') ?></th>
+                    <th scope="col"><?= __('Created') ?></th>
+                    <th scope="col" class="actions"><?= __('Actions') ?></th>
+                </tr>
 
-            <?php foreach ($user->bookings as $bookings): ?>
-            <tr>
-                <td><?= $this->Html->link(($bookings['client']->name), ['controller' => 'Clients', 'action'=> 'view', $bookings->client_id]) ?></td>
-                <td><?= $this->Html->link(($bookings['car']->model . ' ' . $bookings['car']->license), ['controller' => 'Cars', 'action'=> 'view', $bookings->car_id]) ?></td>               
-                <td><?= h($bookings->created) ?></td>
+                <?php foreach ($user->bookings as $bookings): ?>
+                <tr>
+                    <td><?= $this->Html->link(($bookings['client']->name), ['controller' => 'Clients', 'action'=> 'view', $bookings->client_id]) ?></td>
+                    <td><?= $this->Html->link(($bookings['car']->model . ' ' . $bookings['car']->license), ['controller' => 'Cars', 'action'=> 'view', $bookings->car_id]) ?></td>
+                    <td><?= h($bookings->created) ?></td>
 
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
-                    
-                    <?php if
-                        ($loguser['role'] === 'admin') :?> 
-                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $bookings->id)]) ?>
-                    <?php 
-                        endif 
-                    ?>     
-                
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
+                    <td class="actions">
+                        <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
+                        <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
+
+                        <?php if
+                            ($loguser['role'] === 'admin') :?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookings', 'action' => 'delete', $bookings->id], ['confirm' => __('Are you sure you want to delete the booking #{0}?', $bookings->id)]) ?>
+                        <?php
+                            endif
+                        ?>
+
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
         <?php endif; ?>
     </div>
 </div>

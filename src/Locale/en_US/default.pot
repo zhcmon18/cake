@@ -822,3 +822,11 @@ msgstr ""
 msgid "Add Promotion"
 msgstr ""
 
+msgid "Search Client"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Promotion"
+msgstr ""
