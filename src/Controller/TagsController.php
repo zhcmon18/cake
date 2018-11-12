@@ -14,18 +14,17 @@ class TagsController extends AppController
 {
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
-        
-        if (isset($user['role']) && $user['role'] === 'admin') {
-            return true;
-        }
-        
-        if (in_array($action, ['add', 'edit', 'view', 'index'])) {
+
+        if (isset($user['role']) && $user['role'] === 'admin' && $user['status'] === 1) {
             return true;
         }
 
-        $id = $this->request->getParam('pass.0');
-        if (!$id) {
-            return false;
+        if (in_array($action, ['add', 'edit']) && $user['status'] === 1) {
+            return true;
+        }
+
+        if (in_array($action, ['view', 'index'])) {
+            return true;
         }
     }    
 

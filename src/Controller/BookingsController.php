@@ -16,11 +16,15 @@ class BookingsController extends AppController
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         
-        if (isset($user['role']) && $user['role'] === 'admin') {
+        if (isset($user['role']) && $user['role'] === 'admin' && $user['status'] === 1) {
             return true;
         }
         
-        if (in_array($action, ['add', 'index', 'view'])) {
+        if (in_array($action, ['index', 'view'])) {
+            return true;
+        }
+
+        if ((in_array($action, ['add'])) && $user['status'] === 1) {
             return true;
         }
 
@@ -32,7 +36,7 @@ class BookingsController extends AppController
         // Check that the booking belongs to the current user.
         $booking = $this->Bookings->findById($id)->first();
 
-        return $booking->user_id === $user['id'];
+        return $booking->user_id === $user['id'] && $user['status'] === 1;
     }
 
     /**

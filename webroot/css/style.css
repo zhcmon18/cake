@@ -554,6 +554,10 @@ table td {
     margin: 0px;
 }
 
+.dropbtn:focus {
+    outline: none;
+}
+
 .dropbtn:focus{
     background-color:#fafafa;
     color: #116d76;

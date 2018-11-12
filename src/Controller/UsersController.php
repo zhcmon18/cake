@@ -22,7 +22,7 @@ class UsersController extends AppController
     }
     
     public function isAuthorized($user) {
-        $action = $this->request->getParam('action');
+        //$action = $this->request->getParam('action');
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
