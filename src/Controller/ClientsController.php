@@ -31,7 +31,7 @@ class ClientsController extends AppController
             return true;
         }
 
-        if (in_array($action, ['view', 'index', 'viewCars'])) {
+        if (in_array($action, ['view', 'index', 'viewCars', 'findClients'])) {
             return true;
         }
 
