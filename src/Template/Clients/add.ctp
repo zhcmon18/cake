@@ -2,17 +2,18 @@
 
 $loguser = $this->request->getSession()->read('Auth.User');
 $urlToLinkedListFilter = $this->Url->build([
-    "controller" => "Promotions",
-    "action" => "getBySubscription",
+    "controller" => "Subscriptions",
+    "action" => "getSubscriptions",
     "_ext" => "json"
 ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
-echo $this->Html->script('Clients/add-edit', ['block' => 'scriptBottom']);
+echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Client $client
  */
 ?>
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <div class="dropdown">
@@ -48,13 +49,33 @@ echo $this->Html->script('Clients/add-edit', ['block' => 'scriptBottom']);
         <?php endif ?>
     </ul>
 </nav>
-<div class="clients form large-9 medium-8 columns content">
+<div class="clients form large-9 medium-8 columns content" ng-app="linkedlists" ng-controller="subscriptionsController">
     <?= $this->Form->create($client) ?>
     <fieldset>
         <legend><?= __('Add Client') ?></legend>
+         <?= __('Subscriptions') ?>
+        <select name="Subscription_id"
+                id="subscription-id"
+                ng-model="subscription"
+                ng-options="subscription.name for subscription in subscriptions track by subscription.id" required>
+            <option value='1'><?= __('Select') ?></option>
+        </select>
+        <?= __('Promotions') ?>
+        <select name="promotion_id"
+                id="promotion-id"
+                ng-disabled="!subscription"
+                ng-model="promotion"
+                ng-options="promotion.name for promotion in subscription.promotions track by promotion.id">
+            <option value=''><?= __('Select') ?></option>
+        </select>
         <?php
-            echo $this->Form->control('subscription_id', ['options' => $subscriptions]);
-            echo $this->Form->control('promotion_id', ['options' => $promotions]);
+            /*
+            echo $this->Form->control('subscription_id', ['options' => $subscriptions, 'ng-model' => 'subscription',
+                'ng-options' => 'subscription.name for subscription in subscriptions track by subscription.id']);
+            echo $this->Form->control('promotion_id', ['options' => $promotions, 'ng-disabled' => '!category',
+                    'ng-model' => 'promotion',
+                    'ng-options' => 'promotion.name for promotion in subscription.promotions track by promotion.id']);
+            */
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

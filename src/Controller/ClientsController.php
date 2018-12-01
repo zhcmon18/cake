@@ -122,6 +122,7 @@ class ClientsController extends AppController
         $promotions = $this->getPromotions($subscription_id);
 
         $this->set(compact('client', 'subscriptions', 'promotions'));
+        $this->set('_serialize', ['client', 'subscriptions', 'promotions']);
     }
 
     /**

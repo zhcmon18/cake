@@ -14,32 +14,18 @@ class SubscriptionsController extends AppController
 {
 
     public function isAuthorized($user) {
-
-        $action = $this->request->getParam('action');
-
-        if (isset($user['role']) && $user['role'] === 'admin' && $user['status'] === 1) {
-            return true;
-        }
-
-        if (in_array($action, ['add', 'edit']) && $user['status'] === 1) {
-            return true;
-        }
-
-        if (in_array($action, ['view', 'index'])) {
-            return true;
-        }
-
+        return true;
     }
 
-    /**
-     * Index method
-     *
-     * @return \Cake\Http\Response|void
-     */
-    public function index()
-    {
-        $subscriptions = $this->paginate($this->Subscriptions);
+    public function getSubscriptions() {
+        $this->autoRender = false;
 
-        $this->set(compact('subscriptions'));
+        $subscriptions = $this->Subscriptions->find('all', [
+            'contain' => ['Promotions'],
+        ]);
+
+        $subscriptionsJ = json_encode($subscriptions);
+        $this->response->type('json');
+        $this->response->body($subscriptionsJ);
     }
 }

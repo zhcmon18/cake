@@ -1,69 +1,46 @@
 <?php
 $urlToRestApi = $this->Url->build('/api/subscriptions', true);
 echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
-echo $this->Html->script('Subscriptions/index', ['block' => 'scriptBottom']);
-echo $this->Html->css([
-    'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
-    'Subscriptions/basic.css'
-]);
-
+//echo $this->Html->script('Subscriptions/index', ['block' => 'scriptBottom']);
 ?>
+<script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+</script>
+<script src="webroot/js/Subscriptions/index.js"></script>
+
 <div class="container">
     <div class="row">
         <div class="panel panel-default subscriptions-content">
-            <div class="panel-heading">Subscriptions <a href="javascript:void(0);" class="glyphicon glyphicon-plus" id="addLink" onclick="javascript:$('#addForm').slideToggle();">Add</a></div>
-            <div class="panel-body none formData" id="addForm">
-                <h2 id="actionLabel">Add Subscription</h2>
-                <form class="form" id="subscriptionAddForm" enctype='application/json'>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" name="name" id="name"/>
-                    </div>
-                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#addForm').slideUp();">Cancel</a>
-                    <a href="javascript:void(0);" class="btn btn-success" onclick="subscriptionAction('add')">Add Subscription</a>
-                    <!-- input type="submit" class="btn btn-success" id="addButton" value="Add Subscription" -->
-                </form>
-            </div>
-            <div class="panel-body none formData" id="editForm">
-                <h2 id="actionLabel">Edit Subscription</h2>
-                <form class="form" id="subscriptionEditForm" enctype='application/json'>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" name="name" id="nameEdit"/>
-                    </div>
-                    <input type="hidden" class="form-control" name="id" id="idEdit"/>
-                    <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#editForm').slideUp();">Cancel</a>
-                    <a href="javascript:void(0);" class="btn btn-success" onclick="subscriptionAction('edit')">Update Subscription</a>
-                    <!-- input type="submit" class="btn btn-success" id="editButton" value="Update Subscription" -->
-                </form>
-            </div>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
-                <tbody id="subscriptionData">
-                <?php
-                $count = 0;
-                foreach ($subscriptions as $subscription): $count++;
-                    ?>
+            <div ng-app = "app" ng-controller = "SubscriptionCRUDCtrl">
+                <table>
                     <tr>
-                        <td><?php echo '#' . $count; ?></td>
-                        <td><?php echo $subscription['name']; ?></td>
-                        <td>
-                            <a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editSubscription('<?php echo $subscription['id']; ?>')"></a>
-                            <a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm('Are you sure to delete data?') ? subscriptionAction('delete', '<?php echo $subscription['id']; ?>') : false;"></a>
-                        </td>
+                        <td width="100">ID:</td>
+                        <td><input type="text" id="id" ng-model="subscription.id" /></td>
                     </tr>
-                <?php
-                endforeach;
-                ?>
-                <tr><td colspan="5">No subscription(s) found......</td></tr>
-                </tbody>
-            </table>
+                    <tr>
+                        <td width="100">Name:</td>
+                        <td><input type="text" id="name" ng-model="subscription.name"/></td>
+                    </tr>
+                </table>
+                <br /> <br />
+                <a ng-click="getSubscription(subscription.id)">Get Subscription</a>
+                <a ng-click="updateSubscription(subscription.id,subscription.name)">Update Subscription</a>
+                <a ng-click="addSubscription(subscription.name)">Add Subscription</a>
+                <a ng-click="deleteSubscription(subscription.id)">Delete Subscription</a>
+
+                <br /> <br />
+                <p style="color: green">{{message}}</p>
+                <p style="color: red">{{errorMessage}}</p>
+
+                <br />
+                <br />
+                <a ng-click="getAllSubscriptions()">Get all Subscriptions</a><br />
+                <br /> <br />
+                <div ng-repeat="subscription in subscriptions">
+                    {{subscription.name}}
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 </div>

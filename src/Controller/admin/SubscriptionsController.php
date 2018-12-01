@@ -15,7 +15,6 @@ class SubscriptionsController extends AppController
 
     public function isAuthorized($user) {
 
-
         if (isset($user['role']) && $user['role'] === 'admin') {
             return true;
         }
@@ -35,7 +34,6 @@ class SubscriptionsController extends AppController
             'id', 'name'
         ]
     ];
-
 
     /**
      * Index method

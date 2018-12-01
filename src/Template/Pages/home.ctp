@@ -22,6 +22,7 @@ use Cake\Network\Exception\NotFoundException;
 $this->layout = false;
 
 if (!Configure::read('debug')) :
+
     throw new NotFoundException(
         'Please replace src/Template/Pages/home.ctp with your own version or re-enable debug mode.'
     );

@@ -36,6 +36,7 @@ class PromotionsController extends AppController
 
     }
 
+
     public function getBySubscription() {
         $subscription_id = $this->request->query('subscription_id');
         $promotions = $this->Promotions->find('all', [
