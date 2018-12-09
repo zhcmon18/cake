@@ -13,6 +13,11 @@ use App\Controller\AppController;
 class SubscriptionsController extends AppController
 {
 
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['index']);
+    }
+
     public function isAuthorized($user) {
         return true;
     }

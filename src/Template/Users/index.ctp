@@ -24,7 +24,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -46,7 +46,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('username', __('Email')) ?></th>
                 <th scope="col"><?= $this->Paginator->sort('role') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>             
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -55,7 +55,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <tbody>
             <?php foreach ($users as $user): ?>
             <tr>
-                <td><?= h($user->email) ?></td>
+                <td><?= h($user->username) ?></td>
                 <td><?= h($user->role) ?></td>
                 <td><?= h($user->created) ?></td>
                 <td class="actions">

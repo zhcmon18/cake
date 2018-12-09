@@ -200,6 +200,7 @@ Type::build('timestamp')
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
 
 Plugin::load('CakePdf', ['bootstrap' => true]);
+Plugin::load('ADmad/JwtAuth');
 
 Configure::write('CakePdf', [
     'engine' => [

@@ -13,9 +13,12 @@ echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
  * @var \App\Model\Entity\Client $client
  */
 ?>
-
+<script
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
+</script>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
+
         <div class="dropdown">
             <button id="navbtn" class="dropbtn"><?= __('Navigation') ?></button>
             <div id="dropnav" class="dropdown-content">
@@ -33,7 +36,8 @@ echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -49,6 +53,7 @@ echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
         <?php endif ?>
     </ul>
 </nav>
+
 <div class="clients form large-9 medium-8 columns content" ng-app="linkedlists" ng-controller="subscriptionsController">
     <?= $this->Form->create($client) ?>
     <fieldset>
@@ -69,13 +74,7 @@ echo $this->Html->script('Clients/add', ['block' => 'scriptBottom']);
             <option value=''><?= __('Select') ?></option>
         </select>
         <?php
-            /*
-            echo $this->Form->control('subscription_id', ['options' => $subscriptions, 'ng-model' => 'subscription',
-                'ng-options' => 'subscription.name for subscription in subscriptions track by subscription.id']);
-            echo $this->Form->control('promotion_id', ['options' => $promotions, 'ng-disabled' => '!category',
-                    'ng-model' => 'promotion',
-                    'ng-options' => 'promotion.name for promotion in subscription.promotions track by promotion.id']);
-            */
+
             echo $this->Form->control('name');
             echo $this->Form->control('telephone');
             echo $this->Form->control('address');

@@ -32,7 +32,7 @@ echo $this->Html->script('Clients/search', ['block' => 'scriptBottom']);
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -79,7 +79,7 @@ echo $this->Html->script('Clients/search', ['block' => 'scriptBottom']);
                     <?= $this->Html->link(__('View'), ['action' => 'view', $client->id]) ?>
                     
                     <?php 
-                        if($loguser['status'] == 1) : ?>
+                        if($loguser['status'] === true) : ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $client->id]) ?>
                     <?php 
                         endif

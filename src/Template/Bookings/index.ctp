@@ -25,7 +25,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -58,7 +58,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
         <tbody>
             <?php foreach ($bookings as $booking): ?>
             <tr>               
-                <td><?= $this->Html->link($booking->user->email, ['controller' => 'Users', 'action' => 'view', $booking->user->id])?></td>
+                <td><?= $this->Html->link($booking->user->username, ['controller' => 'Users', 'action' => 'view', $booking->user->id])?></td>
                 <td><?= $this->Html->link($booking->client->name, ['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></td>
                 <td><?= $this->Html->link(($booking->car->model . ' ' . $booking->car->license) , ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></td>
                 <td><?= h($booking->date_service) ?></td>
@@ -66,7 +66,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <?= $this->Html->link(__('View'), ['action' => 'view', $booking->id]) ?>
                 
                 <?php 
-                    if(($loguser['status'] == 1 && $loguser['id'] == $booking->user_id) || $loguser['role'] === 'admin') : ?>
+                    if(($loguser['status'] === true && $loguser['id'] == $booking->user_id) || $loguser['role'] === 'admin') : ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $booking->id]) ?>
                 <?php 
                     endif

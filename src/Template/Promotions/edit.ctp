@@ -21,7 +21,7 @@ if ($loguser != null) : ?>
                     <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
                 </div>
             </div><br>
-            <?php if($loguser['status'] == 1) : ?>
+            <?php if($loguser['status'] === true) : ?>
                 <div class="dropdown">
                     <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                     <div id="dropact" class="dropdown-content">

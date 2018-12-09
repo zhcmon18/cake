@@ -24,7 +24,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -77,7 +77,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 </tr>
                 <?php foreach ($tag->bookings as $bookings): ?>
                 <tr>
-                    <td><?= $this->Html->link(($bookings['user']->email), ['controller'=>'Users', 'action'=>'view', $bookings['user']->id]) ?></td>
+                    <td><?= $this->Html->link(($bookings['user']->username), ['controller'=>'Users', 'action'=>'view', $bookings['user']->id]) ?></td>
                     <td><?= $this->Html->link(($bookings['client']->name), ['controller'=>'Clients', 'action'=>'view', $bookings['client']->id]) ?></td>
                     <td><?= $this->Html->link(($bookings['car']->model . ' ' . $bookings['car']->license), ['controller'=>'Cars', 'action'=>'view', $bookings['car']->id]) ?></td>
                     <td><?= h($bookings->date_service) ?></td>
@@ -86,7 +86,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                         <?= $this->Html->link(__('View'), ['controller' => 'Bookings', 'action' => 'view', $bookings->id]) ?>
 
                         <?php
-                            if(($loguser['status'] == 1 && $loguser['id'] == $bookings->user_id) || $loguser['role'] == 'admin') : ?>
+                            if(($loguser['status'] === true && $loguser['id'] == $bookings->user_id) || $loguser['role'] == 'admin') : ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Bookings', 'action' => 'edit', $bookings->id]) ?>
                         <?php
                             endif

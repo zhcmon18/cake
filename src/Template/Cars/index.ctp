@@ -24,7 +24,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -61,7 +61,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $car->id]) ?>
                     
-                    <?php if($loguser['status'] == 1) : ?>
+                    <?php if($loguser['status'] === true) : ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $car->id]) ?>
                     <?php
                        endif

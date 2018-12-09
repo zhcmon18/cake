@@ -24,7 +24,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -87,7 +87,7 @@ $loguser = $this->request->getSession()->read('Auth.User');
                     <td><?= h($cars->color) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['controller' => 'Cars', 'action' => 'view', $cars->id]) ?>
-                        <?php if($loguser['status'] == 1) : ?>
+                        <?php if($loguser['status'] === true) : ?>
                             <?= $this->Html->link(__('Edit'), ['controller' => 'Cars', 'action' => 'edit', $cars->id]) ?>
                             <?php if($loguser['role'] == 'admin') : ?>
                                 <?= $this->Form->postLink(__('Delete'), ['controller' => 'Cars', 'action' => 'delete', $cars->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cars->id)]) ?>

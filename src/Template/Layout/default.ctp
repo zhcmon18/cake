@@ -42,7 +42,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
             'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
-            'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js',
             'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
         ], ['block' => 'scriptLibraries']
     );
@@ -60,21 +59,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="top-bar-section">
         <ul class="right">
             <?php if ($loguser) : ?>
-                <?php if($loguser['status'] == 0) :?>
+                <?php if($loguser['status'] === false) :?>
                     <li style="padding: 10px 5px 0 0;">
                         <?= __('Inactive') ?>
                     </li>
                 <?php endif ?>
-                <li>
-                    <?= $this->Html->link($loguser['email'].' '.'('. $loguser['role'].')', ['controller' => 'Users', 'action' => 'view', $loguser['id']]) ?>
-                </li>
-                <li>
-                    <?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
-                </li>
+                <? if($this->request->params['controller'] !== 'Subscriptions') : ?>
+                        <li>
+                            <?= $this->Html->link($loguser['username'].' '.'('. $loguser['role'].')', ['controller' => 'Users', 'action' => 'view', $loguser['id']]) ?>
+                        </li>
+                        <li>
+                            <?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
+                        </li>
+                <?php endif ?>
             <?php else : ?>
-                <li>
-                    <?= $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']) ?>
-                </li>
+                <? if($this->request->params['controller'] !== 'Subscriptions') : ?>
+                    <li>
+                        <?= $this->Html->link(__('Monopage'), ['controller' => 'Subscriptions', 'action' => 'index']) ?>
+                    </li>
+                    <li>
+                        <?= $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']) ?>
+                    </li>
+                <?php endif ?>
             <?php endif ?>
             <li>
                 <ul>

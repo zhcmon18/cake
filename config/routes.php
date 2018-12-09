@@ -52,6 +52,9 @@ Router::extensions(['pdf']);
 Router::prefix('api', function ($routes) {
     $routes->extensions(['json', 'xml']);
     $routes->resources('Subscriptions');
+    $routes->resources('Users');
+    Router::connect('/api/users/register', ['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+    $routes->fallbacks('InflectedRoute');
 
 
 });
@@ -61,7 +64,7 @@ Router::prefix('Admin', function ($routes) {
 });
 
 Router::scope('/', function (RouteBuilder $routes) {
-
+    $routes->resources('Users');
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file
@@ -100,3 +103,4 @@ Router::scope(
         $routes->connect('/tagged/*', ['action' => 'tags']);
     }
 );
+Plugin::routes();

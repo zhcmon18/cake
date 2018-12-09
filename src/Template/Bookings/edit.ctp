@@ -25,7 +25,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
                 <li><?= $this->Html->link(__('List Photos'), ['controller' => 'Photos', 'action' => 'index']) ?></li>
             </div>
         </div><br>
-        <?php if($loguser['status'] == 1) : ?>
+        <?php if($loguser['status'] === true) : ?>
             <div class="dropdown">
                 <button id="actbtn" class="dropbtn"><?= __('Actions') ?></button>
                 <div id="dropact" class="dropdown-content">
@@ -47,7 +47,7 @@ $loguser = $this->request->getSession()->read('Auth.User')
     </ul>
 </nav>
 <div class="bookings form large-9 medium-8 columns content">
-    <h6><?= __('Created by:')?> <?= $this->Html->link($booking['user']->email,['controller' => 'Users', 'action' => 'view', $booking->user->id]) ?> (<?= $booking->created ?>)</h6>
+    <h6><?= __('Created by:')?> <?= $this->Html->link($booking['user']->username,['controller' => 'Users', 'action' => 'view', $booking->user->id]) ?> (<?= $booking->created ?>)</h6>
     <h6><?= __('Client')?> <?= $this->Html->link($booking['client']->name,['controller' => 'Clients', 'action' => 'view', $booking->client->id]) ?></h6>
     <h6><?= __('Car:')?> <?= $this->Html->link(($booking['car']->model . ' ' . $booking['car']->license), ['controller' => 'Cars', 'action' => 'view', $booking->car->id]) ?></h6>
     <?= $this->Form->create($booking) ?>

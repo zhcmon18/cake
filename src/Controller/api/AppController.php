@@ -6,11 +6,13 @@ use Cake\Event\Event;
 
 class AppController extends Controller
 {
+
     use \Crud\Controller\ControllerTrait;
 
     public function initialize()
     {
         parent::initialize();
+
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Crud.Crud', [
             'actions' => [
@@ -26,30 +28,25 @@ class AppController extends Controller
                 'Crud.ApiQueryLog'
             ]
         ]);
-
         $this->loadComponent('Auth', [
-            'authorize'=> 'Controller',
+            //'storage' => 'Memory',
             'authenticate' => [
                 'Form' => [
+                    'scope' => ['Users.active' => 1]
+                ],
+                'ADmad/JwtAuth.Jwt' => [
+                    'parameter' => 'token',
+                    'userModel' => 'Users',
+                    'scope' => ['Users.active' => 1],
                     'fields' => [
-                        'username' => 'email',
+                        'username' => 'username',
                         'password' => 'password'
-                    ]
+                    ],
+                    'queryDatasource' => true
                 ]
             ],
-            'loginAction' => [
-                'prefix' => false,
-                'controller' => 'Users',
-                'action' => 'login'
-            ],
-            //use isAuthorized in Controllers
-            'authorize' => ['Controller'],
-            // If unauthorized, return them to page they were just on
-            'unauthorizedRedirect' => $this->referer()
+            'unauthorizedRedirect' => false,
+            'checkAuthIn' => 'Controller.initialize'
         ]);
-
-        // Allow the display action so our PagesController
-        // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['changeLang', 'login', 'activate']);
     }
 }

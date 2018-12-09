@@ -20,7 +20,7 @@ class UsersController extends AppController
         parent::initialize();
         $this->Auth->allow(['logout']);
     }
-    
+
     public function isAuthorized($user) {
         //$action = $this->request->getParam('action');
         if (isset($user['role']) && $user['role'] === 'admin') {
@@ -39,6 +39,8 @@ class UsersController extends AppController
     public function login() {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
+
+
             if ($user) {
                 $this->Auth->setUser($user);
                 return $this->redirect($this->Auth->redirectUrl());

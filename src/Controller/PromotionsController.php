@@ -22,11 +22,11 @@ class PromotionsController extends AppController
 
         $action = $this->request->getParam('action');
 
-        if (isset($user['role']) && $user['role'] === 'admin' && $user['status'] === 1) {
+        if (isset($user['role']) && $user['role'] === 'admin' && $user['status'] === true) {
             return true;
         }
 
-        if (in_array($action, ['add', 'edit']) && $user['status'] === 1) {
+        if (in_array($action, ['add', 'edit']) && $user['status'] === true) {
             return true;
         }
 

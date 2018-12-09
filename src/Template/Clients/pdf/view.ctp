@@ -49,7 +49,7 @@
                 </tr>
                 <?php foreach ($client->bookings as $bookings): ?>
                     <tr>
-                        <td><?= h($bookings['user']->email) ?></td>
+                        <td><?= h($bookings['user']->username) ?></td>
                         <td><?= h($bookings['car']->model) . ' ' . h($bookings['car']->license) ?></td>
                         <td><?= h($bookings->created) ?></td>
 

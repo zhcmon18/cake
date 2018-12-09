@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use \Crud\Controller\ControllerTrait;
 use Cake\I18n\I18n;
 
 /**
@@ -29,6 +30,7 @@ use Cake\I18n\I18n;
 class AppController extends Controller
 {
 
+
     use \Crud\Controller\ControllerTrait;
 
     public $components = [
@@ -39,6 +41,11 @@ class AppController extends Controller
                 'Crud.Add',
                 'Crud.Edit',
                 'Crud.Delete'
+            ],
+            'listeners' => [
+                'Crud.Api',
+                'Crud.ApiPagination',
+                'Crud.ApiQueryLog'
             ]
         ]
     ];
@@ -81,12 +88,14 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
         
+
+
         $this->loadComponent('Auth', [
             'authorize'=> 'Controller',
             'authenticate' => [
                 'Form' => [
                     'fields' => [
-                        'username' => 'email',
+                        'username' => 'username',
                         'password' => 'password'
                     ]
                 ]
@@ -104,7 +113,7 @@ class AppController extends Controller
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
         $this->Auth->allow(['changeLang', 'login', 'activate']);
-        
+
     }
     
     public function changeLang($lang = 'en_US') {
