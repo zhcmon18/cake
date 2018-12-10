@@ -15,7 +15,7 @@ class UsersController extends AppController {
         $this->Auth->allow(['token']);
     }
 
-
+    /*
     public function add() {
         $this->Crud->on('afterSave', function(Event $event) {
             if ($event->subject->created) {
@@ -32,6 +32,7 @@ class UsersController extends AppController {
         });
         return $this->Crud->execute();
     }
+    */
 
     public function token() {
         $user = $this->Auth->identify();

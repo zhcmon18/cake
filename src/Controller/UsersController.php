@@ -55,6 +55,7 @@ class UsersController extends AppController
         return $this->redirect(['controller' => 'Home', 'action' => 'index']);
     }
 
+
     /**
      * Index method
      *

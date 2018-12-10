@@ -7,7 +7,7 @@ class SubscriptionsController extends AppController
 {
     public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['index', 'view', 'add', 'edit', 'delete']);
+        $this->Auth->allow(['index']);
     }
 
     public $paginate = [
