@@ -7,6 +7,7 @@ echo $this->Html->css([
 ]);
 
 ?>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script
     src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js">
 </script>
@@ -20,9 +21,11 @@ echo $this->Html->css([
 
             <div ng-controller = "usersCtrl">
 
-                <div id="logDiv" style="margin: 10px 0 20px 0;"><a href="javascript:void(0);" class="glyphicon glyphicon-log-in" id="login-btn" onclick="javascript:$('#loginForm').slideToggle();">Login</a></div>
+                <div id="logDiv" style="margin: 10px 0 20px 0;"><a href="javascript:void(0);" style="text-decoration: none; font-size: 1.2em;" id="login-btn" onclick="javascript:$('#loginForm').slideToggle();"><span class="glyphicon glyphicon-log-in"></span> Login</a></div>
 
                 <div class="none formData" id="loginForm">
+                    <div id="captcha"></div>
+                    <p style="color:red;">{{ captcha_status}}</p>
                     <form class="form" enctype='application/json'>
                         <div class="form-group">
                             <label>Username</label>
@@ -42,8 +45,8 @@ echo $this->Html->css([
                             <input ng-model="newPassword" type="password" class="form-control" id="form-password" name="form-password" style="width: 250px" />
                         </div>
                         <a href="javascript:void(0);" class="btn btn-warning" onclick="$('#changeForm').slideUp(); emptyInput();">Cancel</a>
-                        <a href="javascript:void(0);" class="btn btn-success" ng-click="changePassword()">Submit</a>
-                        <a href="javascript:void(0);" class="btn btn-warning" ng-click="logout()">Logout</a>
+                        <a href="javascript:void(0);" class="btn btn-success" ng-click="changePassword()">Submit</a><br>
+                        <a href="javascript:void(0);" style="margin-top: 20px;" class="btn btn-warning" ng-click="logout()">Logout</a>
                     </form>
                 </div>
                 <br>

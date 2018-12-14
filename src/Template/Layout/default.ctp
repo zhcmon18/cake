@@ -58,44 +58,58 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </ul>
     <div class="top-bar-section">
         <ul class="right">
-            <?php if ($loguser) : ?>
-                <?php if($loguser['status'] === false) :?>
-                    <li style="padding: 10px 5px 0 0;">
-                        <?= __('Inactive') ?>
-                    </li>
-                <?php endif ?>
-                <? if($this->request->params['controller'] !== 'Subscriptions') : ?>
+            <? if($this->request->params['controller'] !== 'Subscriptions') : ?>
+
+                <?php if ($loguser) : ?>
+
+                    <?php if($loguser['status'] === false) :?>
+
+                        <li style="padding: 10px 5px 0 0;">
+                            <?= __('Inactive') ?>
+                        </li>
+
+                    <?php endif ?>
+
                         <li>
                             <?= $this->Html->link($loguser['username'].' '.'('. $loguser['role'].')', ['controller' => 'Users', 'action' => 'view', $loguser['id']]) ?>
                         </li>
                         <li>
                             <?= $this->Html->link(__('Logout'), ['controller' => 'Users', 'action' => 'logout']) ?>
                         </li>
-                <?php endif ?>
-            <?php else : ?>
-                <? if($this->request->params['controller'] !== 'Subscriptions') : ?>
+
+                <?php else : ?>
+
                     <li>
                         <?= $this->Html->link(__('Monopage'), ['controller' => 'Subscriptions', 'action' => 'index']) ?>
                     </li>
                     <li>
                         <?= $this->Html->link(__('Login'), ['controller' => 'Users', 'action' => 'login']) ?>
                     </li>
+
                 <?php endif ?>
+
+                <li>
+                    <ul>
+                        <?php if($this->request->getSession()->read('Config.language') == 'en_US') : ?>
+
+                            <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?> </li>
+                            <li><?= $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) ?> </li>
+
+                        <?php elseif($this->request->getSession()->read('Config.language') == 'ru') : ?>
+
+                            <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?> </li>
+                            <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?> </li>
+
+                        <?php else : ?>
+
+                            <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?> </li>
+
+                            <li><?= $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) ?> </li>
+                        <?php endif; ?>
+                    </ul>
+
             <?php endif ?>
-            <li>
-                <ul>
-                    <?php
-                    if($this->request->getSession()->read('Config.language') == 'en_US') : ?>
-                        <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?> </li>
-                        <li><?= $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) ?> </li>
-                    <?php elseif($this->request->getSession()->read('Config.language') == 'ru') : ?>
-                        <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?> </li>
-                        <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?> </li>
-                    <?php else : ?>
-                        <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?> </li>
-                        <li><?= $this->Html->link('Русский', ['action' => 'changeLang', 'ru'], ['escape' => false]) ?> </li>
-                    <?php endif; ?>
-                </ul>
+
                 <ul>
                     <li> <?= $this->Html->link(__('About'), ['controller' => 'About', 'action' => 'index']) ?></li>
                 </ul>

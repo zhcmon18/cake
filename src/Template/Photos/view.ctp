@@ -69,6 +69,15 @@ $loguser = $this->request->getSession()->read('Auth.User');
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($photo->modified) ?></td>
         </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>
+                <?php echo $this->Html->image($photo->path.$photo->name, [
+                    "alt" => $photo->name
+                ]);
+                ?>
+            </td>
+        </tr>
     </table>
     <div class="related">
         <?php if (!empty($photo->cars)): ?>

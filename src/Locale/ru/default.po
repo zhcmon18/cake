@@ -690,3 +690,6 @@ msgstr "Активен"
 
 msgid "Promotion"
 msgstr "Скидка"
+
+msgid "Preview"
+msgstr "Предосмотр "

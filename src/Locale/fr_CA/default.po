@@ -672,3 +672,6 @@ msgstr "Actif"
 
 msgid "Promotion"
 msgstr ""
+
+msgid "Preview"
+msgstr "Aperçu"

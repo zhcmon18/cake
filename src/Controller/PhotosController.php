@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Filesystem\File;
 
 /**
  * Photos Controller
@@ -64,29 +65,37 @@ class PhotosController extends AppController
     public function add()
     {
         $photo = $this->Photos->newEntity();
-        if ($this->request->is('post')) {
-            if (!empty($this->request->data['name']['name'])) {
-                $fileName = $this->request->data['name']['name'];
+        if ($this->request->is('post') or $this->request->is('ajax')) {
+
+            if (!empty($this->request->data['file']['name'])) {
+
+                $fileName = $this->request->data['file']['name'];
                 $uploadPath = 'Files/';
                 $uploadFile = $uploadPath . $fileName;
-                if (move_uploaded_file($this->request->data['name']['tmp_name'], 'img/' . $uploadFile)) {
+
+                if (move_uploaded_file($this->request->data['file']['tmp_name'], 'img/' . $uploadFile)) {
+
                     $photo = $this->Photos->patchEntity($photo, $this->request->getData());
                     $photo->name = $fileName;
                     $photo->path = $uploadPath;
+                    $photo->status = 1;
+
                     if ($this->Photos->save($photo)) {
-                        $this->Flash->success(__('Photo has been uploaded and inserted successfully.'));
+                        $this->Flash->success(__('File has been uploaded and inserted successfully.'));
                     } else {
-                        $this->Flash->error(__('Unable to upload photo, please try again.'));
+                        $this->Flash->error(__('Unable to upload file, please try again.'));
                     }
                 } else {
-                    $this->Flash->error(__('Unable to save photo, please try again.'));
+                    $this->Flash->error(__('Unable to upload file, please try again.'));
                 }
             } else {
-                $this->Flash->error(__('Please choose a photo to upload.'));
+                $this->Flash->error(__('Please choose a file to upload.'));
             }
         }
         $cars = $this->Photos->Cars->find('list', ['limit' => 200]);
         $this->set(compact('photo', 'cars'));
+        $this->set('_serialize', ['photo']);
+
     }
 
     /**
@@ -125,8 +134,19 @@ class PhotosController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $photo = $this->Photos->get($id);
+
+        $name = $photo->name;
+
         if ($this->Photos->delete($photo)) {
-            $this->Flash->success(__('The photo has been deleted.'));
+
+            $file = new File(WWW_ROOT . 'img/Files/' . $name, false, 0777);
+
+            if($file->delete()) {
+                $this->Flash->success(__('The photo has been deleted.'));
+            } else {
+                $this->Flash->error(__('Error deleting the photo from the file system'));
+            }
+
         } else {
             $this->Flash->error(__('The photo could not be deleted. Please, try again.'));
         }

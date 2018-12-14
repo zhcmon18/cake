@@ -37,6 +37,10 @@ legend {
     color:#15848F;
 }
 
+hr {
+   max-width: 1100px;
+}
+
 .row {
     max-width: 80rem;
 }
@@ -606,3 +610,4 @@ table td {
     position: relative;
     right: -0.313em;
 }
+

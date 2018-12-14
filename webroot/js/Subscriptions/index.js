@@ -1,8 +1,26 @@
+var onloadCallback = function() {
+    widgetId1 = grecaptcha.render('captcha', {
+        'sitekey': '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI',
+        'theme': 'light'
+    });
+};
+
 var app = angular.module('app',[]);
+
+var logIn = '<a href="javascript:void(0);" style="text-decoration: none; font-size: 1.2em;" id="login-btn" ' +
+    'onclick="javascript:$(\'#loginForm\').slideToggle();"><span class="glyphicon glyphicon-log-in"></span> Login</a>';
+
+var logOut = '<a href="javascript:void(0);" style="text-decoration: none; font-size: 1.2em;" id="login-btn" ' +
+    'onclick="javascript:$(\'#changeForm\').slideToggle();"><span class="glyphicon glyphicon-log-out"></span> Logout or Change password</a>';
 
 app.controller('usersCtrl', function ($scope, $compile, $http) {
 
     $scope.login = function () {
+
+        if (grecaptcha.getResponse(widgetId1) == '') {
+            $scope.captcha_status = 'Please verify captha.';
+            return;
+        }
 
         var req = {
             method: 'POST',
@@ -22,14 +40,14 @@ app.controller('usersCtrl', function ($scope, $compile, $http) {
 
                 // Switch button for Logout
                 $('#logDiv').html(
-                    $compile('<a href="javascript:void(0);" class="glyphicon glyphicon-log-out" id="login-btn" onclick="javascript:$(\'#changeForm\').slideToggle();">Logout/Modify</a>')($scope)
+                    $compile(logOut)($scope)
                 );
 
                 emptyInput();
 
                 $('#loginForm').slideUp();
 
-                //$scope.messageLogin = 'Welcome!';
+                $scope.messageLogin = 'Welcome!';
                 $scope.errorLogin = '';
             })
 
@@ -43,13 +61,15 @@ app.controller('usersCtrl', function ($scope, $compile, $http) {
     $scope.logout = function () {
         localStorage.setItem('token', "no token");
 
+        // Switch button for Login
         $('#logDiv').html(
-            $compile('<a href="javascript:void(0);" class="glyphicon glyphicon-log-in" id="login-btn" onclick="javascript:$(\'#loginForm\').slideToggle();">Login</a>')($scope)
+            $compile(logIn)($scope)
         );
 
         $('#changeForm').slideUp();
         $scope.messageLogin = 'You have logged out';
         $scope.errorLogin = '';
+        grecaptcha.reset();
 
     }
     $scope.changePassword = function () {
@@ -233,19 +253,18 @@ app.service('SubscriptionCRUDService',['$http', function ($http) {
 }]);
 
 $(document).ready(function () {
-    'use strict';
     localStorage.setItem('token', "no token");
     $('#changePass').hide();
 });
 
-
-
 function emptyInput() {
-        $('#password').val('');
-        $('#username').val('');
-        $('#form-password').val('');
+    $('#password').val('');
+    $('#username').val('');
+    emptyInputPass();
 };
 
 function emptyInputPass() {
     $('#form-password').val('');
 };
+
+
